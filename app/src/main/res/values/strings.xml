@@ -1,0 +1,336 @@
+<resources>
+    <!-- application resources -->
+    <string name="app_version" translatable="false">ver. %s</string>
+
+    <string name="one" translatable="false">1</string>
+    <string name="two" translatable="false">2</string>
+    <string name="three" translatable="false">3</string>
+    <string name="four" translatable="false">4</string>
+    <string name="five" translatable="false">5</string>
+    <string name="six" translatable="false">6</string>
+    <string name="seven" translatable="false">7</string>
+    <string name="eight" translatable="false">8</string>
+    <string name="nine" translatable="false">9</string>
+    <string name="zero" translatable="false">0</string>
+
+    <string name="drawer_open" translatable="false">drawer_open</string>
+    <string name="drawer_close" translatable="false">drawer_close</string>
+
+    <string name="button_close">Close</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_help">Help</string>
+    <string name="button_accept">Accept</string>
+    <string name="button_back">Back</string>
+    <string name="button_confirm">Confirm</string>
+    <string name="button_return">Return</string>
+
+    <string name="phone_prefix">48</string>
+    <string name="phone_mask">+48 ___ ___ ___</string>
+    <string name="phone_empty">+48 </string>
+    <string name="phone_prefix_staging" translatable="false">333</string>
+    <string name="phone_mask_staging" translatable="false">+359 ___ ___ ___</string>
+    <string name="phone_empty_staging" translatable="false">+359 </string>
+
+    <string name="confirm_exit_from_app">Quit the application?</string>
+
+    <string name="font_light" translatable="false">sans-serif-light</string>
+    <string name="font_medium" translatable="false">sans-serif-medium</string>
+    <string name="font_regular" translatable="false">sans-serif</string>
+    <string name="font_condensed" translatable="false">sans-serif-condensed</string>
+    <string name="font_black" translatable="false">sans-serif-black</string>
+    <string name="font_thin" translatable="false">sans-serif-thin</string>
+
+    <string name="select_locale" translatable="false">Select the app language </string>
+    <string name="select_locate_ru" translatable="false">Русский</string>
+    <string name="select_locate_pl" translatable="false">Polski</string>
+    <string name="select_locate_ro" translatable="false">Română</string>
+    <string name="select_locate_bg" translatable="false">Български</string>
+
+    <!-- login -->
+    <string name="sign_in_title">Log in</string>
+    <string name="sign_in_info">Using email or phone and personal PIN-code</string>
+    <string name="sign_in_login">E-mail or phone number (e.g. 666 777 888)</string>
+    <string name="sign_in_pin">Personal PIN</string>
+    <string name="sign_in_forgot_pin">Forgot your PIN?</string>
+    <string name="sign_in_button">Log in</string>
+
+    <string name="sign_in_login_mock">48799000111</string>
+    <string name="sign_in_pin_mock">1111</string>
+
+    <string name="forgot_title">Forgot your PIN?</string>
+    <string name="forgot_hint">Enter your email or phone</string>
+    <string name="forgot_info">Enter mobile phone or email, we’ll send confirmation code and you can set up a new PIN.</string>
+    <string name="forgot_button">SEND CONFIRMATION CODE</string>
+
+    <string name="verify_title">Forgot your PIN?</string>
+    <string name="verify_hint">Confirmation Code</string>
+    <string name="verify_not_code">Сode did’t come?</string>
+    <string name="verify_send_again">send again</string>
+    <string name="verify_time_info">You can request new code in:</string>
+
+    <string name="sign_up_title">Set up your new PIN</string>
+    <string name="sign_up_pin">Your new PIN</string>
+    <string name="sign_up_confirm">Confirm PIN</string>
+    <string name="sign_up_simple">\nYour password is too simple\n</string>
+    <string name="sign_up_simple_change">Change</string>
+    <string name="sign_up_simple_next">Continue</string>
+
+    <string name="lock_title">PIN-code</string>
+    <string name="lock_user_hint">you\'ve been idle for 15 munutes.\nPlease, unlock Revo app to continue</string>
+    <string name="lock_pin">Enter your PIN</string>
+    <string name="lock_not_you">Not you?</string>
+    <string name="lock_login">Log in here</string>
+
+    <!-- main -->
+    <string name="main_menu_dashboard">Dashboard</string>
+    <string name="main_menu_make_purchase">Make purchase</string>
+    <string name="main_menu_return_purchase">Return purchase</string>
+    <string name="main_menu_sign_out">Sign out</string>
+
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_make_purchase">Make purchase</string>
+    <string name="dashboard_return_purchase">Return purchase</string>
+    <string name="dashboard_call_online">Call online</string>
+    <string name="dashboard_chat">Chat support</string>
+    <string name="dashboard_question">Questions?</string>
+    <string name="dashboard_loans">Loans</string>
+    <string name="dashboard_amount">Amount</string>
+    <string name="dashboard_period">Sales report:  %s</string>
+    <string name="dashboard_select_period">select period</string>
+    <string name="dashboard_confirm_return">Exit to dashboard?</string>
+    <string name="dashboard_chat_link"> </string>
+    <string name="dashboard_support_call" translatable="false">22 245-05-45</string>
+    <string name="dashboard_self_registration">ОТПРАВИТЬ ФОРМУ\nРЕГИСТРАЦИИ КЛИЕНТУ</string>
+
+    <string name="declined_title">Declined</string>
+    <string name="declined_caption">Purchase declined</string>
+    <string name="declined_hint">Thank you for applying to Revo service.\nUnfortunately the decision about client is negative.</string>
+    <string name="declined_to_dashboard">go to dashboard</string>
+    <string name="declined_sincerely">Sincerely, Revo</string>
+
+    <string name="help_title">Support</string>
+
+    <!-- client -->
+    <string name="profile_title">Client Profile</string>
+    <string name="profile_first_name">First name</string>
+    <string name="profile_middle_name">Middle name</string>
+    <string name="profile_last_name">Last name</string>
+    <string name="profile_date_of_birth">Date of birth</string>
+    <string name="profile_id">ID (Passport)</string>
+    <string name="profile_next">NEXT, Step 2 of 5</string>
+    <string name="profile_expiry_date">Expiry date</string>
+    <string name="profile_pesel">PESEL</string>
+    <string name="profile_bulletin"></string>
+    <string name="profile_email">E-mail</string>
+    <string name="profile_street">Street</string>
+    <string name="profile_house">House</string>
+    <string name="profile_flat">Flat</string>
+    <string name="profile_postal_code">Postal Code</string>
+    <string name="profile_city">City</string>
+    <string name="profile_agree_asp"> </string>
+    <string name="profile_agree_personal_date"> </string>
+    <string name="profile_agree_asp_title"> </string>
+    <string name="profile_agree_personal_date_title"> </string>
+
+    <string name="profile_check_title">Check the following details with the buyer\'s ID. If the data is correct, press \"I confirm\", if not, return to the form and make the correction.</string>
+    <string name="profile_check_client_name">Name and Surname:</string>
+    <string name="profile_check_client_pesel">PESEL:</string>
+    <string name="profile_check_client_number">ID (Passport):</string>
+
+    <string name="agreement_title">Client Agreement</string>
+    <string name="agreement_client_name">Clients\'s name</string>
+    <string name="agreement_check_all">I mark all the following consents</string>
+    <string name="agreement_regulations">I have read and accept the Revo Partner Regulations</string>
+    <string name="agreement_regulations_title">Regulations of the Revo Partner mobile application</string>
+    <string name="agreement_personal_data">I consent to the collection and processing of my personal data by taking a photo of a personal ID</string>
+    <string name="agreement_personal_data_title">Processing personal data</string>
+    <string name="agreement_credit_bureaus">I give authorizations and consents regarding verification at the Credit Information Bureau, business information offices and through the Loan Information Exchange Platform and for sharing my personal data in order to assess creditworthiness</string>
+    <string name="agreement_credit_bureaus_title">Credit bureaus processing</string>
+    <string name="agreement_marketing_email">I consent to the processing of my personal data in order to conduct direct marketing via e-mail (Optional)</string>
+    <string name="agreement_administration"></string>
+    <string name="agreement_marketing_email_title">Processing personal data for email marketing</string>
+    <string name="agreement_marketing_phone">I agree to the processing of my personal data in order to conduct direct marketing via telephone connections (Optional)</string>
+    <string name="agreement_marketing_phone_title">Processing personal data for telemarketing</string>
+    <string name="agreement_confirm">Confirm</string>
+
+    <string name="scan_camera_permission">Please enable Camera permission</string>
+    <string name="scan_storage_permission">Please enable Storage permission</string>
+
+    <string name="documents_title">Documents</string>
+    <string name="documents_first">ID first page</string>
+    <string name="documents_second">ID second page</string>
+    <string name="documents_third"> </string>
+    <string name="documents_new_photo">new photo</string>
+    <string name="documents_pick_photo_title">Please pick the source</string>
+    <string name="documents_next">NEXT, Step 4 of 5</string>
+    <string name="documents_back">Go back to form</string>
+    <string name="documents_client_name">Name and Surname</string>
+    <string name="documents_client_pesel">PESEL</string>
+    <string name="documents_title_warning"> </string>
+
+    <!-- purchase -->
+    <string name="purchase_title">Request</string>
+    <string name="purchase_sum">Total sum requested</string>
+    <string name="purchase_client">Client</string>
+    <string name="purchase_phone">Mobile phone</string>
+    <string name="purchase_next">NEXT, Step 1 of 5</string>
+    <string name="purchase_info">The administrator of your personal data is Revo Technologies Sp. z o.o. , ul. Grzybowska 2/29, 00–131 Warsaw, NIP 525–269–16–73. <u>Read more.</u></string>
+    <string name="purchase_help_title">Information article</string>
+    <string name="purchase_self_registration">SEND THE REGISTRATION FORM\nTO THE CUSTOMER ON THE PHONE?</string>
+
+    <string name="calc_title">Calculator</string>
+    <string name="calc_limit">Approved limit</string>
+    <string name="calc_limit_rcl_not_accepted" />
+    <string name="calc_sum">Sum of purchase</string>
+    <string name="calc_period">Select period</string>
+    <string name="calc_input_sum">Please enter the purchase order and confirm</string>
+    <string name="calc_next">Next, Step 3 of 5</string>
+    <string name="calc_loan_period">%d month</string>
+    <string name="calc_loan_pay">%s zł / m</string>
+    <string name="calc_loan_total_of_payment">Total of payments</string>
+    <string name="calc_loan_sum">Sum with discount</string>
+    <string name="calc_loan_overpayment">Total overpayment</string>
+    <string name="calc_loan_payment_schedule">Payment schedule</string>
+    <string name="calc_enable_sms_inform">Aktywuj Dodatkowe Powiadomienia %s / mies.</string>
+    <string name="calc_enable_sms_inform_info">Po zaakceptowaniu tej zgody, będziemy wysyłać Ci dodatkowe powiadomienia SMS, aby przypomnieć Ci o dokonywaniu terminowych płatności. Aktywacja usługi Dodatkowe Powiadomienia odbywa się na &lt;a href="http://kokao-backend.mokka.pl/legal_documents/downloads/informing">warunkach z Umowy o Odnawialny Limit Kredytowy&lt;/a></string>
+    <string name="calc_accident_insurance"> </string>
+
+    <string name="confirm_title">Standard European Consumer</string>
+    <string name="confirm_next">Confirm</string>
+
+    <string name="contract_title">Contract</string>
+    <string name="contract_hint">Individual contract terms </string>
+    <string name="contract_agree">Agree with individual contract terms</string>
+    <string name="contract_agree_title">Individual contract terms</string>
+    <string name="contract_secci">Standard European Consumer Credit Information</string>
+    <string name="contract_secci_title">Standard European Consumer</string>
+
+    <string name="contract_ru_title"> </string>
+    <string name="contract_ru_conditions"> </string>
+    <string name="contract_ru_sum"> </string>
+    <string name="contract_ru_over"> </string>
+    <string name="contract_ru_pay_count"> </string>
+    <string name="contract_ru_pay_month"> </string>
+    <string name="contract_ru_conditions_all"> </string>
+    <string name="contract_ru_conditions_hint"> </string>
+    <string name="contract_ru_conditions_check"> </string>
+    <string name="contract_ru_offer_title"> </string>
+    <string name="contract_ru_insurance_title"> </string>
+    <string name="contract_ru_individual_conditions_title"> </string>
+    <string name="contract_admin_info"></string>
+    <string name="agreement_SMS"></string>
+    <string name="agreement_SMS_title"></string>
+
+    <string name="protection_program_title"> </string>
+
+    <string name="barcode_title">Barcode</string>
+    <string name="barcode_message">Scan this barcode to cashier\nto finish purchase</string>
+    <string name="barcode_sum">Total: %s</string>
+    <string name="barcode_value">No : %s</string>
+    <string name="barcode_next">Finish, Step 5 of 5</string>
+    <string name="barcode_result_success" />
+    <string name="barcode_input_hint" />
+
+
+    <string name="confirm_client_title">Client Verification</string>
+    <string name="confirm_client_hint">Enter SMS code\nto confirm your identity</string>
+    <string name="confirm_client_confirmation_code">Confirmation Code</string>
+    <string name="confirm_new_client_hint">Enter SMS code to confirm consents and continue registration process</string>
+
+    <string name="self_register_hint">Send the registration form to the client</string>
+    <string name="self_register_message">To send a self-registration form and check the available amount, enter the customer’s phone number and click continue.</string>
+    <string name="self_register_success_title">Message successfully sent!</string>
+    <string name="self_register_success_message">The client can register and check the available amount on their own.</string>
+    <string name="self_register_retry_client_title">User is already registered</string>
+    <string name="self_register_retry_client_message">A verification code has been sent to the client for authorization</string>
+
+    <string name="confirm_read_loan_info_checkable" />
+    <string name="confirm_read_loan_info" />
+    <string name="confirm_read_loan_info_rcl_accepted_checkable" />
+    <string name="confirm_read_loan_info_rcl_accepted" />
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted" />
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted_kind_rcl" />
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted_kind_individual_agreement" />
+    <string name="loan_info_repeated_not_rcl_accepted_title" />
+    <string name="loan_info_repeated_not_rcl_accepted_message" />
+
+
+    <!-- returns -->
+    <string name="search_title">Search</string>
+    <string name="search_hint">Fill one of the fields</string>
+    <string name="search_phone">Client\'s phone number or email</string>
+    <string name="search_passport">Client\'s ID</string>
+    <string name="search_order">Contract</string>
+    <string name="search_button">search client</string>
+
+    <string name="search_item_phone">Phone</string>
+    <string name="search_item_contract">Contract</string>
+    <string name="search_item_barcode">Barcode</string>
+    <string name="search_item_date">Date</string>
+    <string name="search_item_sum">Sum purchase</string>
+    <string name="search_item_return">Make return</string>
+
+    <string name="detail_title">Return details</string>
+    <string name="detail_phone">Phone</string>
+    <string name="detail_total">Purchase total\nincl. merchant\'s discount</string>
+    <string name="detail_return_sum">Return amount</string>
+    <string name="detail_return_full">Full return</string>
+    <string name="detail_amount">Return amount\nexcl. merchant\'s discount</string>
+    <string name="detail_confirm">I confirm that all entered details are correct and agree to return the purchase</string>
+    <string name="detail_next">next, Step 1 of 2</string>
+    <string name="detail_remaining_sum">Remaining sum</string>
+    <string name="detail_return_sum_error">The refund amount can not be greater than \"Other amount\"</string>
+
+    <string name="barcode_return_title">Barcode</string>
+    <string name="barcode_return_message">Scan this barcode to cashier to finish return</string>
+    <string name="barcode_return_sum">Purchase sum: %s\nReturn sum: %s</string>
+    <string name="barcode_return_next">Finish, Step 2 of 2</string>
+    <string name="barcode_return_cancel"><u>Cancel return</u></string>
+
+    <string name="return_confirm_title">Return confirmation</string>
+
+    <!-- select store -->
+    <string name="select_store_title">Select your store</string>
+    <string name="select_store_hint">choose a store you\'re working in today:</string>
+    <string name="select_store_not_you">Not you?</string>
+    <string name="select_store_go_back">Go back</string>
+    <string name="select_store_confirm_logout">Sign out?</string>
+
+    <string name="update_found">Update found.\nYou must update the existing version of the app.</string>
+    <string name="update_found_ok">Update</string>
+    <string name="update_found_cancel">No</string>
+    <string name="update_not_download">The file could not be downloaded.</string>
+    <string name="update_download_complete">Loading is complete.</string>
+    <string name="update_install">Install</string>
+
+    <!-- demo -->
+    <string name="demo">Demo</string>
+    <string name="demo_alert">This is a test account. If you want to make a real transaction, log in to your real account.</string>
+    <string name="demo_mode">Demo mode</string>
+
+    <!-- chat -->
+    <string name="chat_title" translatable="false" />
+    <string name="hint_chat_message" translatable="false" />
+    <string name="chat_greetings" translatable="false" />
+    <string name="chat_connection_error_title" translatable="false" />
+    <string name="chat_connection_error_message" translatable="false" />
+    <string name="chat_status_typying" translatable="false" />
+    <string name="chat_status_online" translatable="false" />
+    <string name="chat_status_offline" translatable="false" />
+    <string name="chat_operator_gone" translatable="false" />
+
+    <!-- untranslatable romanian confirmation titles -->
+    <string name="ro_confirm_1" translatable="false">Sunt de acord cu renunțarea la termenul de 15 zile în vederea citirii, înțelegerii și exprimării acordului privind semnarea contractului de credit.</string>
+    <string name="ro_confirm_2" translatable="false">"Am citit și sunt de acord cu termenii și condițiile din documentul de Informații standard la nivel european privind creditul pentru consumatori. "</string>
+    <string name="ro_confirm_3" translatable="false">"Vom trimite informații despre comandă, graficul de rambursare si metodele de plată disponibile prin e-mail "</string>
+    <string name="ro_confirm_4" translatable="false">Sunt de acord cu termenii și condițiile acordului de vânzare-cumpărare ale serviciului avansului Mokka.</string>
+    <string name="ro_confirm_5" translatable="false">Sunt de acord cu termenii și condițiile acordului-cadru al serviciului. </string>
+    <string name="ro_confirm_6" translatable="false">Sunt de acord cu termenii și condițiile acordului individual Mokka.</string>
+    <string name="bnpl_term_title" />
+    <string name="bnpl_sum_with_discount" />
+    <string name="option_pay_installments" />
+
+    <string name="empty" translatable="false" />
+
+</resources>

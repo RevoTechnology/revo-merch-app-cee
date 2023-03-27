@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dashboard_tabs">
+        <item>ПОСЛЕДЕН МЕСЕЦ</item>
+        <item>ПРЕДИШЕН МЕСЕЦ</item>
+        <item>ПЕРИОД</item>
+    </string-array>
+
+    <string-array name="profile_documents">
+        <item>име</item>
+        <item>клиент с паспорт</item>
+    </string-array>
+</resources>

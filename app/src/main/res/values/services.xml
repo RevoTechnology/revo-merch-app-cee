@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<string name="pushwoosh_sender_id" translatable="false">1053710312118</string>
+    <string name="pushwoosh_app_id" translatable="false">ECB74-6FE07</string>-->
+
+    <string name="pushwoosh_sender_id" translatable="false">45089476972</string>
+    <string name="pushwoosh_app_id" translatable="false">9258A-BC063</string>
+    <string name="lamoda_action" translatable="false">ru.revoplus.client</string>
+
+    <string name="default_notification_channel_id" translatable="false">default_channel</string>
+
+    <!-- Exponea -->
+    <string name="exponea_auth" translatable="false">Token 14kvm6ih9srt4x83nh6716kszuda2wk4a05wgsbu23m68zq3iukpvkyjuyonqkom</string>
+    <string name="exponea_project_token" translatable="false">e60b373a-668c-11e9-a28c-ac1f6b02225e</string>
+    <string name="exponea_base_url" translatable="false">https://api-cis.exponea.com</string>
+</resources>

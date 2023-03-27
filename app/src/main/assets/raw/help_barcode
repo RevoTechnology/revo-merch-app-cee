@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<p>&nbsp;</p>
+		<p><strong>Na jakim kroku jestem?</strong></p>
+		<p>Wprowadzenie kodu kreskowego do systemu kasowego</p>
+		<p><strong>Co muszę teraz zrobić?</strong></p>
+		<ul>
+			<li>Zeskanuj wygenerowany kod za pomocą systemu kasowego w celu zamknięcia transakcji po stronie sieci handlowej.</li>
+		</ul>
+		<p><strong>Dlaczego jest to konieczne?</strong></p>
+		<ul>
+			<li>Dopiero po zeskanowaniu kodu będzie możliwe prawidłowe rozliczenie pomiędzy Revo a partnerem handlowym.</li>
+		</ul>
+		<p><strong>Jakie kroki pozostały?</strong></p>
+		<p>Gratulacje! To już ostatni krok.</p>
+	</body>
+</html>

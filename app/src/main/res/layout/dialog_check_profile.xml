@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="@string/profile_check_title"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/steel"
+        android:layout_marginStart="16dp"
+        android:alpha="0.3"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="14dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/documents_client_name"/>
+
+        <TextView
+            android:id="@+id/profileClientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="14dp"
+            android:gravity="end"
+            android:textColor="@color/steel"
+            android:textSize="16sp"
+            tools:text="Jan Kowalski"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/steel"
+        android:layout_marginStart="16dp"
+        android:alpha="0.3"/>
+
+    <LinearLayout
+        android:id="@+id/peselContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="14dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/documents_client_pesel"/>
+
+        <TextView
+            android:id="@+id/profileClientPesel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="14dp"
+            android:gravity="end"
+            android:textColor="@color/steel"
+            android:textSize="16sp"
+            tools:text="81010200131"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/steel"
+        android:layout_marginStart="16dp"
+        android:alpha="0.3"/>
+
+    <LinearLayout
+        android:id="@+id/profileClientContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="14dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/profile_check_client_number"/>
+
+        <TextView
+            android:id="@+id/profileClientId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="14dp"
+            android:gravity="end"
+            android:textColor="@color/steel"
+            android:textSize="16sp"
+            tools:text="DRG10200"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/steel"
+        android:layout_marginStart="16dp"
+        android:alpha="0.3"/>
+
+</LinearLayout>

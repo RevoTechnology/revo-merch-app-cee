@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+ruby File.read('.ruby-version').chomp
+
+gem 'appium_lib'
+gem 'cucumber', '~> 3.1.0'
+gem 'dotenv'
+gem 'dry-struct'
+gem 'factory_bot'
+gem 'faker'
+gem 'faraday'
+gem 'rspec', '~> 3.8'

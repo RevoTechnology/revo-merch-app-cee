@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<p><strong>Na jakim kroku jestem?<br /></strong>Formularz z danymi klienta</p>
+		<p><br /><strong>Co muszę teraz zrobić?</strong></p>
+		<ul>
+			<li>Wprowadź dane klienta uzupełniając wszystkie pola</li>
+			<li>Poproś klienta o sprawdzenie swoich danych. W szczeg&oacute;lności zwr&oacute;ć uwagę na email i PESEL &ndash; są to krytyczne informacje w dalszym procesie.</li>
+			<li>Ty r&oacute;wnież sprawdź, czy dane podane przez klienta są zgodne z dowodem. Ta procedura jest wymogiem prawnym Biura Informacji Kredytowej, kt&oacute;re musi przestrzegać wymog&oacute;w ustawy.</li>
+			<li>Jeśli z jakiegokolwiek powodu klient wydaje Ci się podejrzany &ndash; pamiętaj o guziku bezpieczeństwa. Jeśli z niego skorzystasz klient zawsze zostanie odrzucony w dalszym procesie</li>
+		</ul>
+		<p><br /><strong>Dlaczego jest to konieczne?</strong></p>
+		<ul>
+			<li>Dane klienta są nam potrzebne żeby przeprowadzić weryfikację zdolności kredytowej klienta, a w następnych krokach w celu podpisania umowy.</li>
+			<li>Pamiętaj, że dane klienta są bezpieczne &ndash; podchodzimy do tematu bezpieczeństwa danych bardzo poważnie i spełniamy wszystkie wymogi RODO.</li>
+		</ul>
+		<p><strong>Jakie kroki pozostały?</strong></p>
+		<p>Potwierdzenie zg&oacute;d kodem SMS &gt; Szczeg&oacute;łowa oferta &gt; Potwierdzenie umowy kodem SMS &gt; Zeskanowanie kodu kreskowego</p>
+	</body>
+</html>

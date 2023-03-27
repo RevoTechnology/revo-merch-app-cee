@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/documentsNextLayout">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/documentsNameCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/documentsNameImage"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="12dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="-12dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_camera"/>
+
+                        <TextView
+                            android:id="@+id/documentsNameView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/documentsNameImage"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:text="@string/documents_first"/>
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/documentsNameNewButton"
+                            android:layout_width="112dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_refresh"
+                            app:backgroundTint="@color/colorAccent"/>
+
+                    </RelativeLayout>
+
+                    <pl.revo.merchant.widget.AspectRatioImageView
+                        android:id="@+id/documentsNamePhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/documentsLivingAddressCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/documentsLivingAddressImage"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="12dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="-12dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_camera"/>
+
+                        <TextView
+                            android:id="@+id/documentsLivingAddressView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/documentsLivingAddressImage"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:text="@string/documents_third"/>
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/documentsLivingAddressButton"
+                            android:layout_width="112dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_refresh"
+                            app:backgroundTint="@color/colorAccent"/>
+
+                    </RelativeLayout>
+
+                    <pl.revo.merchant.widget.AspectRatioImageView
+                        android:id="@+id/documentsThirdPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/documentsClientWithPassportCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/documentsClientWithPassportImage"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="12dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="-12dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_camera"/>
+
+                        <TextView
+                            android:id="@+id/documentsClientWithPassportView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/documentsClientWithPassportImage"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:text="@string/documents_second"/>
+
+                        <androidx.appcompat.widget.AppCompatImageButton
+                            android:id="@+id/documentsClientWithPassportButton"
+                            android:layout_width="112dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:visibility="gone"
+                            android:src="@drawable/ic_refresh"
+                            app:backgroundTint="@color/colorAccent"/>
+
+                    </RelativeLayout>
+
+                    <pl.revo.merchant.widget.AspectRatioImageView
+                        android:id="@+id/documentsSecondPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:text="@string/documents_title_warning"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/documentsNextLayout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <pl.revo.merchant.widget.StepButtonWidget
+            android:id="@+id/documentsNextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            app:step="4"
+            app:steps="5"
+            android:text="@string/documents_next"/>
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+task publishStage(type: GradleBuild) {
+    tasks = [
+            'clean',
+            'assembleStageRelease'
+    ]
+}
+
+task publishProd(type: GradleBuild) {
+    tasks = [
+            'clean',
+            'assembleProdRelease'
+    ]
+}
+
+task publishGoogleRelease(type: GradleBuild) {
+    tasks = [
+            'clean',
+            'assembleRelease'
+    ]
+}
+
+task publishBundle(type: GradleBuild) {
+    tasks = [
+            'clean',
+            'bundleRelease'
+    ]
+}

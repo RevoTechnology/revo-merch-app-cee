@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <p><strong>Na jakim kroku jestem?<br /></strong>Telefon klienta<br /><br /><strong>Co muszę teraz zrobić?</strong></p>
+        <ul>
+            <li>Wpisz numer telefonu kom&oacute;rkowego klienta.</li>
+        </ul>
+        <p><strong>Dlaczego jest to konieczne?</strong></p>
+        <ul>
+            <li>Numer telefonu klienta jest potrzebny, ponieważ w dalszych krokach wyślemy mu SMS z 4-cyfrowym kodem, za pomocą kt&oacute;rego będzie m&oacute;gł wyrazić zgodę na kontynuowanie procesu.</li>
+        </ul>
+        <p><strong>Jakie kroki pozostały?<br /></strong>Zgody klienta &gt; Formularz z danymi klienta &gt; Potwierdzenie zg&oacute;d kodem SMS &gt; Szczeg&oacute;łowa oferta &gt; Potwierdzenie umowy kodem SMS &gt; Zeskanowanie kodu kreskowego</p>
+    </body>
+</html>

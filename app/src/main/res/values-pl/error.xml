@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_title">Coś poszło nie tak…</string>
+
+    <string name="err_network_is_not_available">Ups… Coś poszło nie tak. Spróbuj ponownie za kilka minut</string>
+    <string name="err_unknown">Nieznany błąd</string>
+    <string name="err_server">Server error</string>
+    <string name="err_certificate">Certificate error</string>
+
+    <string name="error_login">Niepoprawny login</string>
+    <string name="error_phone">Niepoprawny nr telefonu</string>
+    <string name="error_email">Niepoprawny e-mail</string>
+    <string name="error_pin_code">Niepoprawny kod PIN</string>
+    <string name="error_pin_not_match">Wpisane kody PIN nie pasują do siebie</string>
+    <string name="error_date">Niepoprawna data</string>
+    <string name="error_sum">Niepoprawna kwota</string>
+    <string name="error_field_required">To pole jest wymagane</string>
+    <string name="error_birth_day">Niepoprawna data</string>
+    <string name="error_pesel">Niepoprawny PESEL</string>
+    <string name="error_id_number">Niepoprawny nr i seria dowodu</string>
+    <string name="error_postal_code">Niepoprawny kod pocztowy</string>
+    <string name="error_scan">Nie znaleziono dokumentu</string>
+    <string name="error_client_data">nieprawidłowe dane klienta</string>
+
+    <string name="error_sms_code">Niepoprawny kod SMS</string>
+    <string name="error_login_or_password">Niepoprawny login</string>
+
+    <string name="error_purchase_exceeds">Maksymalna kwota dostępna w tym sklepie to %s.</string>
+    <string name="error_purchase_small">Wpisana kwota jest niepoprawna.</string>
+
+    <string name="error_large_data">Ilość przesłanych danych przekracza ustalone limity</string>
+
+    <string name="error_do_support">Wystąpił błąd.\nProszę, skontaktuj się z pomocą techniczną</string>
+    <string name="err_api_not_implemented">Wystąpił błąd.\nProszę, skontaktuj się z pomocą techniczną</string>
+    <string name="error_not_authorized">Proszę autoryzować</string>
+
+</resources>

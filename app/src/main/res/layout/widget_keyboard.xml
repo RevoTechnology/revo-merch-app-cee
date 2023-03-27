@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginStart="@dimen/margin_16dp"
+        android:background="@color/gray9"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/component_keyboard_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:showDividers="none">
+
+            <Button
+                android:id="@+id/keyboardOne"
+                style="@style/KeyboardButton"
+                android:text="@string/one" />
+
+            <Button
+                android:id="@+id/keyboardTwo"
+                style="@style/KeyboardButton"
+                android:text="@string/two" />
+
+            <Button
+                android:id="@+id/keyboardThree"
+                style="@style/KeyboardButton"
+                android:text="@string/three" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:showDividers="none">
+
+            <Button
+                android:id="@+id/keyboardFour"
+                style="@style/KeyboardButton"
+                android:text="@string/four" />
+
+            <Button
+                android:id="@+id/keyboardFive"
+                style="@style/KeyboardButton"
+                android:text="@string/five" />
+
+            <Button
+                android:id="@+id/keyboardSix"
+                style="@style/KeyboardButton"
+                android:text="@string/six" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:showDividers="none">
+
+            <Button
+                android:id="@+id/keyboardSeven"
+                style="@style/KeyboardButton"
+                android:text="@string/seven" />
+
+            <Button
+                android:id="@+id/keyboardEight"
+                style="@style/KeyboardButton"
+                android:text="@string/eight" />
+
+            <Button
+                android:id="@+id/keyboardNine"
+                style="@style/KeyboardButton"
+                android:text="@string/nine" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:showDividers="none">
+
+            <ImageButton
+                android:id="@+id/keyboardClear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard_button"
+                android:src="@drawable/ic_close"
+                tools:ignore="ContentDescription,NestedWeights"
+                app:tint="@color/gray0" />
+
+            <Button
+                android:id="@+id/keyboardZero"
+                style="@style/KeyboardButton"
+                android:layout_weight="1"
+                android:text="@string/zero" />
+
+            <ImageButton
+                android:id="@+id/keyboardDelete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_keyboard_button"
+                android:src="@drawable/ic_backspace"
+                android:tint="@color/gray0"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

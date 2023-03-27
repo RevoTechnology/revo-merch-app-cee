@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- application resources -->
+    <string name="button_close">Zamknij</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Anuluj</string>
+    <string name="button_help">Pomoc</string>barcode_next
+    <string name="button_accept">Rozumiem</string>
+    <string name="button_back">Wróć</string>
+    <string name="button_confirm">Potwierdzam</string>
+    <string name="button_return">Wróć</string>
+
+    <string name="phone_prefix">48</string>
+    <string name="phone_mask">+48 ___ ___ ___</string>
+    <string name="phone_empty">+48 </string>
+
+    <string name="confirm_exit_from_app">Zamknij aplikację?</string>
+
+    <!-- login -->
+    <string name="sign_in_title">Zaloguj się</string>
+    <string name="sign_in_info">Użyj e-maila lub nr telefonu jako loginu i kodu PIN</string>
+    <string name="sign_in_login">E-mail lub numer telefonu (np. 666 777 888)</string>
+    <string name="sign_in_pin">Kod PIN</string>
+    <string name="sign_in_forgot_pin">NIE PAMIĘTASZ SWOJEGO KODU PIN?</string>
+    <string name="sign_in_button">Zaloguj się</string>
+
+    <string name="sign_in_login_mock">48799000111</string>
+    <string name="sign_in_pin_mock">1111</string>
+
+    <string name="forgot_title">Nie pamiętasz kodu PIN?</string>
+    <string name="forgot_hint">Wpisz numer telefonu lub e-mail</string>
+    <string name="forgot_info">Na Twój numer telefonu lub e-mail wyślemy tymczasowy kod PIN, dzięki któremu ustawisz swój nowy kod PIN.</string>
+    <string name="forgot_button">WYŚLIJ TYMCZASOWY PIN</string>
+
+    <string name="verify_title">Nie pamiętasz kodu PIN?</string>
+    <string name="verify_hint">Tymczasowy PIN</string>
+    <string name="verify_not_code">NIE OTRZYMAŁEŚ KODU?</string>
+    <string name="verify_send_again">WYŚLIJ PONOWNIE</string>
+    <string name="verify_time_info">Wyślij ponowne za:</string>
+
+    <string name="sign_up_title">Ustaw nowy kod PIN</string>
+    <string name="sign_up_pin">Twój nowy PIN</string>
+    <string name="sign_up_confirm">Potwierdź swój nowy PIN</string>
+    <string name="sign_up_simple">\nTwoje hasło jest zbyt proste\n</string>
+    <string name="sign_up_simple_change">Zmień</string>
+    <string name="sign_up_simple_next">Dalej</string>
+
+    <string name="lock_title">Kod PIN</string>
+    <string name="lock_user_hint">twoje konto było niekatywne przez 15 minut.\nWprowadź kod PIN, aby odlokować aplikację</string>
+    <string name="lock_pin">Wprowadź swój kod PIN</string>
+    <string name="lock_not_you">NIE TWOJE KONTO?</string>
+    <string name="lock_login">WYLOGUJ SIĘ</string>
+
+    <!-- main -->
+    <string name="main_menu_dashboard">Pulpit</string>
+    <string name="main_menu_make_purchase">Nowa transakcja</string>
+    <string name="main_menu_return_purchase">Zwrot zakupu</string>
+    <string name="main_menu_sign_out">Wyloguj się</string>
+
+    <string name="dashboard_title">Pulpit</string>
+    <string name="dashboard_make_purchase">Nowa transakcja</string>
+    <string name="dashboard_return_purchase">Zwrot zakupu</string>
+    <string name="dashboard_call_online">Zadzwoń</string>
+    <string name="dashboard_chat">Zapytaj na czacie</string>
+    <string name="dashboard_question">Potrzebujesz pomocy?</string>
+    <string name="dashboard_loans">Transakcje</string>
+    <string name="dashboard_amount">Kwota</string>
+    <string name="dashboard_period">Raport sprzedaży:</string>
+    <string name="dashboard_select_period">Okres spłat</string>
+    <string name="dashboard_confirm_return">Czy na pewno chcesz przerwać proces aplikacji?</string>
+    <string name="dashboard_chat_link">https://mokka.pl/pomoc</string>
+    <string name="dashboard_self_registration">WYŚLIJ FORMULARZ \n REJESTRACJI KLIENTOWI</string>
+
+    <string name="declined_title">Wniosek odrzucony</string>
+    <string name="declined_caption">Wniosek odrzucony</string>
+    <string name="declined_hint">Dziękujemy za przesłanie aplikacji. Niestety nie możemy dziś pomóc Klientowi w opłaceniu zakupów.</string>
+    <string name="declined_to_dashboard">PRZEJDŹ DO PULPITU</string>
+    <string name="declined_sincerely">Z poważaniem, Revo</string>
+
+    <string name="help_title">Pomoc</string>
+
+    <!-- client -->
+    <string name="profile_title">Profil Klienta</string>
+    <string name="profile_first_name">Imię</string>
+    <string name="profile_middle_name">Drugie imię</string>
+    <string name="profile_last_name">Nazwisko</string>
+    <string name="profile_date_of_birth">Data urodzenia</string>
+    <string name="profile_id">Nr i seria dowodu osobistego</string>
+    <string name="profile_next">DALEJ, KROK 2 Z 5</string>
+    <string name="profile_expiry_date">Termin ważności dowodu</string>
+    <string name="profile_pesel">PESEL</string>
+    <string name="profile_bulletin" />
+
+    <string name="profile_email">E-mail</string>
+    <string name="profile_street">Ulica</string>
+    <string name="profile_house">Nr domu</string>
+    <string name="profile_flat">Nr mieszkania</string>
+    <string name="profile_postal_code">Kod pocztowy</string>
+    <string name="profile_city">Miejscowość</string>
+    <string name="profile_agree_asp"> </string>
+    <string name="profile_agree_personal_date"> </string>
+    <string name="profile_agree_asp_title"> </string>
+    <string name="profile_agree_personal_date_title"> </string>
+
+    <string name="profile_check_title">Sprawdź poniższe dane z dowodem osobistym Kupującego. Jeżeli dane się zgadzają naciśnij \"Potwierdzam\", jeżeli nie, wróć do formularza i dokonaj korekty.</string>
+    <string name="profile_check_client_name">Imię i Nazwisko:</string>
+    <string name="profile_check_client_pesel">PESEL:</string>
+    <string name="profile_check_client_number">Numer dowodu:</string>
+
+    <string name="agreement_title">Zgody Klienta</string>
+    <string name="agreement_client_name">Imię i nazwisko</string>
+    <string name="agreement_check_all">Zaznaczam wszystkie poniższe zgody</string>
+    <string name="agreement_regulations">Zapoznałem/am się i akceptuję treść Regulaminu aplikacji Revo Partner</string>
+    <string name="agreement_regulations_title">Regulamin aplikacji mobilnej Revo Partner</string>
+    <string name="agreement_personal_data">Wyrażam zgodę na pobranie i przetwarzanie moich danych osobowych</string>
+    <string name="agreement_personal_data_title">Przetwarzanie danych osobowych</string>
+    <string name="agreement_credit_bureaus">Wyrażam zgody na przetwarzanie danych osobowych i weryfikację zdolności kredytowej w Biurze Informacji Kredytowej (BIK), biurach informacji gospodarczej oraz przez uczestników Platformy Wymiany Informacji Pożyczkowej i Systemu Wymiany Informacji, oraz na raportowanie mojego zobowiązania do BIK. Czytaj wiecej</string>
+    <string name="agreement_credit_bureaus_title">Zgoda na weryfikację w biurach kredytowych</string>
+    <string name="agreement_marketing_email">Wyrażam zgodę na marketing usług Mokka drogą elektroniczną. Czytaj wiecej</string>
+    <string name="agreement_administration"></string>
+    <string name="agreement_SMS"></string>
+    <string name="agreement_SMS_title"></string>
+    <string name="agreement_marketing_email_title">Przetwarzanie danych osobowych w celach marketingowych drogą mailową</string>
+    <string name="agreement_marketing_phone">Wyrażam zgodę na przetwarzanie moich danych osobowych, w celu prowadzenia marketingu bezpośredniego za pośrednictwem połączeń telefonicznych (Opcjonalnie)</string>
+    <string name="agreement_marketing_phone_title">Przetwarzanie danych osobowych w celach marketingowych drogą telefoniczną</string>
+    <string name="agreement_confirm">POTWIERDZAM</string>
+
+    <string name="scan_camera_permission">Proszę włącz uprawnienia dla aparatu</string>
+    <string name="scan_storage_permission">Proszę włącz uprawnienia dla pamięci</string>
+
+    <string name="documents_title">Dokumenty</string>
+    <string name="documents_first">Przód dowodu osobistego</string>
+    <string name="documents_second">Tył dowodu osobistego</string>
+    <string name="documents_third"> </string>
+    <string name="documents_new_photo">ZDJĘCIE</string>
+    <string name="documents_pick_photo_title">Proszę wybierz źródło</string>
+    <string name="documents_next">DALEJ, KROK 4 Z 5</string>
+    <string name="documents_back">Wróć do formularza</string>
+    <string name="documents_client_name">Imię i Nazwisko</string>
+    <string name="documents_client_pesel">PESEL</string>
+    <string name="documents_title_warning"> </string>
+
+    <!-- purchase -->
+    <string name="purchase_title">Nowy wniosek</string>
+    <string name="purchase_sum"> </string>
+    <string name="purchase_client">Klient</string>
+    <string name="purchase_phone">Numer telefonu</string>
+    <string name="purchase_next">Kontynuuj</string>
+    <string name="purchase_info" tools:ignore="TypographyDashes" formatted="false" ><![CDATA[Administratorem Twoich danych osobowych jest Revo Technologies sp. z o.o., ul. Grzybowska 2/29, 00-131 Warszawa.\nZapoznałem/am się i akceptuję <a href=\"https://mokka-pl-prod.fra1.digitaloceanspaces.com/Regulamin_Serwisu_Mokka_2021.pdf\">Regulamin Serwisu</a> oraz <a href=\"https://mokka-pl-prod.fra1.digitaloceanspaces.com/Polityka_Prywatności_Mokka_2021.pdf\">Politykę
+Prywatności</a> Mokka.]]></string>
+    <string name="purchase_help_title">Klauzula informacyjna</string>
+    <string name="purchase_self_registration">SEND THE REGISTRATION FORM\nTO THE CUSTOMER ON THE PHONE?</string>
+
+    <string name="calc_title">Kalkulator</string>
+    <string name="calc_limit">Limit Klienta</string>
+    <string name="calc_limit_rcl_not_accepted">Po zaakceptowaniu przez Ciebie Umowy o odnawialny limit kredytowy w następnym kroku, możemy Ci dziś udostępnić kwotę %s.</string>
+    <string name="calc_sum">Suma za zakupy</string>
+    <string name="calc_period">Okres spłat</string>
+    <string name="calc_input_sum">Proszę wprowadź kwotę zakupów i zatwierdź</string>
+    <string name="calc_next">DALEJ, KROK 3 Z 5</string>
+    <string name="calc_loan_period">%d mies.</string>
+    <string name="calc_loan_pay">%s zł / m</string>
+    <string name="calc_loan_total_of_payment">Całkowita kwota do zapłaty</string>
+    <string name="calc_loan_sum">Kwota zakupu</string>
+    <string name="calc_loan_overpayment">Koszt usługi miesięcznie</string>
+    <string name="calc_loan_payment_schedule">Harmonogram spłat</string>
+    <string name="calc_enable_sms_inform">Aktywuj Dodatkowe Powiadomienia %s / mies.</string>
+    <string name="calc_enable_sms_inform_info">Po zaakceptowaniu tej zgody, będziemy wysyłać Ci dodatkowe powiadomienia SMS, aby przypomnieć Ci o dokonywaniu terminowych płatności. Aktywacja usługi Dodatkowe Powiadomienia odbywa się na &lt;a href="http://kokao-backend.mokka.pl/legal_documents/downloads/informing">warunkach z Umowy o Odnawialny Limit Kredytowy&lt;/a></string>
+    <string name="calc_accident_insurance"> </string>
+
+    <string name="confirm_title">Informacje przedumowne dla kredytu konsumenckiego (SECCI)</string>
+    <string name="confirm_next">POTWIERDZAM</string>
+
+    <string name="contract_title">Umowa</string>
+    <string name="contract_hint">Zaakceptuj warunki umowy</string>
+    <string name="contract_agree">Zgadzam się z indywidualnymi warunkami umowy i warunkami umowy ramowej</string>
+    <string name="contract_agree_title">Warunki umowy</string>
+    <string name="contract_secci">Formularz informacyjny dotyczący pożyczki konsumenckiej</string>
+    <string name="contract_secci_title">Informacje przedumowne dla kredytu konsumenckiego (SECCI)</string>
+    <string name="contract_admin_info"></string>
+
+    <string name="contract_ru_title"> </string>
+    <string name="contract_ru_conditions">Kluczowe warunki umowy</string>
+`    <string name="contract_ru_sum">Całkowita kwota do zapłaty</string>
+    <string name="contract_ru_over">Koszt usługi miesięcznie</string>
+    <string name="contract_ru_pay_count">Liczba płatności</string>
+    <string name="contract_ru_pay_month">Miesięczna płatność</string>
+    <string name="contract_ru_conditions_all"> </string>
+    <string name="contract_ru_conditions_hint"> </string>
+    <string name="contract_ru_conditions_check"> </string>
+    <string name="contract_ru_offer_title"> </string>
+    <string name="contract_ru_insurance_title"> </string>
+    <string name="contract_ru_individual_conditions_title"> </string>
+
+    <string name="protection_program_title"> </string>
+
+    <string name="barcode_title">Kod kreskowy</string>
+    <string name="barcode_message">Zeskanuj kod kreskowy w systemie kasowym</string>
+    <string name="barcode_sum">Suma: %s</string>
+    <string name="barcode_value">No : %s</string>
+    <string name="barcode_next">ZAKOŃCZ, Krok 5 z 5</string>
+    <string name="barcode_result_success" />
+    <string name="barcode_input_hint" />
+
+    <string name="confirm_client_title">Weryfikacja Klienta</string>
+    <string name="confirm_client_hint">Wpisz kod SMS,\naby potwierdzić Twój numer telefonu</string>
+    <string name="confirm_client_confirmation_code">Kod weryfikacyjny</string>
+    <string name="confirm_new_client_hint">Wpisz kod SMS, aby zaakceptować\nzgody i kontynuować rejestrację</string>
+
+    <string name="self_register_hint">Wyślij formularz samodzielnej rejestracji do Klienta</string>
+    <string name="self_register_message">Aby wysłać formularz do samodzielnej rejestracji, wprowadź numer telefonu Klienta i kliknij przycisk Kontynuuj.</string>
+    <string name="self_register_success_title">Wiadomość została wysłana!</string>
+    <string name="self_register_success_message">Klient może samodzielnie zarejestrować się i sprawdzić swój dostępny limit.</string>
+    <string name="self_register_retry_client_title">Klient o podanym numerze telefonu istnieje w systemie</string>
+    <string name="self_register_retry_client_message">Wysłaliśmy kod weryfikacyjny na podany numer telefonu.</string>
+
+    <string name="confirm_read_loan_info_checkable">Akceptuję warunki Umowy o odnawialny limit kredytowy oraz Szczególne Warunki Wypłaty na Zakup Towaru</string>
+    <string name="confirm_read_loan_info">Zapoznałem/łam się z treścią Formularza informacyjnego dla Umowy o odnawialny limit kredytowy oraz z treścią Formularza informacyjnego dla Wypłaty na Zakup Towaru</string>
+    <string name="confirm_read_loan_info_rcl_accepted_checkable">Akceptuję Szczególne Warunki Wypłaty na Zakup Towaru</string>
+    <string name="confirm_read_loan_info_rcl_accepted">Zapoznałem/łam się z treścią Formularza informacyjnego dla Wypłaty na Zakup Towaru</string>
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted">Zapoznałem/łam się z treścią Formularza informacyjnego dla Umowy o odnawialny limit kredytowy oraz z treścią Formularza informacyjnego dla Wypłaty na Zakup Towaru</string>
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted_kind_rcl">Akceptuję warunki Umowy o odnawialny limit kredytowy, która zastąpi dotychczasową Ramową Umowę Pożyczki</string>
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted_kind_individual_agreement">Akceptuję Szczególne Warunki Wypłaty na Zakup Towaru</string>
+    <string name="loan_info_repeated_not_rcl_accepted_title">Ważne!</string>
+    <string name="loan_info_repeated_not_rcl_accepted_message"><![CDATA[
+    <p>
+    Dokonanie tego zakupu z Revo wymaga zaakceptowania <b>nowej Umowy o odnawialny limit kredytowy</b>.
+    Jeżeli nie masz aktualnie żadnej pożyczki w Revo, kolejne zamówienia i wypłaty będą dokonywane
+     zgodnie z nową Umową o odnawialny limit kredytowy. Jeśli posiadasz aktualnie pożyczki w Revo,
+     ich warunki nie ulegają zmianie i możesz je nadal spłacać tak jak dotychczas,
+     lecz będą one również podlegały nowej Umowie o odnawialny limit kredytowy, ponieważ
+     <b>po jej zaakceptowaniu przez Ciebie dotychczasowa Ramowa Umowa Pożyczki przestanie obowiązywać</b>.
+<br /><br />
+Z treścią nowej Umowy o odnawialny limit kredytowy możesz się zapoznać poniżej,
+w Profilu Klienta lub na stronie <a href="https://www.revoplus.pl/dokumenty">revoplus.pl/dokumenty</a>.
+</p>
+]]></string>
+
+    <!-- returns -->
+    <string name="search_title">Szukaj transakcji</string>
+    <string name="search_hint">Uzupełnij jedno z pól</string>
+    <string name="search_phone">Nr telefonu lub email Klienta</string>
+    <string name="search_passport">PESEL</string>
+    <string name="search_order">Nr umowy</string>
+    <string name="search_button">Szukaj Klienta</string>
+
+    <string name="search_item_phone">Telefon</string>
+    <string name="search_item_contract">Umowa</string>
+    <string name="search_item_barcode">Kod kreskowy</string>
+    <string name="search_item_date">Data</string>
+    <string name="search_item_sum">Kwota transakcji</string>
+    <string name="search_item_return">Dokonaj zwrotu</string>
+
+    <string name="detail_title">Szczegóły zwrotu</string>
+    <string name="detail_phone">Numer telefonu</string>
+    <string name="detail_total">Kwota transakcji</string>
+    <string name="detail_return_sum">Kwota zwrotu</string>
+    <string name="detail_return_full">Całkowity zwrot</string>
+    <string name="detail_amount">Kwota zwrotu (bez zniżki sklepu)</string>
+    <string name="detail_confirm">Potwierdzam, że dane wpisane powyżej są prawidłowe i zgadzam się na zwrot produktu</string>
+    <string name="detail_next">DALEJ, KROK 1 Z 2</string>
+    <string name="detail_remaining_sum">Pozostała kwota</string>
+    <string name="detail_return_sum_error">Kwota zwrotu nie może być większa niż \"Pozostała kwota\"</string>
+
+    <string name="barcode_return_title">Kod kreskowy</string>
+    <string name="barcode_return_message">Zeskanuj kod kreskowy w systemie kasowym</string>
+    <string name="barcode_return_sum">Kwota zakupów: %s\nKwota zwrotu: %s</string>
+    <string name="barcode_return_next">ZAKOŃCZ, Krok 2 z 2</string>
+    <string name="barcode_return_cancel"><u>Anuluj zwrot</u></string>
+
+    <string name="return_confirm_title">Potwierdzenie zwrotu</string>
+
+    <!-- select store -->
+    <string name="select_store_title">Wybór sklepu</string>
+    <string name="select_store_hint">wybierz sklep, w którym dziś pracujesz:</string>
+    <string name="select_store_not_you">NIE TWOJE KONTO?</string>
+    <string name="select_store_go_back">WYLOGUJ SIĘ</string>
+    <string name="select_store_confirm_logout">Wyloguj się?</string>
+
+    <string name="update_found">Znaleziono aktualizację.\nMusisz zaktualizować istniejącą wersję aplikacji.</string>
+    <string name="update_found_ok">Aktualizuj</string>
+    <string name="update_found_cancel">Nie</string>
+    <string name="update_not_download">Nie można pobrać pliku.</string>
+    <string name="update_download_complete">Ładowanie jest zakończone.</string>
+    <string name="update_install">Zainstaluj</string>
+
+    <!-- demo -->
+    <string name="demo">Tryb demostracyjny</string>
+    <string name="demo_alert">Przechodzisz do trybu demostracyjnego. W tym trybie możesz przetestować proces rejestracji nowego Klienta w Revo. Żadne dane wprowadzone w trybie demostracyjnym nie zostaną zapisane lub zweryfikowane. Wszystkie kody SMS to 1111. Jeżeli chcesz kontynuować używanie trybu demostracyjnego, naciśnij przycisk \"Rozumiem\", jeżeli chcesz powrócić do rzeczywistej aplikacji naciśnij przycisk \"Wróć\".</string>
+    <string name="demo_mode">Tryb demonstracyjny</string>
+
+    <!-- chat -->
+    <string name="chat_title" />
+    <string name="hint_chat_message" />
+    <string name="chat_greetings" />
+    <string name="chat_connection_error_title" />
+    <string name="chat_connection_error_message" />
+    <string name="chat_status_typying" />
+    <string name="chat_status_online" />
+    <string name="chat_status_offline" />
+    <string name="chat_operator_gone" />
+    <string name="bnpl_term_title" >%d dni</string>
+    <string name="bnpl_sum_with_discount" >%s zł</string>
+    <string name="option_pay_installments" >lub zapłać w %d ratach</string>
+
+</resources>

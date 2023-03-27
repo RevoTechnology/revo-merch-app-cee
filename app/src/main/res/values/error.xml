@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_title">Error occurred!</string>
+
+    <string name="err_network_is_not_available">Network is not available. Try later</string>
+    <string name="err_unknown">Unknown error</string>
+    <string name="err_server">Server error</string>
+    <string name="err_certificate">Certificate error</string>
+
+    <string name="error_login">Email or phone is not valid</string>
+    <string name="error_phone">Phone is not valid</string>
+    <string name="error_email">Email is not valid</string>
+    <string name="error_pin_code">Personal PIN is not valid</string>
+    <string name="error_pin_not_match">Entered PIN-codes do not match</string>
+    <string name="error_date">Date is not valid</string>
+    <string name="error_sum">Sum is not valid</string>
+    <string name="error_field_required">Field is required</string>
+    <string name="error_birth_day">Date of birth is not valid </string>
+    <string name="error_pesel">PESEL values is not valid</string>
+    <string name="error_id_number">ID (Passport) is not valid</string>
+    <string name="error_postal_code">Postal Code is not valid</string>
+    <string name="error_scan">Document not found</string>
+    <string name="error_client_data">Invalid client data</string>
+
+    <string name="error_sms_code">SMS-code is not valid</string>
+    <string name="error_login_or_password">Login or Password is not valid</string>
+
+    <string name="error_purchase_exceeds">The sum of purchase exceeds the available limit to %s.</string>
+    <string name="error_purchase_small">The sum of purchase is too small.</string>
+
+    <string name="error_large_data">The amount of data transferred exceeds the established limits</string>
+
+    <string name="error_do_support">An error has occurred.\nPlease contact support</string>
+    <string name="err_api_not_implemented">An error has occurred.\nPlease contact support</string>
+    <string name="error_not_authorized">Please authorize</string>
+    <string name="error_bulletin" />
+</resources>

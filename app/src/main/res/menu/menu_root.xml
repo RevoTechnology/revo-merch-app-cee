@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/group_checkable"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/item_dashboard"
+            android:title="@string/main_menu_dashboard"
+            android:icon="@drawable/ic_dashboard_active"
+            android:checked="true"/>
+
+        <item
+            android:id="@+id/item_make_purchase"
+            android:title="@string/main_menu_make_purchase"
+            android:icon="@drawable/ic_make_purchase"/>
+
+        <item
+            android:id="@+id/item_return_purchase"
+            android:title="@string/main_menu_return_purchase"
+            android:icon="@drawable/ic_return_purchase"/>
+
+    </group>
+
+    <group
+        android:id="@+id/group_bottom"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/item_sign_out"
+            android:title="@string/main_menu_sign_out"
+            android:icon="@drawable/ic_exit"/>
+
+    </group>
+
+</menu>

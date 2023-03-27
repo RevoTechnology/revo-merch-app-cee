@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_title">Нещо се обърка…</string>
+
+    <string name="err_network_is_not_available">Упс… Нещо се обърка. Моля, опитай отново след няколко минути</string>
+    <string name="err_unknown">Неизвестна грешка</string>
+    <string name="err_server">Грешка на сървъра</string>
+    <string name="err_certificate">Грешка в сертификата</string>
+
+    <string name="error_login">Неправилни данни за вход</string>
+    <string name="error_phone">Невалиден телефонен номер</string>
+    <string name="error_email">Неправилен имейл адрес</string>
+    <string name="error_pin_code">Неправилен PIN код</string>
+    <string name="error_pin_not_match">PIN кодовете не съвпадат</string>
+    <string name="error_date">Невалидна дата</string>
+    <string name="error_sum">Неправилна сума</string>
+    <string name="error_field_required">Полето е задължително за попълване</string>
+    <string name="error_birth_day">Невалидна дата</string>
+    <string name="error_pesel">Неправилен ЕГН</string>
+    <string name="error_id_number">Неправилен номер на лична карта</string>
+    <string name="error_postal_code">Неправилен пощенски код</string>
+    <string name="error_scan">Документът не е намерен</string>
+    <string name="error_client_data">Неправилни потребителски данни</string>
+
+    <string name="error_sms_code">Неправилен SMS код</string>
+    <string name="error_login_or_password">Неправилни данни за вход</string>
+
+    <string name="error_purchase_exceeds">Максималната сума, налична в този магазин, е %s</string>
+    <string name="error_purchase_small">Въведената сума е неправилна</string>
+
+    <string name="error_large_data">Количеството прехвърлени данни надвишава зададените лимити</string>
+
+    <string name="error_do_support">Възникна грешка.\n Моля, свържи се с екипа по поддръжка</string>
+    <string name="err_api_not_implemented">Възникна грешка.\n Моля, свържи се с екипа по поддръжка</string>
+    <string name="error_not_authorized">Моля, оторизирай се</string>
+
+</resources>

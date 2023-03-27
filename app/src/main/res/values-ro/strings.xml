@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- application resources -->
+    <string name="button_close">Închide</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Anulează</string>
+    <string name="button_help">Ajutor</string>
+    <string name="button_accept">Am înțeles</string>
+    <string name="button_back">Înapoi</string>
+    <string name="button_confirm">Confirm</string>
+    <string name="button_return">Înapoi</string>
+
+    <string name="phone_prefix">40</string>
+    <string name="phone_mask">+40 ___ ___ ___</string>
+    <string name="phone_empty">+40 </string>
+
+    <string name="confirm_exit_from_app">Închizi aplicația?</string>
+
+    <!-- login -->
+    <string name="sign_in_title">Conectează-te</string>
+    <string name="sign_in_info">Folosește adresa e-mail sau numărul de telefon ca login și codurile PIN</string>
+    <string name="sign_in_login">E-mail sau numărul de telefon (de ex. 666 777 888)</string>
+    <string name="sign_in_pin">Codul PIN</string>
+    <string name="sign_in_forgot_pin">AI UITAT CODUL PIN?</string>
+    <string name="sign_in_button">Conectează-te</string>
+
+    <string name="sign_in_login_mock">40799000111</string>
+    <string name="sign_in_pin_mock">1111</string>
+
+    <string name="forgot_title">Ai uitat codul PIN?</string>
+    <string name="forgot_hint">Introdu numărul de telefon sau e-mail</string>
+    <string name="forgot_info">Vom trimite un PIN temporar la numărul de telefon sau e-mail, care îți va permite să setezi noul PIN.</string>
+    <string name="forgot_button">TRIMITE CODUL PIN TEMPORAR</string>
+
+    <string name="verify_title">Ai uitat codul PIN?</string>
+    <string name="verify_hint">Cod PIN temporar</string>
+    <string name="verify_not_code">NU AI PRIMIT CODUL?</string>
+    <string name="verify_send_again">TRIMITE DIN NOU</string>
+    <string name="verify_time_info">Trimite din nou peste:</string>
+
+    <string name="sign_up_title">Setează un nou cod PIN</string>
+    <string name="sign_up_pin">Noul cod PIN</string>
+    <string name="sign_up_confirm">Confirmă noul tău cod PIN</string>
+    <string name="sign_up_simple">\nParola ta este prea simplă\n</string>
+    <string name="sign_up_simple_change">Modifică</string>
+    <string name="sign_up_simple_next">Mai departe</string>
+
+    <string name="lock_title">Codul PIN</string>
+    <string name="lock_user_hint">Contul tău a fost inactiv timp de 15 minute.\nIntrodu codul PIN, pentru a debloca aplicaţia</string>
+    <string name="lock_pin">Introdu codul tău PIN</string>
+    <string name="lock_not_you">ACESTA NU ESTE CONTUL TĂU?</string>
+    <string name="lock_login">DECONECTEAZĂ-TE</string>
+
+    <!-- main -->
+    <string name="main_menu_dashboard">Desktop</string>
+    <string name="main_menu_make_purchase">O nouă tranzacție</string>
+    <string name="main_menu_return_purchase">Returnare cumpărătură</string>
+    <string name="main_menu_sign_out">Deconectează-te</string>
+
+    <string name="dashboard_title">Desktop</string>
+    <string name="dashboard_make_purchase">O nouă tranzacție</string>
+    <string name="dashboard_return_purchase">Retur Cumpărături</string>
+    <string name="dashboard_call_online">Apelează</string>
+    <string name="dashboard_chat">Întreabă pe chat</string>
+    <string name="dashboard_question">Ai nevoie de ajutor?</string>
+    <string name="dashboard_loans">Tranzacţii</string>
+    <string name="dashboard_amount">Suma</string>
+    <string name="dashboard_period">Raport de vânzări:</string>
+    <string name="dashboard_select_period">Perioada de plată</string>
+    <string name="dashboard_confirm_return">Sigur doreşti să întrerupi procesul aplicaţiei?</string>
+    <string name="dashboard_chat_link">https://mokka.ro/asistenta/</string>
+    <string name="dashboard_self_registration">Trimite formularul de înregistrare către client prin telefon</string>
+
+    <string name="declined_title">Cerere respinsă</string>
+    <string name="declined_caption">Cerere respinsă</string>
+    <string name="declined_hint">Mulţumim pentru expedierea aplicației. Din păcate astăzi nu-l putem ajuta pe Client să-și plătească cumpărăturile.</string>
+    <string name="declined_to_dashboard">TRECI LA DESKTOP</string>
+    <string name="declined_sincerely">Cu respect, Revo</string>
+
+    <string name="help_title">Ajutor</string>
+
+    <!-- client -->
+    <string name="profile_title">Profilul Clientului</string>
+    <string name="profile_first_name">Prenume</string>
+    <string name="profile_middle_name">Celălalt prenume</string>
+    <string name="profile_last_name">Nume</string>
+    <string name="profile_date_of_birth">Data de naştere</string>
+    <string name="profile_id">Nr. și seria cărții de identitate</string>
+    <string name="profile_next">MAI DEPARTE, PASUL 2 DIN 5</string>
+    <string name="profile_expiry_date">Termenul de valabilitate al cărţii de identitate</string>
+    <string name="profile_pesel">CNP</string>
+    <string name="profile_bulletin" >Serie si numar buletin</string>
+
+    <string name="profile_email">E-mail</string>
+    <string name="profile_street">Strada</string>
+    <string name="profile_house">Nr. imobilului</string>
+    <string name="profile_flat">Nr. apartamentului</string>
+    <string name="profile_postal_code">Cod poştal</string>
+    <string name="profile_city">Localitate</string>
+    <string name="profile_agree_asp"> </string>
+    <string name="profile_agree_personal_date"> </string>
+    <string name="profile_agree_asp_title"> </string>
+    <string name="profile_agree_personal_date_title"> </string>
+
+    <string name="profile_check_title">Verifică următoarele date cu cartea de identitate a Cumpărătorului. Dacă datele sunt corecte, apasă \"Confirm\", dacă nu, revino la formular și corectează datele.</string>
+    <string name="profile_check_client_name">Prenume și Nume:</string>
+    <string name="profile_check_client_pesel">CNP:</string>
+    <string name="profile_check_client_number">Numărul cărții de identitate:</string>
+
+    <string name="agreement_title">Acordurile Clientului</string>
+    <string name="agreement_client_name">Prenume și nume</string>
+    <string name="agreement_check_all">Bifez toate consimțămintele de mai jos</string>
+    <string name="agreement_regulations">Am citit și accept conținutul Termenilor și Condițiilor aplicației Rev</string>
+    <string name="agreement_regulations_title">Termenii și Condițiile aplicației mobile Revo Partner</string>
+    <string name="agreement_personal_data">Acord de consultare și prelucrare a informațiilor din bazele de date ale Ministerului Finanțelor Publice, Agenția Națională de Adminstrare Fiscală (ANAF)</string>
+    <string name="agreement_personal_data_title">Prelucrarea datelor cu caracter personal</string>
+    <string name="agreement_credit_bureaus">Am citit și sunt informat cu privire la transmiterea, prelucrarea și consultarea datelor mele cu caracter personal la SC Biroul deCredit SA.</string>
+    <string name="agreement_credit_bureaus_title">Consimțământ pentru verificare la birourile de credit</string>
+    <string name="agreement_marketing_email">Sunt de acord cu prelucrarea datelor mele cu caracter personal în scopul realizării marketingului prin intermediul poștei electronice și SMS cu informații noi și notificări de alertă</string>
+    <string name="agreement_marketing_email_title">Prelucrarea datelor cu caracter personal în scopuri de marketing prin e-mail</string>
+    <string name="agreement_administration"></string>
+    <string name="agreement_SMS"></string>
+    <string name="agreement_SMS_title"></string>
+    <string name="agreement_marketing_phone">Sunt de acord cu prelucrarea datelor mele personale în scopul marketingului direct prin contact telefonic (Opțional)</string>
+    <string name="agreement_marketing_phone_title">Prelucrarea datelor cu caracter personal în scopuri de marketing prin telefon</string>
+    <string name="agreement_confirm">CONFIRM</string>
+
+    <string name="scan_camera_permission">Te rugăm, să activezi permisiunea pentru cameră</string>
+    <string name="scan_storage_permission">Te rugăm, să activezi permisiunea pentru memorie</string>
+
+    <string name="documents_title">Documente</string>
+    <string name="documents_first">Foto carte de identitate</string>
+    <string name="documents_second"> </string>
+    <string name="documents_third"> </string>
+    <string name="documents_new_photo">FOTOGRAFIE</string>
+    <string name="documents_pick_photo_title">Te rugăm să selectezi sursa</string>
+    <string name="documents_next">MAI DEPARTE, PASUL 4 DIN 5</string>
+    <string name="documents_back">Revenire la formular</string>
+    <string name="documents_client_name">Prenume și Nume</string>
+    <string name="documents_client_pesel">CNP</string>
+    <string name="documents_title_warning"> </string>
+
+    <!-- purchase -->
+    <string name="purchase_title">Cerere nouă</string>
+    <string name="purchase_sum"> </string>
+    <string name="purchase_client">Client</string>
+    <string name="purchase_phone">Număr de telefon</string>
+    <string name="purchase_next">MAI DEPARTE, PASUL 1 DIN 5</string>
+    <string name="purchase_info">Continuând procesul de înregistrare sunt de acord cu politica de confidențialitate a serviciului și cu descărcarea și prelucrarea datelor mele personale de către Revo Technologies IFN SĂ, Calea Floreasca 169, Floreasca Cube, Corp B, Sector 1, București, CUI 41699896. <a href="https://mokka.ro/docs/Privacy_policy.pdf">Citiți mai multe</a></string>
+    <string name="purchase_help_title">Clauză de informare</string>
+    <string name="purchase_self_registration">SEND THE REGISTRATION FORM\nTO THE CUSTOMER ON THE PHONE?</string>
+
+    <string name="calc_title">Calculator</string>
+    <string name="calc_limit">Limita Clientului</string>
+    <string name="calc_limit_rcl_not_accepted" />
+    <string name="calc_sum">Suma pentru cumpărături</string>
+    <string name="calc_period">Perioada de plată</string>
+    <string name="calc_input_sum">Te rugăm să introduci suma pentru cumpărături și să aprobi</string>
+    <string name="calc_next">MAI DEPARTE, PASUL 3 DIN 5</string>
+    <string name="calc_loan_period">%d luni.</string>
+    <string name="calc_loan_pay">%s RON / lună</string>
+    <string name="calc_loan_total_of_payment">De plată în total</string>
+    <string name="calc_loan_sum">Suma cumpărăturilor</string>
+    <string name="calc_loan_overpayment">Suplimentar de plată</string>
+    <string name="calc_loan_payment_schedule">Graficul de rambursare</string>
+    <string name="calc_enable_sms_inform">Activează notificări suplimentare %s / lună</string>
+    <string name="calc_enable_sms_inform_info">După acordarea consimțământului, îți vom trimite notificări suplimentare prin SMS pentru a îți reaminti să efectuezi plățile în timp util. Activarea serviciului de Notificări Suplimentare este în conformitate cu termenii &lt;a href="http://kokao-backend.mokka.ro/legal_documents/downloads/informing">Contractului de Credit Revolving cu Limită&lt;/a></string>
+    <string name="calc_accident_insurance"> </string>
+
+    <string name="confirm_title">Informații precontractuale pentru creditul de consum (SECCI)</string>
+    <string name="confirm_next">CONFIRM</string>
+
+    <string name="contract_title">Contract</string>
+    <string name="contract_hint">Acceptă condiţiile contractului</string>
+    <string name="contract_agree">Sunt de acord cu termenii și condiţiile individuale ale contractului și cu condiţiile contractului-cadru</string>
+    <string name="contract_agree_title">Condiţiile contractului</string>
+    <string name="contract_secci">Formularul de informare se referă la împrumutul pentru consumatori</string>
+    <string name="contract_secci_title">Informații precontractuale pentru creditul de consum (SECCI)</string>
+
+    <string name="contract_ru_title"> </string>
+    <string name="contract_ru_conditions">Condițiile contractului</string>
+    <string name="contract_ru_sum">Total de plată</string>
+    <string name="contract_ru_over">Suplimentar de plată</string>
+    <string name="contract_ru_pay_count">Numărul de plăți</string>
+    <string name="contract_ru_pay_month">Plata lunară</string>
+    <string name="contract_ru_conditions_all"> </string>
+    <string name="contract_ru_conditions_hint"> </string>
+    <string name="contract_ru_conditions_check"> </string>
+    <string name="contract_ru_offer_title"> </string>
+    <string name="contract_ru_individual_conditions_title"> </string>
+    <string name="contract_admin_info"></string>
+
+    <string name="barcode_title">Cod de bare</string>
+    <string name="barcode_message">Scanează codul de bare pentru finalizare</string>
+    <string name="barcode_sum">Suma: %s</string>
+    <string name="barcode_value">Nr : %s</string>
+    <string name="barcode_next">FINALIZEAZĂ, Pasul 5 din 5</string>
+
+    <string name="confirm_client_title">Verificarea Clientului</string>
+    <string name="confirm_client_hint">Introdu codul SMS pentru a confirma numărul tău de telefon</string>
+    <string name="confirm_client_confirmation_code">Codul de verificare</string>
+    <string name="confirm_new_client_hint">Introdu codul SMS pentru a accepta\nacordurile și a continua înregistrarea</string>
+
+    <string name="self_register_hint">Expediază formularul de înregistrare independentă Clientului</string>
+    <string name="self_register_message">Pentru a expedia formularul de înregistrare independentă, introdu numărul de telefon al Clientului și apasă butonul Continuă.</string>
+    <string name="self_register_success_title">Mesajul a fost expediat!</string>
+    <string name="self_register_success_message">Clientul se poate înregistra independent și verifica limita sa disponibilă.</string>
+    <string name="self_register_retry_client_title">Clientul cu acest număr de telefon există în sistem</string>
+    <string name="self_register_retry_client_message">Am trimis codul de verificare la numărul de telefon furnizat.</string>
+
+    <string name="confirm_read_loan_info_checkable" />
+    <string name="confirm_read_loan_info">Sunt de acord cu termenii și condițiile acordului Mokka</string>
+    <string name="confirm_read_loan_info_rcl_accepted_checkable" />
+    <string name="confirm_read_loan_info_rcl_accepted" />
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted" />
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted_kind_rcl" />
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted_kind_individual_agreement" />
+    <string name="loan_info_repeated_not_rcl_accepted_title" />
+    <string name="loan_info_repeated_not_rcl_accepted_message" />
+
+
+    <!-- returns -->
+    <string name="search_title">Caută tranzacția</string>
+    <string name="search_hint">Completează unul dintre câmpuri</string>
+    <string name="search_phone">Nr. de telefon sau adresa e-mail a Clientului</string>
+    <string name="search_passport">CNP</string>
+    <string name="search_order">Nr. contractului</string>
+    <string name="search_button">Caută Clientul</string>
+
+    <string name="search_item_phone">Telefon</string>
+    <string name="search_item_contract">Contract</string>
+    <string name="search_item_barcode">Cod de bare</string>
+    <string name="search_item_date">Data</string>
+    <string name="search_item_sum">Suma tranzacţiei</string>
+    <string name="search_item_return">Fă o returnare</string>
+
+    <string name="detail_title">Detaliile returnării</string>
+    <string name="detail_phone">Număr de telefon</string>
+    <string name="detail_total">Suma tranzacţiei</string>
+    <string name="detail_return_sum">Suma de returnare</string>
+    <string name="detail_return_full">Returnare totală</string>
+    <string name="detail_amount">Suma de returnare (fără reducerea magazinului)</string>
+    <string name="detail_confirm">Confirm că datele introduse mai sus sunt corecte și sunt de acord cu returnarea produsului</string>
+    <string name="detail_next">MAI DEPARTE, PASUL 1 DIN 2</string>
+    <string name="detail_remaining_sum">Suma rămasă</string>
+    <string name="detail_return_sum_error">Suma de returnare nu poate fi mai mare decât \"Suma rămasă\"</string>
+
+    <string name="barcode_return_title">Cod de bare</string>
+    <string name="barcode_return_message">Scanează codul de bare din sistemul de marcat</string>
+    <string name="barcode_return_sum">Suma cumpărăturilor: %s\n Sumă retur: %s</string>
+    <string name="barcode_return_next">FINALIZEAZĂ, Pasul 2 din 2</string>
+    <string name="barcode_return_cancel"><u>Anulați returul</u></string>
+
+    <string name="return_confirm_title">Confirmarea returnării</string>
+
+    <!-- select store -->
+    <string name="select_store_title">Alegerea magazinului</string>
+    <string name="select_store_hint">Alege magazinul în care lucrezi azi:</string>
+    <string name="select_store_not_you">ACESTA NU ESTE CONTUL TĂU?</string>
+    <string name="select_store_go_back">DECONECTEAZĂ-TE</string>
+    <string name="select_store_confirm_logout">Te deconectezi?</string>
+
+    <string name="update_found">Au fost găsite actualizări.\nTrebuie să actualizezi versiunea curentă a aplicaţiei.</string>
+    <string name="update_found_ok">Actualizează</string>
+    <string name="update_found_cancel">Nu</string>
+    <string name="update_not_download">Fișierul nu noapte fi descărcat.</string>
+    <string name="update_download_complete">Încărcarea a fost finalizată.</string>
+    <string name="update_install">Instalează</string>
+
+    <!-- demo -->
+    <string name="demo">Modul demo</string>
+    <string name="demo_alert">Treci la modul demo. În acest mod poți testa procesul de înregistrare a unui Client nou în Revo. Orice date introduse în modul demo nu vor fi salvate sau verificate. Toate codurile SMS sunt 1111.  Dacă dorești să continui folosirea modului demo, apasă butonul \"Am înțeles\", dacă dorești să revii la aplicația efectivă, apasă butonul \"Înapoi\".</string>
+    <string name="demo_mode">Modul demo</string>
+    <string name="bnpl_term_title" >%d zile</string>
+    <string name="bnpl_sum_with_discount" >%s RON</string>
+    <string name="option_pay_installments" >Sau plata în %d rate</string>
+
+</resources>

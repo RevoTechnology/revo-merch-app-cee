@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/agreementNextBtn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/agreementAll"
+                style="@style/AgreementItem">
+
+                <CheckBox
+                    android:id="@+id/agreementAllCheckBox"
+                    style="@style/AgreementCheck"
+                    android:text="@string/agreement_check_all"
+                    android:theme="@style/CheckBoxTheme" />
+
+            </LinearLayout>
+
+            <View style="@style/AgreementDivider" />
+
+
+            <LinearLayout style="@style/AgreementItem">
+
+                <CheckBox
+                    android:id="@+id/agreementCreditBureausCheckBox"
+                    style="@style/AgreementCheck"
+                    android:text="@string/agreement_credit_bureaus"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:theme="@style/CheckBoxTheme" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/agreementCreditBureausImageView"
+                    style="@style/AgreementArrow" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/dividerView"
+                style="@style/AgreementDivider" />
+
+            <LinearLayout style="@style/AgreementItem">
+
+                <CheckBox
+                    android:id="@+id/agreementMarketingEmailCheckBox"
+                    style="@style/AgreementCheck"
+                    android:text="@string/agreement_marketing_email"
+                    android:theme="@style/CheckBoxTheme" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/agreementMarketingEmailImageView"
+                    style="@style/AgreementArrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bgCheckboxLayout"
+                style="@style/AgreementItem"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/agreementPersonalDataCheckBox"
+                    style="@style/AgreementCheck"
+                    android:text="@string/agreement_SMS"
+                    android:theme="@style/CheckBoxTheme" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/agreementPersonalDataImageView"
+                    style="@style/AgreementArrow" />
+
+            </LinearLayout>
+
+            <View style="@style/AgreementDivider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16dp"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:text="@string/agreement_administration">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/agreementNextBtn"
+        style="@style/BottomButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.5"
+        android:text="@string/agreement_confirm" />
+
+</RelativeLayout>
+
+

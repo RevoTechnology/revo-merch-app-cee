@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "45089476972",
+    "firebase_url": "https://merchappnextgen.firebaseio.com",
+    "project_id": "merchappnextgen",
+    "storage_bucket": "merchappnextgen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45089476972:android:2a24f04336b32ba0",
+        "android_client_info": {
+          "package_name": "pl.revo.merchant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45089476972-8la9mtq1g4dm55khrkl6bms7rpcjedev.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pl.revo.merchant",
+            "certificate_hash": "cda29c353d530e8be93d7697af3940a8c5a2a617"
+          }
+        },
+        {
+          "client_id": "45089476972-n12mdgbc6toln7kn3bgb62jnp2gpg1nr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIxPGbok_GD96vnzciVkEl9TutQKK5NSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45089476972-n12mdgbc6toln7kn3bgb62jnp2gpg1nr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45089476972:android:7e3736fa81e8e7e334e349",
+        "android_client_info": {
+          "package_name": "pl.revo.merchant.ee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45089476972-n12mdgbc6toln7kn3bgb62jnp2gpg1nr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIxPGbok_GD96vnzciVkEl9TutQKK5NSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45089476972-n12mdgbc6toln7kn3bgb62jnp2gpg1nr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

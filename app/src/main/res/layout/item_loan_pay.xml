@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <TextView
+            android:id="@+id/payDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="March, 9"/>
+
+        <TextView
+            android:id="@+id/paySum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textColor="@color/steel"
+            android:textSize="16sp"
+            tools:text="80,00 zł"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/payDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/steel"
+        android:alpha="0.3"/>
+
+</LinearLayout>

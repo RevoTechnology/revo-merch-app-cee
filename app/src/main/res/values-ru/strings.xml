@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_close">Закрыть</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Отмена</string>
+    <string name="button_help">Помощь</string>
+    <string name="button_accept">Принимаю</string>
+    <string name="button_back">Назад</string>
+    <string name="button_confirm">Подтверждаю</string>
+    <string name="button_return">Вернуться</string>
+
+    <string name="phone_prefix">7</string>
+    <string name="phone_mask">+7 (___) ___ __ __</string>
+    <string name="phone_empty">+7 (</string>
+
+    <string name="confirm_exit_from_app">Выйти из приложения?</string>
+
+    <!-- login -->
+    <string name="sign_in_title">Войти</string>
+    <string name="sign_in_info">Войти по номеру телефона</string>
+    <string name="sign_in_login">Номер телефона</string>
+    <string name="sign_in_pin">Пин-код</string>
+    <string name="sign_in_forgot_pin">Забыли пин-код?</string>
+    <string name="sign_in_button">Войти</string>
+
+    <string name="sign_in_login_mock">78884112555</string>
+    <string name="sign_in_pin_mock">1111</string>
+
+    <string name="forgot_title">Забыли пин?</string>
+    <string name="forgot_hint">Номер телефона</string>
+    <string name="forgot_info">Введите номер телефона. На указанный номер вы получите смс с кодом подтверждения. После введения подтверждающего смс-кода вы сможете установить себе новый пин.</string>
+    <string name="forgot_button">ОТПРАВИТЬ КОД</string>
+
+    <string name="verify_title">Забыли пин?</string>
+    <string name="verify_hint">Код подтверждения</string>
+    <string name="verify_not_code">Код не пришел?</string>
+    <string name="verify_send_again">отправить снова</string>
+    <string name="verify_time_info">Клиент не получил код? Вы можете запросить код повторно через:</string>
+
+    <string name="sign_up_title">Установите новый пин</string>
+    <string name="sign_up_pin">Ваш новый пин</string>
+    <string name="sign_up_confirm">Подтвердите пин</string>
+    <string name="sign_up_simple">\nВаш пароль слишком простой\n</string>
+    <string name="sign_up_simple_change">Сменить</string>
+    <string name="sign_up_simple_next">Продолжить</string>
+
+    <string name="lock_title">Введите пин</string>
+    <string name="lock_user_hint">Вы не пользовались приложением больше 15 минут.\nВведите ваш пин-код для разблокировки.</string>
+    <string name="lock_pin">Введите пин-код</string>
+    <string name="lock_not_you">Не ваше имя?</string>
+    <string name="lock_login">Войти</string>
+
+    <!-- main -->
+    <string name="main_menu_dashboard">Главный экран</string>
+    <string name="main_menu_make_purchase">Совершить покупку</string>
+    <string name="main_menu_return_purchase">Возврат покупки</string>
+    <string name="main_menu_sign_out">Выйти</string>
+
+    <string name="dashboard_title">Главный экран</string>
+    <string name="dashboard_make_purchase">Оформление\nклиента / заказа</string>
+    <string name="dashboard_return_purchase">Возврат\nзаказа</string>
+    <string name="dashboard_call_online">Помощь</string>
+    <string name="dashboard_chat">Помощь</string>
+    <string name="dashboard_question">Возникли вопросы?</string>
+    <string name="dashboard_loans">Количество</string>
+    <string name="dashboard_amount">Руб.</string>
+    <string name="dashboard_period">Заказы в этом месяце</string>
+    <string name="dashboard_select_period">select period</string><!-- In the Russian version is not -->
+    <string name="dashboard_confirm_return">Выйти на главный экран?</string>
+    <string name="dashboard_chat_link">https://partner.revo.ru/support</string>
+    <string name="dashboard_support_call" translatable="false">22 245-05-45</string>
+    <string name="dashboard_self_registration">ОТПРАВИТЬ ФОРМУ\nРЕГИСТРАЦИИ КЛИЕНТУ</string>
+
+    <string name="declined_title">Отказ</string>
+    <string name="declined_caption">Отказано в оформлении</string>
+    <string name="declined_hint">Спасибо за обращение в Рево. К сожалению, по результатам проверки по клиенту вынесено отрицательное решение.</string>
+    <string name="declined_to_dashboard">На главный экран</string>
+    <string name="declined_sincerely">С уважением, Рево</string>
+
+    <string name="help_title">Поддержка</string>
+
+    <!-- client -->
+    <string name="profile_title">Введите данные</string>
+    <string name="profile_first_name">Имя</string>
+    <string name="profile_middle_name">Отчество</string>
+    <string name="profile_last_name">Фамилия</string>
+    <string name="profile_date_of_birth">Дата рождения</string>
+    <string name="profile_id">Серия и номер паспорта</string>
+    <string name="profile_next">ПРОДОЛЖИТЬ, Шаг 2 из 5</string>
+    <string name="profile_expiry_date"> </string>
+    <string name="profile_pesel"> </string>
+    <string name="profile_bulletin" ></string>
+
+    <string name="profile_email"> </string>
+    <string name="profile_street"> </string>
+    <string name="profile_house"> </string>
+    <string name="profile_flat"> </string>
+    <string name="profile_postal_code"> </string>
+    <string name="profile_city"> </string>
+    <string name="profile_agree_asp">1. Принимаю все условия Соглашения об использовании Аналога собственноручной подписи.</string>
+    <string name="profile_agree_personal_date">2. Даю согласие МФК “Рево Технологии” (ООО) на обработку моих персональных данных.</string>
+    <string name="profile_agree_asp_title">Соглашение об использовании Аналога собственноручной подписи.</string>
+    <string name="profile_agree_personal_date_title">Cогласие на обработку ПДн.</string>
+
+    <string name="profile_check_title">Проверьте введенные паспортные данные.</string>
+    <string name="profile_check_client_name">Name and Surname:</string>
+    <string name="profile_check_client_pesel">PESEL:</string>
+    <string name="profile_check_client_number">Последние 4 цифры паспорта:</string>
+
+    <string name="agreement_title">Договор и согласие</string>
+    <string name="agreement_client_name">Имя клиента</string>
+    <string name="agreement_check_all">I mark all the following consents</string>
+    <string name="agreement_regulations">I have read and accept the Revo Partner Regulations</string>
+    <string name="agreement_regulations_title">Regulations of the Revo Partner mobile application</string>
+    <string name="agreement_personal_data">I consent to the collection and processing of my personal data by taking a photo of a personal ID</string>
+    <string name="agreement_personal_data_title">Processing personal data</string>
+    <string name="agreement_credit_bureaus">I give authorizations and consents regarding verification at the Credit Information Bureau, business information offices and through the Loan Information Exchange Platform and for sharing my personal data in order to assess creditworthiness</string>
+    <string name="agreement_credit_bureaus_title">Credit bureaus processing</string>
+    <string name="agreement_marketing_email">I consent to the processing of my personal data in order to conduct direct marketing via e-mail (Optional)</string>
+    <string name="agreement_marketing_email_title">Processing personal data for email marketing</string>
+    <string name="agreement_administration"></string>
+    <string name="agreement_marketing_phone">I agree to the processing of my personal data in order to conduct direct marketing via telephone connections (Optional)</string>
+    <string name="agreement_marketing_phone_title">Processing personal data for telemarketing</string>
+    <string name="agreement_confirm">Confirm</string>
+
+    <string name="scan_camera_permission">Please enable Camera permission</string>
+    <string name="scan_storage_permission">Please enable Storage permission</string>
+
+    <string name="documents_title">Паспорт клиента</string>
+    <string name="documents_first">Основной разворот</string>
+    <string name="documents_second">Клиент с паспортом</string>
+    <string name="documents_third">Регистрация</string>
+    <string name="documents_new_photo"> </string>
+    <string name="documents_pick_photo_title">Please pick the source</string>
+    <string name="documents_next">ПРОДОЛЖИТЬ, Шаг 4 из 5</string>
+    <string name="documents_back"> </string>
+    <string name="documents_client_name">ФИО</string>
+    <string name="documents_client_pesel"> </string>
+    <string name="documents_title_warning">Пожалуйста, сделайте 3 фото в соответствии с инструкцией. Убедитесь в том, что паспорт действительно принадлежит покупателю, не обладает признаками подделки и находится в хорошем состоянии. В случае, если запрашивается меньшее количество фото, сделайте только те фото, которые запрашиваются на экране приложения .</string>
+
+    <!-- purchase -->
+    <string name="purchase_title">Заявка</string>
+    <string name="purchase_sum"> </string>
+    <string name="purchase_client">Провести регистрацию клиента</string>
+    <string name="purchase_phone">Мобильный телефон</string>
+    <string name="purchase_next">ПРОДОЛЖИТЬ, Шаг 1 из 5</string>
+    <string name="purchase_info"> </string>
+    <string name="purchase_help_title"> </string>
+    <string name="purchase_self_registration">ОТПРАВИТЬ ФОРМУ РЕГИСТРАЦИИ\nКЛИЕНТУ НА ТЕЛЕФОН?</string>
+
+    <string name="calc_title">Покупка</string>
+    <string name="calc_limit">Доступная сумма</string>
+    <string name="calc_limit_rcl_not_accepted" />
+    <string name="calc_sum">Ввести сумму покупки</string>
+    <string name="calc_period">Выберите график платежей</string>
+    <string name="calc_input_sum">Введите сумму покупки и нажмите кнопку</string>
+    <string name="calc_next">ПРОДОЛЖИТЬ, Шаг 3 из 5</string>
+    <string name="calc_loan_period">%d мес.</string>
+    <string name="calc_loan_pay">%s руб./мес.</string>
+    <string name="calc_loan_total_of_payment">Сумма к оплате частями</string>
+    <string name="calc_loan_sum"> </string>
+    <string name="calc_loan_overpayment">Переплата</string>
+    <string name="calc_loan_payment_schedule">График платежей</string>
+    <string name="calc_enable_sms_inform">%s</string>
+    <string name="calc_enable_sms_inform_info">Po zaakceptowaniu tej zgody, będziemy wysyłać Ci dodatkowe powiadomienia SMS, aby przypomnieć Ci o dokonywaniu terminowych płatności. Aktywacja usługi Dodatkowe Powiadomienia odbywa się na &lt;a href="http://kokao-backend.mokka.pl/legal_documents/downloads/informing">warunkach z Umowy o Odnawialny Limit Kredytowy&lt;/a></string>
+    <string name="calc_accident_insurance">Подключить защиту от несчастных случаев</string>
+
+
+    <string name="confirm_title"> </string>
+    <string name="confirm_next"> </string>
+
+    <string name="contract_title"> </string>
+    <string name="contract_hint"> </string>
+    <string name="contract_agree"> </string>
+    <string name="contract_agree_title"> </string>
+    <string name="contract_secci"> </string>
+    <string name="contract_secci_title"> </string>
+
+    <string name="contract_ru_title">Заявление и согласие</string>
+    <string name="contract_ru_conditions">Основные условия</string>
+    <string name="contract_ru_sum">Сумма к оплате частями</string>
+    <string name="contract_ru_over">Переплата</string>
+    <string name="contract_ru_pay_count">Количество платежей</string>
+    <string name="contract_ru_pay_month">Ежемесячный платеж</string>
+    <string name="contract_ru_conditions_all">Общие и индивидуальные условия Договора</string>
+    <string name="contract_ru_conditions_hint">Вводя код, вы подписываете Договор потребительского займа с лимитом кредитования и Согласие на взаимодействие с третьими лицами, направленное на возврат просроченной задолженности, простой электронной подписью.</string>
+    <string name="contract_ru_conditions_check">Подтверждаю свое согласие с Общими и индивидуальными условиями Договора потребительского займа и другими условиями обслуживания</string>
+    <string name="contract_ru_offer_title">Полный текст договора и согласия</string>
+    <string name="contract_ru_individual_conditions_title">Индивидуальные условия</string>
+    <string name="contract_ru_insurance_title">Полные условия программы защиты</string>
+    <string name="contract_admin_info"></string>
+    <string name="agreement_SMS"></string>
+    <string name="agreement_SMS_title"></string>
+
+    <string name="protection_program_title">Программа зашиты</string>
+
+    <string name="barcode_title">Завершение оформления</string>
+    <string name="barcode_message">Отсканируйте штрих-код на кассе для завершения оформления</string>
+    <string name="barcode_sum">Сумма покупки: %s</string>
+    <string name="barcode_value">No : %s</string>
+    <string name="barcode_next">ЗАВЕРШИТЬ, Шаг 5 из 5</string>
+    <string name="barcode_result_success">Успешно\n%s</string>
+    <string name="barcode_input_hint">Поле ввода</string>
+
+    <string name="confirm_client_title">Подтверждение</string>
+    <string name="confirm_client_hint">Введите смс или push-код для подтверждения и продолжения оформления</string>
+    <string name="confirm_client_confirmation_code">Код подтверждения</string>
+    <string name="confirm_new_client_hint">Введите смс или push-код для подтверждения и продолжения оформления</string>
+
+    <string name="self_register_hint">Отправить форму регистрации клиенту</string>
+    <string name="self_register_message">Для отправки формы самостоятельной регистрации и проверки доступной суммы введите номер телефона клиента и нажмите продолжить.</string>
+    <string name="self_register_success_title">Сообщение успешно отправлено!</string>
+    <string name="self_register_success_message">Клиент может пройти регистрацию и проверить доступную сумму самостоятельно.</string>
+    <string name="self_register_retry_client_title">Пользователь уже зарегистрирован</string>
+    <string name="self_register_retry_client_message">Клиенту отправлен код подтверждения для авторизации.</string>
+
+    <string name="confirm_read_loan_info_checkable" />
+    <string name="confirm_read_loan_info" />
+    <string name="confirm_read_loan_info_rcl_accepted_checkable" />
+    <string name="confirm_read_loan_info_rcl_accepted" />
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted" />
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted_kind_rcl" />
+    <string name="confirm_read_loan_info_repeated_not_rcl_accepted_kind_individual_agreement" />
+    <string name="loan_info_repeated_not_rcl_accepted_title" />
+    <string name="loan_info_repeated_not_rcl_accepted_message" />
+
+
+    <!-- returns -->
+    <string name="search_title">Найти заказ</string>
+    <string name="search_hint">Заполните одно из полей</string>
+    <string name="search_phone">Номер телефона клиента</string>
+    <string name="search_passport">Серия и номер паспорта</string>
+    <string name="search_order">Номер заказа</string>
+    <string name="search_button">ИСКАТЬ</string>
+
+    <string name="search_item_phone">Телефон</string>
+    <string name="search_item_contract">Номер заказа</string>
+    <string name="search_item_barcode">Штрих-код</string>
+    <string name="search_item_date">Дата</string>
+    <string name="search_item_sum">Сумма заказа</string>
+    <string name="search_item_return">ОФОРМИТЬ ВОЗВРАТ</string>
+
+    <string name="detail_title">Оформить возврат</string>
+    <string name="detail_phone">Телефон</string>
+    <string name="detail_total">Полная сумма заказа</string>
+    <string name="detail_return_sum">К возврату</string>
+    <string name="detail_return_full">Полный возврат</string>
+    <string name="detail_amount"> </string>
+    <string name="detail_confirm"> </string>
+    <string name="detail_next">ПРОДОЛЖИТЬ, Шаг 1 из 2</string>
+    <string name="detail_remaining_sum">Остаток</string>
+    <string name="detail_return_sum_error">Сумма возврата не может быть больше, чем \"Остаток\"</string>
+
+    <string name="barcode_return_title">Завершение возврата</string>
+    <string name="barcode_return_message">Отсканируйте штрих-код на кассе для завершения возврата</string>
+    <string name="barcode_return_sum">Сумма покупки: %s\nСумма возврата: %s</string>
+    <string name="barcode_return_next">ЗАВЕРШИТЬ, Шаг 2 из 2</string>
+    <string name="barcode_return_cancel"><u>Отменить возврат</u></string>
+
+    <string name="return_confirm_title">Подтверждение возврата</string>
+
+    <!-- select store -->
+    <string name="select_store_title">Выбрать магазин</string>
+    <string name="select_store_hint">выберите магазин, в котором вы сегодня работаете:</string>
+    <string name="select_store_not_you">Вернуться</string>
+    <string name="select_store_go_back"> </string>
+    <string name="select_store_confirm_logout">Выйти?</string>
+
+    <string name="update_found"> </string>
+    <string name="update_found_ok">Скачать</string>
+    <string name="update_found_cancel"> </string>
+    <string name="update_not_download"> </string>
+    <string name="update_download_complete"> </string>
+    <string name="update_install"> </string>
+
+    <!-- demo -->
+    <string name="demo">Демо</string>
+    <string name="demo_alert">Это тестовый аккаунт. Если вы хотите совершить реальную транзакцию, войдите в свою реальную учетную запись.</string>
+    <string name="demo_mode">Демо-режим</string>
+
+    <!-- chat -->
+    <string name="chat_title">Чат поддержки</string>
+    <string name="hint_chat_message">Сообщение</string>
+    <string name="chat_greetings">Привет, %s!\nчем мы можем помочь?</string>
+    <string name="chat_connection_error_title">Нет соединения</string>
+    <string name="chat_connection_error_message">Проверь настройки связи\nи попробуй еще раз.\n\nКонтактный телефон:\n8 (495) 777–66-87</string>
+    <string name="chat_status_typying">Оператор набирает текст…</string>
+    <string name="chat_status_online">Оператор онлайн</string>
+    <string name="chat_status_offline" >Оператор оффлайн</string>
+    <string name="chat_operator_gone" >Оператор вышел из чата</string>
+</resources>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+		<p><strong>Na jakim kroku jestem?</strong></p>
+		<p>Szczeg&oacute;ły zwrotu</p>
+		<p><br /><strong>Co muszę teraz zrobić?</strong></p>
+		<ul>
+		<li>Jeśli klient dokonuje pełnego zwrotu, zaznacz odpowiednie pole (&bdquo;Pełny zwrot&rdquo;).</li>
+		<li>Jeśli klient zwraca tylko część produkt&oacute;w wpisz całkowitą sumę zwrotu według kwot widniejących na rachunku klienta. Kwoty te powinny się zgadzać z kwotami z systemu kasowego.</li>
+		<li>Po określeniu kwoty zwrotu, poproś klienta o zaznaczenie pola wyboru na dole ekranu w celu potwierdzenia jego zwrotu.</li>
+		</ul>
+		<p><strong>Dlaczego jest to konieczne?</strong></p>
+		<ul>
+		<li>Jeśli klient zwraca całość zakup&oacute;w, umowa pożyczki zostanie rozwiązana &ndash; klient nie ponosi żadnych dodatkowych koszt&oacute;w.</li>
+		<li>Jeśli był to zwrot częściowy, klient otrzyma uaktualniony harmonogram spłat z nową kwotą całkowitą na adres email, kt&oacute;ry podał w trakcie zakup&oacute;w (nowy harmonogram będzie też dostępny na jego koncie klienta na revoplus.pl).</li>
+		</ul>
+		<p><strong>Jakie kroki pozostały?</strong></p>
+		<p>Potwierdzenie zwrotu kodem SMS &gt; Zeskanowanie kodu kreskowego</p>
+			</body>
+</html>

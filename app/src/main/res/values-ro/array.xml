@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dashboard_tabs">
+        <item>ULTIMA L.</item>
+        <item>PRECEDENTA L.</item>
+        <item>PERIOADA</item>
+    </string-array>
+
+    <string-array name="profile_documents">
+        <item>name</item>
+        <item>client_with_passport</item>
+    </string-array>
+</resources>

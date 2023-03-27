@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+		<p><strong>Na jakim kroku jestem?</strong></p>
+		<p>Formularz informacyjny</p>
+		<p><br /><strong>Co muszę teraz zrobić?</strong></p>
+		<ul>
+		<li>Przekaż klientowi telefon i poproś o zapoznanie się ze szczeg&oacute;łami oferty.</li>
+		<li>Jeśli klient zapoznał się ze szczeg&oacute;łowymi danymi może przejść do ostatniego kroku &ndash; akceptacji umowy.</li>
+		</ul>
+		<p><strong>Dlaczego jest to konieczne?</strong></p>
+		<ul>
+		<li>Klient ma prawo zapoznać się ze szczeg&oacute;łami umowy zanim ją podpisze - to długi dokument, kt&oacute;ry zawiera wszystkie informacje o warunkach oferty.</li>
+		</ul>
+		<p><strong>Jakie kroki pozostały?</strong></p>
+		<p>Potwierdzenie umowy kodem SMS &gt; Zeskanowanie kodu kreskowego</p>
+    </body>
+</html>

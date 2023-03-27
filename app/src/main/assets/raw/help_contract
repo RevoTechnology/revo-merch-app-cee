@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+		<p><strong>Na jakim kroku jestem?</strong></p>
+		<p>Potwierdzenie umowy kodem SMS</p>
+		<p><br /><strong>Co muszę teraz zrobić?</strong></p>
+		<ul>
+		<li>Klient może zobaczyć szczeg&oacute;ły dotyczące umowy, klikając odpowiednią &bdquo;strzałkę&rdquo;.</li>
+		<li>Jeśli klient zgadza się z umową, musi zaznaczyć odpowiednie pole wyboru (checkbox).</li>
+		<li>Klient podpisuje umowę kolejnym 4-cyfrowym kodem, kt&oacute;ry wysłaliśmy SMS-em - wpisanie kodu oznacza podpisanie umowy.</li>
+		</ul>
+		<p><strong>Dlaczego jest to konieczne?</strong></p>
+		<ul>
+		<li>Jeśli klient chce skorzystać z usługi Revoplus, to musi to potwierdzić na tym kroku.</li>
+		<li>Umowa wraz ze wszystkimi szczeg&oacute;łami (harmonogram spłat, dane do logowanie do profilu klienta na revoplus.pl, itp.) zostanie przesłana do klienta na adres email jaki podał w pierwszych krokach procesu.</li>
+		</ul>
+		<p><strong>Jakie kroki pozostały?</strong></p>
+		<p>Zeskanowanie kodu kreskowego</p>
+    </body>
+</html>

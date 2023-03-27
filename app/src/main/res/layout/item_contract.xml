@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minHeight="51dp">
+
+    <CheckBox
+        android:id="@+id/contractCheck"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="13dp"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:theme="@style/CheckBoxTheme"
+        android:textColor="@color/steel"
+        android:textSize="14sp"
+        tools:text="Agree with personal signature policy "
+        tools:ignore="RtlSymmetry"
+        tools:visibility="gone"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/contractInfoImage"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_info_outline"/>
+
+    <TextView
+        android:id="@+id/contractName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="13dp"
+        android:paddingBottom="13dp"
+        android:textColor="@color/steel"
+        android:textSize="14sp"
+        tools:text="Agree with personal signature policy "/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/linkImageView"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_width="56dp"
+        android:layout_height="50dp"
+        android:padding="13dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_chevron_right"
+        android:tint="@color/gray"/>
+
+</LinearLayout>

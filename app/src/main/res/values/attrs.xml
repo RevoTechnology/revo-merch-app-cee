@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextInputWidget">
+        <attr name="passwordToggleEnabled" format="boolean"/>
+        <attr name="android:hint"/>
+        <attr name="android:inputType"/>
+        <attr name="android:imeOptions"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="android:maxLength"/>
+    </declare-styleable>
+
+    <declare-styleable name="StepButtonWidget">
+        <attr name="step" format="integer"/>
+        <attr name="steps" format="integer"/>
+        <attr name="android:text"/>
+    </declare-styleable>
+
+    <declare-styleable name="RotateLoading">
+        <attr name="loading_width" format="dimension"/>
+        <attr name="loading_speed" format="integer"/>
+    </declare-styleable>
+
+</resources>

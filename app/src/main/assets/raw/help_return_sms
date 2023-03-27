@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+		<p><strong>Na jakim kroku jestem?</strong></p>
+		<p>Potwierdzenie zwrotu kodem SMS</p>
+		<p><br /><strong>Co muszę teraz zrobić?</strong></p>
+		<ul>
+		<li>Aby kontynuować proces zwrotu, klient wprowadza 4-cyfrowy kod, kt&oacute;ry wysłaliśmy na jego telefon kom&oacute;rkowy.</li>
+		</ul>
+		<p><strong>Dlaczego jest to konieczne?</strong></p>
+		<ul>
+		<li>Wpisanie kodu z SMS-a, kt&oacute;ry otrzymał klient na sw&oacute;j telefon potwierdza jego tożsamość oraz wiemy, że klient na pewno chce kontynuować proces zwrotu.</li>
+		</ul>
+		<p><strong>Jakie kroki pozostały?</strong></p>
+		<p>Zeskanowanie kodu kreskowego</p>
+    </body>
+</html>

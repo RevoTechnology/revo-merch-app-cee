@@ -1,0 +1,16 @@
+package pl.revo.merchant.ui.client.profile
+
+import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
+import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
+import pl.revo.merchant.common.IBaseView
+
+interface ClientProfileView : IBaseView {
+    @StateStrategyType(AddToEndSingleStrategy::class)
+    fun showProfile()
+
+    @StateStrategyType(AddToEndSingleStrategy::class)
+    fun setCities(cities: List<String>)
+
+    @StateStrategyType(AddToEndSingleStrategy::class)
+    fun setStreets(streets: List<String>)
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_title">Произошла ошибка!</string>
+
+    <string name="err_network_is_not_available">Сеть недоступна. Попробуйте позже</string>
+    <string name="err_unknown">Неизвестная ошибка</string>
+    <string name="err_server">Ошибка сервера. Пожалуйста, обратитесь в службу поддержки</string>
+    <string name="err_certificate">Ошибка сертификата. Пожалуйста, обратитесь в слубжу поддержки</string>
+
+    <string name="error_login">E-mail или телефон недействителен</string>
+    <string name="error_phone">Телефон не действителен</string>
+    <string name="error_email">Email не допустимый</string>
+    <string name="error_pin_code">Пин-код недействителен</string>
+    <string name="error_pin_not_match">Ввыеденные пин-коды не совпадают</string>
+    <string name="error_date">Данные не действительны</string>
+    <string name="error_sum">Сумма не действительна</string>
+    <string name="error_field_required">Обязательное для заполнения</string>
+    <string name="error_birth_day">Дата рождения вне допустимого диапазона</string>
+    <string name="error_pesel"> </string>
+    <string name="error_id_number">Ошибка в паспортных данных клиента. Пожалуйста, проверьте корректность введенных данных</string>
+    <string name="error_postal_code"> </string>
+    <string name="error_scan">Документ не найден</string>
+    <string name="error_client_data">Неверные данные клиента</string>
+
+
+    <string name="error_sms_code">SMS-код недействителен</string>
+    <string name="error_login_or_password">Логин или пароль не действительны</string>
+
+    <string name="error_purchase_exceeds">Сумма покупки превышает доступный лимит %s.</string>
+    <string name="error_purchase_small">Сумма покупки слишком мала.</string>
+
+    <string name="error_large_data">Объем передаваемых даных превышает установленные лимиты</string>
+
+    <string name="error_do_support">Произошла ошибка.\nПожалуйста, обратитесь в поддержку</string>
+    <string name="err_api_not_implemented">Произошла ошибка.\nПожалуйста, обратитесь в поддержку</string>
+    <string name="error_not_authorized">Пожалуйста, авторизуйтесь</string>
+
+</resources>

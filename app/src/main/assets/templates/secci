@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>Revo</title>
+    <style type='text/css'>th{border-bottom:1px solid #ccc}th,td{padding:1px 8px;vertical-align:top}.page-break{display:block;clear:both;page-break-after:always}table.table{width:100%;max-width:100%;margin-bottom:20px;border-spacing:0;border-collapse:collapse}table.table-bordered,table.table-bordered th,table.table-bordered td{border:1px solid #000}.pl.framework .lst-kix_list_5-0>li{counter-increment:lst-ctn-kix_list_5-0}.pl.framework ol.lst-kix_list_5-3.start{counter-reset:lst-ctn-kix_list_5-3 0}.pl.framework .lst-kix_list_5-1>li{counter-increment:lst-ctn-kix_list_5-1}.pl.framework ol.lst-kix_list_5-0{list-style-type:none}.pl.framework ol.lst-kix_list_5-1{list-style-type:none}.pl.framework ol.lst-kix_list_5-2{list-style-type:none}.pl.framework ol.lst-kix_list_5-3{list-style-type:none}.pl.framework .lst-kix_list_5-2>li{counter-increment:lst-ctn-kix_list_5-2}.pl.framework .lst-kix_list_5-0>li:before{content:"" counter(lst-ctn-kix_list_5-0,decimal) ". "}.pl.framework .lst-kix_list_5-3>li:before{content:"" counter(lst-ctn-kix_list_5-0,decimal) "." counter(lst-ctn-kix_list_5-1,decimal) "." counter(lst-ctn-kix_list_5-2,decimal) "." counter(lst-ctn-kix_list_5-3,decimal) ". "}.pl.framework .lst-kix_list_5-2>li:before{content:"" counter(lst-ctn-kix_list_5-0,decimal) "." counter(lst-ctn-kix_list_5-1,decimal) "." counter(lst-ctn-kix_list_5-2,decimal) ". "}.pl.framework .lst-kix_list_5-1>li:before{content:"" counter(lst-ctn-kix_list_5-0,decimal) "." counter(lst-ctn-kix_list_5-1,decimal) ". "}.pl.framework .lst-kix_list_5-3>li{counter-increment:lst-ctn-kix_list_5-3}.pl.framework ol.lst-kix_list_5-0.start{counter-reset:lst-ctn-kix_list_5-0 1}.pl.framework ol.lst-kix_list_5-1.start{counter-reset:lst-ctn-kix_list_5-1 0}.pl.framework ol.lst-kix_list_5-2.start{counter-reset:lst-ctn-kix_list_5-2 0}.pl.framework ol{margin:0;padding:0}.pl.framework .c32{color:#262626;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.pl.framework .c24{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.pl.framework .c1{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.pl.framework .c20{color:#000000;font-weight:400;text-decoration:none;vertical-align:super;font-size:12pt;font-family:"Times New Roman";font-style:normal}.pl.framework .c2{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.pl.framework .c25{margin-left:35.4pt;padding-top:0;text-indent:-35.4pt;padding-bottom:14.4pt;text-align:left}.pl.framework .c34{font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.pl.framework .c6{padding-top:0;padding-bottom:0;orphans:2;widows:2;text-align:left}.pl.framework .c27{padding-top:0;text-indent:35.4pt;padding-bottom:14.4pt;text-align:left}.pl.framework .c10{padding-top:0;padding-bottom:12pt;text-align:center}.pl.framework .c29{padding-top:0;padding-bottom:0;text-align:right}.pl.framework .c13{padding-top:0;padding-bottom:0;text-align:justify}.pl.framework .c31{padding-top:0;padding-bottom:14.4pt;text-align:justify}.pl.framework .c0{padding-top:0;padding-bottom:12pt;text-align:justify}.pl.framework .c33{background-color:#ffffff;max-width:600pt}.pl.framework .c9{page-break-after:avoid;orphans:2;widows:2}.pl.framework .c3{margin-left:0;list-style-position:inside;text-indent:45pt}.pl.framework .c11{margin-left:64.4pt;text-indent:-36pt}.pl.framework .c7{margin-left:39.3pt;padding-left:18pt}.pl.framework .c15{margin-left:18pt;padding-left:18pt}.pl.framework .c26{list-style-position:inside;text-indent:90pt}.pl.framework .c19{margin-left:70.8pt;text-indent:-70.8pt}.pl.framework .c4{margin-left:46.4pt;padding-left:18pt}.pl.framework .c18{orphans:2;widows:2}.pl.framework .c5{padding:0;margin:0}.pl.framework .c8{font-weight:700}.pl.framework .c28{font-size:11pt}.pl.framework .c30{margin-left:70.8pt}.pl.framework .c17{text-indent:-36pt}.pl.framework .c12{height:12pt}.pl.framework .c21{margin-left:36pt}.pl.framework li{color:#000000;font-size:12pt;font-family:"Times New Roman"}.pl.framework p{margin:0;color:#000000;font-size:12pt;font-family:"Times New Roman"}.pl.individual .c1{padding-top:0;text-indent:35.4pt;padding-bottom:10pt;orphans:2;widows:2;text-align:justify}.pl.individual .c9{-webkit-text-decoration-skip:none;color:#000000;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:11pt;font-style:normal}.pl.individual .c13{padding-top:0;padding-bottom:10pt;orphans:2;widows:2;text-align:center}.pl.individual .c4{padding:0 0 10pt 0;margin-left:0;orphans:2;widows:2;text-align:justify}.pl.individual .c5{color:#000000;text-decoration:none;vertical-align:baseline;font-size:11pt;font-style:normal}.pl.individual .c14{background-color:#ffffff;max-width:600pt}.pl.individual .c0{font-weight:700;font-family:"Times New Roman"}.pl.individual .c2{font-weight:400;font-family:"Times New Roman"}.pl.individual .c10{text-indent:36pt}.pl.individual .c8{height:11pt}.pl.individual .c7{font-size:12pt}.pl.individual .c15{font-style:italic}.pl.individual p{margin:0;color:#000000;font-size:11pt;font-family:"Times New Roman"}.pl.schedule table td{padding:0}.pl.schedule .c18{border-right-style:solid;padding:0 5.4pt 0 5.4pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:65.8pt;border-top-color:#000000;border-bottom-style:solid}.pl.schedule .c13{border-right-style:solid;padding:0 5.4pt 0 5.4pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:48.5pt;border-top-color:#000000;border-bottom-style:solid}.pl.schedule .c7{border-right-style:solid;padding:0 5.4pt 0 5.4pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:99.2pt;border-top-color:#000000;border-bottom-style:solid}.pl.schedule .c22{border-right-style:solid;padding:0 5.4pt 0 5.4pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:68.3pt;border-top-color:#000000;border-bottom-style:solid}.pl.schedule .c1{border-right-style:solid;padding:0 5.4pt 0 5.4pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:92.2pt;border-top-color:#000000;border-bottom-style:solid}.pl.schedule .c6{padding-top:0;padding-bottom:0;orphans:2;widows:2;text-align:justify;height:11pt}.pl.schedule .c4{padding-top:0;padding-bottom:10pt;orphans:2;widows:2;text-align:justify;height:11pt}.pl.schedule .c5{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Times New Roman";font-style:normal}.pl.schedule .c10{color:#000000;text-decoration:none;vertical-align:baseline;font-size:11pt;font-style:normal}.pl.schedule .c9{padding-top:0;padding-bottom:0;orphans:2;widows:2;text-align:justify}.pl.schedule .c12{padding-top:0;padding-bottom:0;orphans:2;widows:2;text-align:left}.pl.schedule .c16{padding-top:0;padding-bottom:10pt;orphans:2;widows:2;text-align:justify}.pl.schedule .c14{padding-top:0;padding-bottom:10pt;orphans:2;widows:2;text-align:center}.pl.schedule .c0{padding-top:0;padding-bottom:0;orphans:2;widows:2;text-align:center}.pl.schedule .c11{color:#000000;text-decoration:none;vertical-align:baseline;font-size:11pt;font-style:normal}.pl.schedule .c20{margin-left:-5.4pt;border-spacing:0;border-collapse:collapse;margin-right:auto}.pl.schedule .c21{background-color:#ffffff;max-width:600pt}.pl.schedule .c2{font-family:"Times New Roman";font-weight:700}.pl.schedule .c17{font-weight:700;font-family:"Times New Roman"}.pl.schedule .c8{font-weight:400;font-family:"Times New Roman"}.pl.schedule .c15{height:44pt}.pl.schedule .c3{height:0}.pl.schedule p{margin:0;color:#000000;font-size:11pt;font-family:"Times New Roman"}.pl.secci .lst-kix_h8w4nqyug0ir-0>li{counter-increment:lst-ctn-kix_h8w4nqyug0ir-0}.pl.secci ol.lst-kix_h8w4nqyug0ir-0{list-style-type:none}.pl.secci ol.lst-kix_h8w4nqyug0ir-0.start{counter-reset:lst-ctn-kix_h8w4nqyug0ir-0 0}.pl.secci .lst-kix_h8w4nqyug0ir-0>li:before{content:"" counter(lst-ctn-kix_h8w4nqyug0ir-0,decimal) ". "}.pl.secci ol{margin:0;padding:0}.pl.secci table td{padding:0}.pl.secci .c42{border-right-style:solid;padding:3.8pt 3.8pt 3.8pt 3.8pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:705.4pt;border-top-color:#000000;border-bottom-style:solid}.pl.secci .c5{border-right-style:solid;padding:3.8pt 3.8pt 3.8pt 3.8pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:middle;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:354pt;border-top-color:#000000;border-bottom-style:solid}.pl.secci .c32{border-right-style:solid;padding:3.8pt 3.8pt 3.8pt 3.8pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:708pt;border-top-color:#000000;border-bottom-style:solid}.pl.secci .c0{border-right-style:solid;padding:3.8pt 3.8pt 3.8pt 3.8pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:354pt;border-top-color:#000000;border-bottom-style:solid}.pl.secci .c12{border-right-style:solid;padding:3.8pt 3.8pt 3.8pt 3.8pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:352.7pt;border-top-color:#000000;border-bottom-style:solid}.pl.secci .c31{border-right-style:solid;padding:3.8pt 3.8pt 3.8pt 3.8pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:middle;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:352.7pt;border-top-color:#000000;border-bottom-style:solid}.pl.secci .c26{-webkit-text-decoration-skip:none;color:#3b3b3b;font-weight:700;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:15pt;font-family:"Times New Roman"}.pl.secci .c16{padding-top:0;text-indent:-12pt;padding-bottom:0;orphans:2;widows:2;text-align:center}.pl.secci .c13{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Times New Roman";font-style:normal}.pl.secci .c1{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.pl.secci .c6{padding-top:0;padding-bottom:0;orphans:2;widows:2;text-align:left;height:11pt}.pl.secci .c8{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-style:normal}.pl.secci .c3{padding-top:0;padding-bottom:14.4pt;orphans:2;widows:2;text-align:left}.pl.secci .c14{padding-top:0;padding-bottom:14.4pt;orphans:2;widows:2;text-align:center}.pl.secci .c10{padding-top:0;padding-bottom:0;orphans:2;widows:2;text-align:left}.pl.secci .c40{padding-top:0;padding-bottom:0;orphans:2;widows:2;text-align:right}.pl.secci .c11{padding-top:0;padding-bottom:10pt;orphans:2;widows:2;text-align:justify}.pl.secci .c37{padding-top:0;padding-bottom:6pt;orphans:2;widows:2;text-align:left}.pl.secci .c22{padding-top:0;padding-bottom:14.4pt;orphans:2;widows:2;text-align:justify}.pl.secci .c34{padding-top:0;padding-bottom:10pt;orphans:2;widows:2;text-align:left}.pl.secci .c43{padding-top:0;padding-bottom:12pt;orphans:2;widows:2;text-align:left}.pl.secci .c30{padding-top:0;padding-bottom:0;orphans:2;widows:2;text-align:justify}.pl.secci .c23{margin-left:auto;border-spacing:0;border-collapse:collapse;margin-right:auto}.pl.secci .c27{-webkit-text-decoration-skip:none;color:#3b3b3b;text-decoration:underline;text-decoration-skip-ink:none}.pl.secci .c9{vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-weight:700}.pl.secci .c15{vertical-align:baseline;font-size:12pt;font-family:"Times New Roman";font-weight:400}.pl.secci .c28{vertical-align:baseline;font-family:"Times New Roman";font-weight:400}.pl.secci .c17{color:#000000;text-decoration:none;font-style:normal}.pl.secci .c35{font-size:12pt;font-family:"Times New Roman";font-weight:700}.pl.secci .c24{background-color:#ffffff;max-width:697.9pt}.pl.secci .c29{margin-left:15.8pt;text-indent:-15.8pt;margin-right:18pt}.pl.secci .c20{font-size:12pt;font-family:"Times New Roman";font-weight:400}.pl.secci .c45{padding:0;margin:0}.pl.secci .c38{margin-left:36pt;padding-left:0}.pl.secci .c33{font-size:15pt;font-style:normal}.pl.secci .c39{font-style:normal}.pl.secci .c36{margin-right:18pt}.pl.secci .c44{margin-left:36pt}.pl.secci .c7{height:11pt}.pl.secci .c4{height:0}.pl.secci .c46{height:87pt}.pl.secci li{color:#000000;font-size:11pt;font-family:"Times New Roman"}.pl.secci p{margin:0;color:#000000;font-size:11pt;font-family:"Times New Roman"}
+</style>
+    <meta content='initial-scale=1, width=device-width, target-densitydpi=device-dpi, minimum-scale=0.1' name='viewport'>
+</head>
+<body class='pl secci'>
+<div class="c24">
+    <p class="c14">
+        <span class="c26">FORMULARZ INFORMACYJNY DOTYCZĄCY POŻYCZKI KONSUMENCKIEJ</span>
+    </p>
+    <p class="c3">
+        <span class="c26">1. Imię, nazwisko (nazwa) i adres (siedziba) kredytodawcy lub pośrednika kredytowego</span>
+    </p>
+    <a id="t.035804c9aee23e47048044baef51160fbe489b0f"></a>
+    <a id="t.0"></a>
+    <table class="c23">
+        <tbody>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Pożyczkodawca</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">REVO TECHNOLOGIES SP. Z O.O.</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Adres: (siedziba)</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c1">Ul. Grzybowska nr 2 lokal 29,&nbsp;00-131 Warszawa</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Numer telefonu</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c1">brak</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Adres poczty elektronicznej</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                                <span class="c20 c2">
+                                    <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7f1410110b1e140b3f0d1a09100f130a0c510f13">test@revoplus.pl</a>
+                                </span>
+                    <sup></sup>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Adres strony internetowej</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c20 c2">www.revoplus.pl</span>
+                    <sup></sup>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Pośrednik kredytowy</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c20 c2">brak</span>
+                    <sup></sup>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c1">Adres: (siedziba)</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c20 c2">brak</span>
+                    <sup></sup>
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="c3">
+        <span class="c26">2. Opis głównych cech kredytu</span>
+    </p>
+    <a id="t.fcfb87c1df75ed0a5f2b8c72cdcca1f23100d551"></a>
+    <a id="t.1"></a>
+    <table class="c23">
+        <tbody>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Rodzaj kredytu</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c11">
+                    <span class="c1">Pożyczka na zakup określonych towarów i usług konsumenckich (kredyt wiązany)</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Całkowita kwota kredytu</span>
+                </p>
+                <p class="c3">
+                    <span class="c8">Maksymalna kwota/suma (jeżeli nie przewidziano maksymalnej kwoty) wszystkich środków pieniężnych, które zostaną Panu/Pani udostępnione</span>
+                </p>
+                <p class="c3 c7">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c15">&nbsp;Kwota Pożyczki: </span>
+                    <span class="c20 c2">600 zł </span>
+                    <sup></sup>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Terminy i sposób wypłaty kredytu</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">W jaki sposób i w jakim terminie otrzyma</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Pan/Pani środki pieniężne</span>
+                </p>
+                <p class="c6">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c11">
+                    <span class="c1">Kwota Pożyczki zostanie przelana na rachunek partnera handlowego Pożyczkodawcy (Dostawcy), będącego sprzedawcą Towaru. Po zawiadomieniu o akceptacji Wniosku Klienta przez Pożyczkodawcę i zawarciu Umowy Pożyczki, Dostawca dostarczy Klientowi Towary, a Kwota Pożyczki zostanie przelana na rachunek Dostawcy w terminach uzgodnionych z Dostawcą.</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Czas obowiązywania umowy</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c30">
+                    <span class="c1">Ramowa Umowa Pożyczki jest zawierana na czas nieokreślony. </span>
+                </p>
+                <p class="c11">
+                    <span class="c15">Umowa Pożyczki będzie obowiązywać dopóki Klient w pełni nie zrealizuje swoich zobowiązań z tej Umowy Pożyczki; okres spłaty Pożyczki to </span>
+                    <span class="c20 c2">3</span>
+                    <span class="c20">&nbsp;</span>
+                    <span class="c15">mie</span>
+                    <span class="c20">s</span>
+                    <span class="c1">.</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Zasady i terminy spłaty kredytu</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c22">
+                    <span class="c35">Spłaty Pożyczki należy dokonać w następujący sposób:</span>
+                    <span class="c20">&nbsp;Pożyczka będzie spłacana w Ratach Miesięcznych zgodnie z obowiązującym Harmonogramem Płatności, przez system płatniczy udostępniony Klientowi w Profilu Klienta lub przez link płatności wysłany w wiadomości email na Zarejestrowany Adres Email Klienta. Datą spłaty Pożyczki będzie data autoryzacji zlecenia płatniczego Klienta przez agenta płatniczego.
+                                    <br>
+                                    <br>
+                                </span>
+                    <span class="c9 c17">Kwota, liczba oraz częstotliwość dokonywania płatności rat przez Klienta: </span>
+                </p>
+                <p class="c22">
+                    <span class="c20">Kwota Raty Miesięcznej łącznie: </span>
+                    <span class="c20 c2">205 zł </span>
+                    <span class="c1"></span>
+                </p>
+                <p class="c22">
+                    <span class="c20">Liczba Rat Miesięcznych: </span>
+                    <span class="c20 c2">3</span>
+                    <span class="c1"></span>
+                </p>
+                <p class="c22">
+                    <span class="c20">Kwota Kapitału Zadłużenia: </span>
+                    <span class="c20 c2">600 zł </span>
+                    <span class="c1"></span>
+                </p>
+                <p class="c22">
+                    <span class="c20">Kwota Opłaty za Udzielenie Pożyczki: </span>
+                    <span class="c20 c2">15 zł </span>
+                    <span class="c20">
+                                    <br>
+                                    <br>
+                                </span>
+                    <span class="c35">Odsetki lub opłaty będą uiszczane w następujący sposób:</span>
+                </p>
+                <ol class="c45 lst-kix_h8w4nqyug0ir-0 start" start="1">
+                    <li class="c22 c38">
+                        <span class="c1">Opłata za Udzielenie Pożyczki – spłacana w równych częściach w każdej Racie Miesięcznej;</span>
+                    </li>
+                    <li class="c22 c38">
+                                    <span class="c1">Odsetki Karne – naliczane za każdy dzień opóźnienia aż do dnia spłaty zadłużenia i płatne w dniu spłaty zaległej Raty Miesięcznej lub jej części.
+                                        <br>
+                                        <br>Jeżeli w Terminie Płatności Raty Miesięcznej środki wpłacone przez Klienta nie będą wystarczające na pokrycie całego wymagalnego Zadłużenia, wpłacone środki zostaną rozliczone w następujący sposób:
+                                    </span>
+                    </li>
+                </ol>
+                <p class="c22 c44">
+                                <span class="c20">1. W pierwszej kolejności – Opłata za Udzielenie Pożyczki,
+                                    <br>
+                                    <br>2. W drugiej kolejności – Odsetki Karne;
+                                    <br>
+                                    <br>3. W trzeciej kolejności – zaległy Kapitał Zadłużenia.
+                                </span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Całkowita kwota do zapłaty przez konsumenta</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Jest to suma wszystkich środków pieniężnych,</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">które kredytodawca udostępnia Panu/Pani, oraz</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">wszelkie koszty, które zobowiązany/a będzie</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Pan/Pani ponieść w związku z umową o kredyt</span>
+                </p>
+                <p class="c6">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c5" colspan="1" rowspan="1">
+                <p class="c11">
+                    <span class="c1">Suma całkowitej Kwoty Pożyczki oraz całkowitych kosztów Pożyczki:</span>
+                </p>
+                <p class="c14">
+                    <span class="c20 c2">615 zł </span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Kredyt wiązany lub w formie odroczonej płatności</span>
+                </p>
+                <p class="c37">
+                    <span class="c1">– opis towaru lub usługi:</span>
+                </p>
+                <p class="c43">
+                    <span class="c1">– cena:</span>
+                </p>
+            </td>
+            <td class="c5" colspan="1" rowspan="1">
+                <p class="c14">
+                    <span class="c20">Towary </span>
+                    <span class="c20 c2"></span>
+                </p>
+                <p class="c14">
+                    <span class="c20 c2">600 zł </span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Wymagane zabezpieczenia kredytu</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Zabezpieczenie, jakie będzie Pan/Pani musiał/a</span>
+                </p>
+                <p class="c10">
+                    <span class="c28">przedstawić w związku z umową o kredyt</span>
+                </p>
+            </td>
+            <td class="c5" colspan="1" rowspan="1">
+                <p class="c14">
+                    <span class="c1">Nie dotyczy</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Informacja czy umowa pożyczki przewiduje gwarancję spłaty całkowitej kwoty pożyczki wypłaconej na jej podstawie</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Jeżeli zgodnie z postanowieniami umowy o kredyt płatności</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">dokonywane przez Pana/Panią nie są zaliczane do spłaty</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">całkowitej kwoty kredytu, ale będą wykorzystywane do</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">zgromadzenia kapitału przez okresy i na zasadach okreś-</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">lonych w umowie o kredyt lub w umowie dodatkowej, to</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">umowa o kredyt nie przewiduje gwarancji spłaty całkowi-</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">tej kwoty kredytu wypłaconej na jej podstawie.</span>
+                </p>
+                <p class="c6">
+                    <span class="c1"></span>
+                </p>
+                <p class="c37 c7">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c5" colspan="1" rowspan="1">
+                <p class="c14">
+                    <span class="c1">Nie dotyczy</span>
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="c3 c7">
+        <span class="c27 c28 c33"></span>
+    </p>
+    <p class="c3">
+        <span class="c26">3. Koszty kredytu</span>
+    </p>
+    <a id="t.d4af8c1a2eb7f9608b62aa2c4d9b83a5f0c731ce"></a>
+    <a id="t.2"></a>
+    <table class="c23">
+        <tbody>
+        <tr class="c4">
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Stopa oprocentowania kredytu oraz warunki jej zmiany</span>
+                </p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c16">
+                    <span class="c1">Nie dotyczy – Pożyczkodawca nie pobiera oprocentowania (odsetek od kapitału Pożyczki).</span>
+                </p>
+                <p class="c30 c7">
+                    <span class="c1"></span>
+                </p>
+                <p class="c11 c7">
+                    <span class="c1"></span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Rzeczywista roczna stopa oprocentowania</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Jest to całkowity koszt kredytu ponoszony przez</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">konsumenta, wyrażony jako wartość procentowa</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">całkowitej kwoty kredytu w stosunku rocznym</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">przedstawiona, aby pomóc Panu/Pani</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">w porównaniu oferowanych kredytów</span>
+                </p>
+                <p class="c6">
+                    <span class="c1"></span>
+                </p>
+                <p class="c7 c37">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c14">
+                    <span class="c1 c2">15.86%</span>
+                </p>
+                <p class="c14">
+                    <span class="c1">Reprezentatywny przykład RRSO:</span>
+                </p>
+                <p class="c14">
+                    <span class="c20">Przykład reprezentatywny: całkowita kwota pożyczki: 1 000,00 zł, RRSO (Rzeczywista Roczna Stopa Oprocentowania): 9,00%, oprocentowanie stałe 0%, całkowita kwota do zapłaty: 1 015,00 zł, całkowity koszt: 15,00 zł (w tym: prowizja: 15,00 zł, odsetki: 0 zł, koszt ubezpieczenia: brak), 3 równe miesięczne raty w wysokości po: 338,33 zł. Warunki oferty: wg stanu na 25 września 2018 r. Umowa o pożyczkę zawierana jest pomiędzy pożyczkobiorcą a pożyczkodawcą tj. Revo Technologies sp. z o.o. pod warunkiem pozytywnej oceny zdolności kredytowej pożyczkobiorcy. Niniejszy materiał nie stanowi oferty w rozumieniu kodeksu cywilnego i ma charakter wyłącznie informacyjny.</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Obowiązek zawarcia umowy dodatkowej</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Do uzyskania kredytu lub do uzyskania go na oferowanych warunkach jest konieczne zawarcie przez Pana/Panią umowy dodatkowej,</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">w szczególności umowy ubezpieczenia lub innej umowy. Jeżeli koszty tych usług nie są znane kredytodawcy, to nie są one uwzględnione w rzeczywistej rocznej stopie oprocentowania.</span>
+                </p>
+                <p class="c6">
+                    <span class="c8"></span>
+                </p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c14">
+                    <span class="c1">Nie dotyczy</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c42" colspan="2" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Koszty, które zobowiązany/a będzie Pan/Pani</span>
+                    <span class="c15">&nbsp;</span>
+                    <span class="c9">ponieść w związku z umową o kredyt*</span>
+                </p>
+                <p class="c6">
+                    <span class="c1"></span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Koszty prowadzenia jednego lub kilku rachunków w celu dokonywania wpłat i wypłat środków pieniężnych</span>
+                </p>
+            </td>
+            <td class="c31" colspan="1" rowspan="1">
+                <p class="c14">
+                    <span class="c1">Nie dotyczy</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Koszty korzystania z instrumentów płatniczych (np. karty kredytowej)*</span>
+                </p>
+                <p class="c3 c7">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c31" colspan="1" rowspan="1">
+                <p class="c14">
+                    <span class="c1">Nie dotyczy</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Inne koszty, które konsument zobowiązany jest ponieść w związku z umową </span>
+                </p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c22">
+                    <span class="c15">Opłata za Udzielenie Pożyczki: </span>
+                    <span class="c20 c2">15 zł </span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Warunki, na jakich koszty związane z umową o kredyt mogą ulegać zmianie*</span>
+                </p>
+                <p class="c3 c7">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c22">
+                    <span class="c1">Pożyczkodawca jest uprawniony do zmiany &nbsp;wysokości Opłaty za Udzielenie Pożyczki w przypadku:</span>
+                </p>
+                <p class="c22">
+                    <span class="c1">1) zmiany poziomu inflacji w wartości opublikowanej przez GUS; 2) zmian w zakresie kosztów obsługi Pożyczek wynikających ze zmiany cen usług telekomunikacyjnych, pocztowych, niezależnych od Pożyczkodawcy zmian kosztów, ponoszonych w związku z realizacją Umowy Ramowej wynikających ze współpracy Pożyczkodawcy z Dostawcą lub w przypadku zmiany prawa, która ma wpływ na koszty obsługi Pożyczki; 3) wprowadzenia przez Pożyczkodawcę nowych usług do oferty, pod warunkiem, że korzystanie przez Klienta z nowych usług jest dobrowolne, a żadna zmiana kosztów nie może mieć wpływu na warunki istniejącej Umowy Pożyczki.</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Opłaty notarialne</span>
+                </p>
+            </td>
+            <td class="c31" colspan="1" rowspan="1">
+                <p class="c14">
+                    <span class="c1">Nie dotyczy</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Skutek braku płatności</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Brak płatności może mieć dla Pani/Pana poważne konsekwencje (np. sprzedaż zajętych w toku postępowania egzekucyjnego rzeczy ruchomych lub nieruchomości) i może utrudnić otrzymanie kredytu. Skutki braku płatności mogą być dla Pana/Pani następujące:</span>
+                </p>
+                <p class="c6">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c12" colspan="1" rowspan="1">
+                <p class="c22 c36">
+                    <span class="c1">W przypadku niedotrzymania przez Klienta któregokolwiek terminu przewidzianego w Harmonogramie Płatności, Klient będzie zobowiązany do zapłaty Odsetek Karnych. &nbsp;Odsetki karne stanowią dwukrotność stopy referencyjnej Narodowego Banku Polskiego oraz 5,5 punktów procentowych w skali roku i &nbsp;zostaną odpowiednio zmienione w razie zmiany stopy referencyjnej NBP. &nbsp;</span>
+                </p>
+                <p class="c22 c36">
+                    <span class="c1">Aktualna stopa Odsetek Karnych jest podana w Szczególnych Warunkach Pożyczki. </span>
+                </p>
+                <p class="c22 c36">
+                    <span class="c15">W dniu wydania niniejszego Formularza Informacyjnego, stopa Odsetek Karnych wynosi </span>
+                    <span class="c9">14%</span>
+                    <span class="c1">&nbsp;w skali roku.</span>
+                </p>
+                <p class="c22 c36">
+                    <span class="c1">W przypadku braku terminowej spłaty, Pożyczkodawca może:</span>
+                </p>
+                <p class="c22 c36">
+                    <span class="c1">• rozwiązać Ramową Umowę Pożyczki z zachowaniem 30-dniowego okresu wypowiedzenia;</span>
+                </p>
+                <p class="c22 c36">
+                    <span class="c1">• skierować sprawę do współpracujących ze Pożyczkodawcą firm windykacyjnych;</span>
+                </p>
+                <p class="c11">
+                    <span class="c1">• zgodnie Ustawą z dnia 9 kwietnia 2010 r. o udostępnianiu informacji gospodarczych i wymianie danych gospodarczych (Dziennik Ustaw z 14 maja 2010r.) przekazać informacje o zaległościach biurom informacji gospodarczej;• &nbsp;pozwać Klienta do sądu o zapłatę.</span>
+                </p>
+                <p class="c22 c36">
+                    <span class="c1">Pożyczkodawca przekazuje informacje o istniejących zaległościach Klienta do Biura Informacji Kredytowej (BIK S.A.).</span>
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="c3 c7">
+        <span class="c27 c28 c33"></span>
+    </p>
+    <p class="c3">
+        <span class="c26">4. Inne ważne informacje</span>
+    </p>
+    <a id="t.ec99e7e65e33424b113e0edeb6704a5e6bb47947"></a>
+    <a id="t.3"></a>
+    <table class="c23">
+        <tbody>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Odstąpienie od umowy</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">W terminie 14 dni od dnia zawarcia umowy ma</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Pan/Pani prawo do odstąpienia od umowy:</span>
+                </p>
+                <p class="c14 c7">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c14">
+                    <span class="c1">Tak</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Spłata pożyczki przed terminem określonym w umowie</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Ma Pan/Pani prawo w każdym czasie do spłaty</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">całości lub części kredytu przed terminem określonym</span>
+                </p>
+                <p class="c10">
+                    <span class="c28">w umowie</span>
+                </p>
+                <p class="c3 c7">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c14">
+                    <span class="c1">Tak</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Uprawnienie pożyczkodawcy do zastrzeżenia prowizji za spłatę pożyczki przed terminem</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c14">
+                    <span class="c1">Nie dotyczy</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Sprawdzenie w bazie danych</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Jeżeli kredytodawca odmówi Panu/Pani udzielenia kredytu konsumenckiego na podstawie informacji zawartych w bazie danych, jest zobowiązany niezwłocznie przekazać Panu/Pani bezpłatną informację o wynikach tego sprawdzenia oraz wskazać bazę danych, w której tego sprawdzenia dokonano</span>
+                </p>
+                <p class="c6">
+                    <span class="c1"></span>
+                </p>
+                <p class="c37 c7">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c30">
+                    <span class="c15">Na podstawie udzielonych zgód, Pożyczkodawca ma prawo do sprawdzenia zdolności i wiarygodności kredytowej Klienta w następujących instytucjach: </span>
+                    <span class="c20">Biuro Informacji Kredytowej S.A. z siedzibą w Warszawie, ul. Jacka Kaczmarskiego 77a. 02-679 Warszawa, Biuro Informacji Gospodarczej InfoMonitor S.A. z siedzibą w Warszawie, ul. Jacka Kaczmarskiego 77, 02-679 Warszawa, Krajowe Biuro Informacji Gospodarczej S.A. z siedzibą w Krakowie, ul. Lublańska 38, 31 – 476 Kraków, Platforma Wymiany Informacji Pożyczkowej*.
+                                    <br>
+* Lista współpracujących kredytodawców:
+http://www.credit-check.pl/uczestnicy/
+
+                                </span>
+                </p>
+                <p class="c30 c7">
+                    <span class="c1"></span>
+                </p>
+                <p class="c30">
+                    <span class="c1">Jeżeli Wniosek o Pożyczkę zostanie odrzucony na podstawie sprawdzenia w zewnętrznej bazie danych lub bazie danych Pożyczkodawcy, Pożyczkodawca niezwłocznie bezpłatnie zawiadomi Klienta o wynikach tego sprawdzenia i wskaże bazę danych, w której tego sprawdzenia dokonano.</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Prawo do otrzymania projektu umowy pożyczki</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Ma Pan/Pani prawo do otrzymania, na wniosek, bezpłatnego projektu umowy o kredyt konsumencki, chyba że w chwili gdy zgłasza Pan/Pani takie żądanie, kredytodawca nie wyraża woli zawarcia z Panem/Panią umowy</span>
+                </p>
+                <p class="c6">
+                    <span class="c1"></span>
+                </p>
+                <p class="c3 c7">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c11">
+                    <span class="c15">Ma Pani/Pan prawo do otrzymania bezpłatnie projektu Ramowej Umowy Pożyczki i Szczególnych Warunków Pożyczki. Wzór Ramowej Umowy Pożyczki i Szczególnych Warunków Pożyczki jest dostępny pod adresem</span>
+                    <span class="c15">&nbsp;</span>
+                    <sup></sup>
+                    <sup></sup>
+                    <span class="c20 c2">www.revoplus.pl</span>
+                    <span class="c20">&nbsp;</span>
+                    <span class="c1">w sekcji "Dokumenty". Ramowa Umowa Pożyczki i Szczególne Warunki Pożyczki są przesyłane Klientowi na Trwałym Nośniku podczas składania Wniosku o Pożyczkę, przed zawarciem każdej Umowy Pożyczki.</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Czas obowiązywania formularza</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c11">
+                    <span class="c1">Niniejszy Formularz informacyjny jest ważny przez 1 dzień.</span>
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="c3 c7">
+        <span class="c27 c15 c39"></span>
+    </p>
+    <p class="c3">
+        <span class="c9 c27">5. Dodatkowe informacje podawane w przypadku sprzedaży usług finansowych na odległość</span>
+    </p>
+    <a id="t.6adbcfc772ba35062d77ad7c7c7216f2fb881e7e"></a>
+    <a id="t.4"></a>
+    <table class="c23">
+        <tbody>
+        <tr class="c4">
+            <td class="c32" colspan="2" rowspan="1">
+                <p class="c3">
+                    <span class="c15">a) </span>
+                    <span class="c9">Dane Pożyczkodawcy</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">POŻYCZKODAWCA</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c30">
+                    <span class="c9">REVO TECHNOLOGIES SP. Z O.O.</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Adres siedziby</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c1">Ul. Grzybowska nr 2 lokal 29,&nbsp;00-131 Warszawa</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Numer telefonu</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c15"></span>
+                    <span class="c20 c2">22 245-05-45</span>
+                    <span class="c15"></span>
+                    <sup></sup>
+                    <sup></sup>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Adres e-mail</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c15"></span>
+                    <span class="c20 c2">
+                                    <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ddb6b2b3a9bcb6a99dafb8abb2adb1a8aef3adb1">test@revoplus.pl</a>
+                                </span>
+                    <span class="c15"></span>
+                    <sup></sup>
+                    <sup></sup>
+                    <sup></sup>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c9">Adres www</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c20 c2">www.revoplus.pl</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Rejestr</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c22">
+                    <span class="c1">Spółka jest zarejestrowana w Rejestrze Przedsiębiorców Krajowego Rejestru Sądowego pod numerem KRS: 0000655200.</span>
+                </p>
+                <p class="c22">
+                    <span class="c1">Pożyczkodawca jest wpisany do rejestru instytucji pożyczkowych prowadzonego przez Komisję Nadzoru Finansowego pod numerem RIP000394. </span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Organ nadzoru</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c1">W zakresie wpisu do rejestru instytucji pożyczkowych: Komisja Nadzoru Finansowego, www.knf.gov.pl</span>
+                </p>
+                <p class="c3">
+                    <span class="c1">W zakresie ochrony konsumentów: Prezes Urzędu Ochrony Konkurencji i Konsumentów, www.uokik.gov.pl</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c32" colspan="2" rowspan="1">
+                <p class="c3">
+                    <span class="c15">b) </span>
+                    <span class="c9">Dane dotyczące umowy</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Odstąpienie od umowy</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c1">Ma Pan/Pani prawo do odstąpienia od Ramowej Umowy Pożyczki i każdej Umowy Pożyczki, w terminie 14 dni od ich zawarcia. </span>
+                </p>
+                <p class="c3">
+                    <span class="c1">Odstąpienia dokonuje się przez złożenie oświadczenia Pożyczkodawcy, przesłanego na:</span>
+                </p>
+                <p class="c3">
+                                <span class="c20 c2">
+                                    <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b1dadedfc5d0dac5f1c3d4c7dec1ddc4c29fc1dd">test@revoplus.pl</a>
+                                </span>
+                </p>
+                <p class="c3">
+                    <span class="c15">lub na: </span>
+                    <span class="c20 c2">Ul. Grzybowska nr 2 lokal 29, 00-131 Warszawa</span>
+                </p>
+                <p class="c3">
+                    <span class="c1">Wzór oświadczenia o odstąpieniu od Ramowej Umowy Pożyczki lub Umowy Pożyczki jest przesyłany Klientowi przy zawieraniu Umowy Pożyczki i jest dostępny w Profilu Klienta.</span>
+                </p>
+                <p class="c3">
+                                <span class="c1">Skutki nieskorzystania z prawa do odstąpienia: jeżeli nie skorzysta Pan/Pani z prawa do odstąpienia od Ramowej Umowy Pożyczki, Ramowa Umowa Pożyczki będzie Pana/Panią wiązać do czasu jej wypowiedzenia, co oznacza możliwość składania w tym czasie Wniosków o Pożyczkę. Jeżeli nie skorzysta Pan/Pani z prawa do odstąpienia od Umowy Pożyczki, Umowa Pożyczki będzie Pana/Panią wiązać do czasu pełnej spłaty Zadłużenia z tej Umowy Pożyczki.</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Wybór prawa właściwego</span>
+                </p>
+                <p class="c10">
+                    <span class="c8">Do zawartej z Panem/Panią umowy o kredyt będzie miało zastosowanie prawo:</span>
+                </p>
+                <p class="c6">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3 c7">
+                    <span class="c1"></span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Postanowienie umowy dotyczące wyboru prawa właściwego lub właściwego sądu*</span>
+                </p>
+                <p class="c6">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c1">Prawo polskie</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Prawo właściwe dla zobowiązań pozaumownych</span>
+                </p>
+                <p class="c10">
+                    <span class="c9">wynikających z kontaktów handlowych mających miejsce przed zawarciem umowy:</span>
+                </p>
+                <p class="c6">
+                    <span class="c1"></span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c1">Prawo polskie</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Język umowy/język komunikacji*</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c1">Pożyczkodawca będzie się komunikować z Klientem w języku polskim.</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c32" colspan="2" rowspan="1">
+                <p class="c3">
+                    <span class="c15">c) </span>
+                    <span class="c9">Dane dotyczące odwołań</span>
+                </p>
+            </td>
+        </tr>
+        <tr class="c4">
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c10">
+                    <span class="c9">Pozasądowe rozstrzyganie sporów</span>
+                </p>
+            </td>
+            <td class="c0" colspan="1" rowspan="1">
+                <p class="c3">
+                    <span class="c1">Organem uprawnionym do pozasądowego rozstrzygania sporów między Pożyczkodawcą a Klientem jest Rzecznik Finansowy. Więcej informacji dostępnych na:</span>
+                </p>
+                <p class="c3">
+                    <span class="c1">www.rf.gov.pl</span>
+                </p>
+                <p class="c3">
+                    <span class="c1">Na podstawie zgody Pożyczkodawcy i Klienta, spór może być rozstrzygnięty przez Sąd Polubowny przy Komisji Nadzoru Finansowego. Więcej informacji dostępnych na:</span>
+                </p>
+                <p class="c3">
+                    <span class="c1">www.knf.gov.pl/regulacje/Sad_Polubowny</span>
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="c7 c34">
+        <span class="c1"></span>
+    </p>
+    <div>
+        <p class="c7 c40">
+            <span class="c13"></span>
+        </p>
+        <p class="c6">
+            <span class="c13"></span>
+        </p>
+    </div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_title">Ceva nu a mers bine...</string>
+
+    <string name="err_network_is_not_available">Hopa... Ceva nu a mers bine. Încearcă din nou în câteva minute</string>
+    <string name="err_unknown">Eroare necunoscută</string>
+    <string name="err_server">Server error</string>
+    <string name="err_certificate">Certificate error</string>
+
+    <string name="error_login">Login nevalid</string>
+    <string name="error_phone">Număr de telefon nevalid</string>
+    <string name="error_email">E-mail nevalid</string>
+    <string name="error_pin_code">Cod PIN nevalid</string>
+    <string name="error_pin_not_match">Codurile PIN introduse nu se potrivesc</string>
+    <string name="error_date">Data nevalidă</string>
+    <string name="error_sum">Suma nevalidă</string>
+    <string name="error_field_required">Acest câmp este obligatoriu</string>
+    <string name="error_birth_day">Data nevalidă</string>
+    <string name="error_pesel">CNP nevalid</string>
+    <string name="error_id_number">Număr și serie CI nevalide</string>
+    <string name="error_postal_code">Cod poştal nevalid</string>
+    <string name="error_scan">Documentul nu a fost găsit</string>
+
+    <string name="error_sms_code">Cod SMS nevalid</string>
+    <string name="error_login_or_password">Login nevalid</string>
+
+    <string name="error_purchase_exceeds">Suma maximă disponibilă în acest magazin este de %s.</string>
+    <string name="error_purchase_small">Suma introdusă este incorectă</string>
+
+    <string name="error_large_data">Cantitatea de date transferate depășește limitele stabilite</string>
+
+    <string name="error_do_support">A apărut o eroare. \nTe rugăm să contactezi asistența tehnică</string>
+    <string name="error_bulletin" >Va rugăm să verificați corectitudinea seriei și numărului buletinului.</string>
+
+
+</resources>

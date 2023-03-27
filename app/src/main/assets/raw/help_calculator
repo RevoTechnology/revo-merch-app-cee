@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	</head>
+	<body>
+		<p><strong>Na jakim kroku jestem?</strong></p>
+		<p>Szczeg&oacute;łowa oferta</p>
+		<p><br /><strong>Co muszę teraz zrobić?</strong></p>
+		<ul>
+			<li>Poinformuj klienta o pozytywnej decyzji o skorzystaniu z usługi Revoplus.</li>
+			<li>Na tym kroku możesz r&oacute;wnież edytować kwotę transakcji - jeśli klient otrzymał decyzję o większej kwocie na zakupy z Revo, może chcieć kupić więcej produkt&oacute;w.</li>
+			<li>Zaprezentuj klientowi szczeg&oacute;ły oferty rozbicia płatności na części.</li>
+		</ul>
+		<p><strong>Dlaczego jest to konieczne?</strong></p>
+		<ul>
+			<li>Klient poznaje szczeg&oacute;ły oferty - może zobaczyć wszystkie informacje dotyczące płatności, całkowitej kwoty do spłaty, itp. w zależności od wyboru liczby płatności.</li>
+		</ul>
+		<p><strong>Jakie kroki pozostały?</strong></p>
+		<p>Potwierdzenie umowy kodem SMS &gt; Zeskanowanie kodu kreskowego</p>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+		<p><strong>Na jakim kroku jestem?</strong></p>
+		<p>Negatywna decyzja o skorzystaniu z usługi Revoplus</p>
+		<p><br /><strong>Co muszę teraz zrobić?</strong></p>
+		<ul>
+		<li>Poinformuj klienta, że jego wniosek o skorzystanie przez niego z usługi Revoplus został odrzucony. Aby podjąć decyzję bierzemy pod uwagę wiele czynnik&oacute;w. Jeśli nie mamy wystarczająco dużo informacji o kliencie, to możliwe, że w takim przypadku wniosek zostanie r&oacute;wnież odrzucony.</li>
+		</ul>
+		<p><strong>Dlaczego jest to konieczne?</strong></p>
+		<ul>
+		<li>Jeśli decyzja o skorzystaniu z usługi jest negatywna, to proces kończy się na tym kroku.</li>
+		</ul>
+		<p><strong>Jakie kroki pozostały?</strong></p>
+		<p>Poproś klienta o zapłacenie za produkty got&oacute;wką lub inną formą płatności, kt&oacute;rą uznaje sieć handlowa.</p>
+    </body>
+</html>
