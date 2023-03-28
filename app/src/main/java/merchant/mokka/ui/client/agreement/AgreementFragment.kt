@@ -186,13 +186,8 @@ class AgreementFragment : BaseFragment(), AgreementView {
     }
 
     private fun isModelValid(): Boolean = if (isBgLocale()) {
-        agreementAllCheckBox.isChecked =
-            agreementCreditBureausCheckBox.isChecked
-                    && agreementMarketingEmailCheckBox.isChecked
-                    && agreementPersonalDataCheckBox.isChecked
-        agreementAllCheckBox.isChecked
+        agreementCreditBureausCheckBox.isChecked && agreementMarketingEmailCheckBox.isChecked
     } else agreementCreditBureausCheckBox.isChecked
-
 
     private fun validateChecks() {
         agreementNextBtn.alpha = isModelValid().toAlpha()
