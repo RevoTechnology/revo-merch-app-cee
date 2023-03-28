@@ -1,5 +1,6 @@
 package merchant.mokka.ui.root
 
+import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.github.salomonbrys.kodein.KodeinInjector
 import com.github.salomonbrys.kodein.instance
@@ -39,26 +40,29 @@ class RootPresenter(injector: KodeinInjector) : BasePresenter<RootView>(injector
         }
     }
 
+
     fun checkApkVersion(deviceInfoData: DeviceInfoData?) {
-        if (isPlLocale() || isRoLocale() || isBgLocale()) {
-            showSignInScreen()
-            service.loadApkVersion()
-                    .subscribeBy(
-                            onSuccess = {
-                                memoryCashedData.remoteVersion = it
-                                if (it.isNewVersion())
-                                    viewState.confirmUpdate(it)
-                            },
-                            onError = {
-                                if (it is NetworkAvailableErr)
-                                    viewState.onError(it)
-                                else
-                                    memoryCashedData.remoteVersion = BuildConfig.VERSION_NAME
-                            }
-                    )
-        } else {
-            deviceLogs(deviceInfoData)
-        }
+        showSignInScreen()
+//        закомментировано 28.03 для задачи #6
+//        if (isPlLocale() || isRoLocale() || isBgLocale()) {
+//            showSignInScreen()
+//            service.loadApkVersion()
+//                    .subscribeBy(
+//                            onSuccess = {
+//                                memoryCashedData.remoteVersion = it
+//                                if (it.isNewVersion())
+//                                    viewState.confirmUpdate(it)
+//                            },
+//                            onError = {
+//                                if (it is NetworkAvailableErr)
+//                                    viewState.onError(it)
+//                                else
+//                                    memoryCashedData.remoteVersion = BuildConfig.VERSION_NAME
+//                            }
+//                    )
+//        } else {
+//            deviceLogs(deviceInfoData)
+//        }
     }
 
     fun loadApkFile() {
