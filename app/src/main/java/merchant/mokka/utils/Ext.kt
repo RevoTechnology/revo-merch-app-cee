@@ -120,7 +120,6 @@ private fun updateResourcesLocaleLegacy(context: Context?, locale: Locale?): Con
     return context
 }
 
-fun isRuLocale() = Prefs.locale == Constants.LOCALE_RU
 fun isPlLocale() = Prefs.locale == Constants.LOCALE_PL
 fun isRoLocale() = Prefs.locale == Constants.LOCALE_RO
 fun isBgLocale() = Prefs.locale == Constants.LOCALE_BG

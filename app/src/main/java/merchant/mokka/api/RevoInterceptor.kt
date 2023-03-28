@@ -8,7 +8,6 @@ import merchant.mokka.pref.Prefs
 import merchant.mokka.utils.isBgLocale
 import merchant.mokka.utils.isPlLocale
 import merchant.mokka.utils.isRoLocale
-import merchant.mokka.utils.isRuLocale
 
 class RevoInterceptor(val useRevoAuth: Boolean, val usePathConstructor: Boolean) : Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
@@ -47,7 +46,6 @@ class RevoInterceptor(val useRevoAuth: Boolean, val usePathConstructor: Boolean)
     companion object {
         fun baseUrl() = when {
             isPlLocale() -> BuildConfig.BASE_PL_URL
-            isRuLocale() -> BuildConfig.BASE_URL
             isRoLocale() -> BuildConfig.BASE_RO_URL
             isBgLocale() -> BuildConfig.BASE_BG_URL
 

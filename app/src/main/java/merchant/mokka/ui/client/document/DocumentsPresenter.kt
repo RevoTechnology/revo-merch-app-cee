@@ -9,7 +9,6 @@ import merchant.mokka.api.error.NetworkAvailableErr
 import merchant.mokka.common.BasePresenter
 import merchant.mokka.model.LoanData
 import merchant.mokka.ui.root.Screens
-import merchant.mokka.utils.isRuLocale
 
 @InjectViewState
 class DocumentsPresenter(injector: KodeinInjector) : BasePresenter<DocumentsView>(injector) {
@@ -23,7 +22,6 @@ class DocumentsPresenter(injector: KodeinInjector) : BasePresenter<DocumentsView
                             onSuccess = {
                                 viewState.hideProgress()
                                 val nextScreen = when{
-                                    isRuLocale() -> Screens.CONTRACT_RU
                                     else -> Screens.CONTRACT
                                 }
 

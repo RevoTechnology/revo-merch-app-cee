@@ -31,7 +31,6 @@ import merchant.mokka.utils.decoro.slots.PredefinedSlots
 import merchant.mokka.utils.decoro.watchers.MaskFormatWatcher
 import merchant.mokka.utils.isBgLocale
 import merchant.mokka.utils.isRoLocale
-import merchant.mokka.utils.isRuLocale
 import merchant.mokka.utils.isValid
 import merchant.mokka.utils.isValidAsPolishPESEL
 import merchant.mokka.widget.EditTextValidator
@@ -74,11 +73,6 @@ class SearchFragment : BaseFragment(), SearchView {
     override fun initView(view: View, savedInstanceState: Bundle?) {
         setHasOptionsMenu(true)
 
-        if (isRuLocale()) {
-            phoneFormatWatcher =
-                createPhoneMaskFormatWatcher(searchLogin, getString(R.string.phone_mask))
-        }
-
         phoneFormatWatcher =
             createPhoneMaskFormatWatcher(searchLogin, getString(R.string.phone_mask))
         searchLogin.setText(R.string.phone_empty)
@@ -91,31 +85,6 @@ class SearchFragment : BaseFragment(), SearchView {
 
         with(view) {
             when {
-                isRuLocale() -> {
-                    searchPassport.filters = arrayOf<InputFilter>(LengthFilter(13))
-                    phonePrefix = getString(R.string.phone_prefix)
-                    if (savedInstanceState == null) searchLogin.setText(R.string.phone_empty)
-                    searchLogin.inputType = InputType.TYPE_CLASS_PHONE
-
-                    addMask(
-                        slots = arrayOf(
-                            PredefinedSlots.digit(),
-                            PredefinedSlots.digit(),
-                            PredefinedSlots.digit(),
-                            PredefinedSlots.digit(),
-                            PredefinedSlots.hardcodedSlot(' '),
-                            PredefinedSlots.digit(),
-                            PredefinedSlots.digit(),
-                            PredefinedSlots.digit(),
-                            PredefinedSlots.digit(),
-                            PredefinedSlots.digit(),
-                            PredefinedSlots.digit()
-                        ),
-                        editor = searchPassport,
-                        showEmpty = false
-                    )
-                    searchPassport.inputType = InputType.TYPE_CLASS_PHONE
-                }
                 isRoLocale() -> {
                     searchPassport.run {
                         inputType = InputType.TYPE_CLASS_NUMBER
@@ -175,25 +144,10 @@ class SearchFragment : BaseFragment(), SearchView {
         val passportValid: Boolean
 
         searchPassportLayout.error = when {
-            isRuLocale() -> {
-                phoneValid = searchLogin.text.isNullOrEmpty() ||
-                        searchLogin.text.toString()
-                            .clearPhone() == getString(R.string.phone_prefix) ||
-                        phoneFormatWatcher.mask.isValid()
-                searchLoginLayout.error = if (phoneValid) null else getString(R.string.error_phone)
-
-                passportValid = when {
-                    searchPassport.text.isNullOrEmpty() -> true
-                    searchPassport.text.toString().length == 11 -> true
-                    else -> false
-                }
-                if (passportValid) null else getString(R.string.error_id_number)
-            }
             isRoLocale() -> {
                 passportValid = cnpValidator.isValid() || searchPassport.text.isNullOrEmpty()
                 if (passportValid) null else getString(R.string.error_pesel)
             }
-
             isBgLocale() -> {
                 passportValid =
                     searchPassport.text?.length == 10 || searchPassport.text.isNullOrEmpty()
@@ -245,22 +199,14 @@ class SearchFragment : BaseFragment(), SearchView {
 
     override fun onResume() {
         super.onResume()
-        if (isRuLocale()) {
-            phoneFormatWatcher.setCallback(FormatTextWatcher { validate() })
-        } else {
-            searchLogin.addTextChangedListener(loginValidator)
-        }
+        searchLogin.addTextChangedListener(loginValidator)
         searchPassport.attachValidator(cnpValidator, searchPassportLayout)
         searchContract.addTextChangedListener(contractValidator)
     }
 
     override fun onPause() {
         super.onPause()
-        if (isRuLocale()) {
-            phoneFormatWatcher.setCallback(null)
-        } else {
-            searchLogin.removeTextChangedListener(loginValidator)
-        }
+        searchLogin.removeTextChangedListener(loginValidator)
         searchPassport.detachValidator(cnpValidator)
         searchContract.removeTextChangedListener(contractValidator)
     }

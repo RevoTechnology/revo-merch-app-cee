@@ -42,7 +42,6 @@
     <string name="font_thin" translatable="false">sans-serif-thin</string>
 
     <string name="select_locale" translatable="false">Select the app language </string>
-    <string name="select_locate_ru" translatable="false">Русский</string>
     <string name="select_locate_pl" translatable="false">Polski</string>
     <string name="select_locate_ro" translatable="false">Română</string>
     <string name="select_locate_bg" translatable="false">Български</string>
@@ -206,18 +205,17 @@
     <string name="contract_secci">Standard European Consumer Credit Information</string>
     <string name="contract_secci_title">Standard European Consumer</string>
 
-    <string name="contract_ru_title"> </string>
-    <string name="contract_ru_conditions"> </string>
-    <string name="contract_ru_sum"> </string>
-    <string name="contract_ru_over"> </string>
-    <string name="contract_ru_pay_count"> </string>
-    <string name="contract_ru_pay_month"> </string>
-    <string name="contract_ru_conditions_all"> </string>
-    <string name="contract_ru_conditions_hint"> </string>
-    <string name="contract_ru_conditions_check"> </string>
-    <string name="contract_ru_offer_title"> </string>
-    <string name="contract_ru_insurance_title"> </string>
-    <string name="contract_ru_individual_conditions_title"> </string>
+    <string name="contract_conditions"> </string>
+    <string name="contract_sum"> </string>
+    <string name="contract_over"> </string>
+    <string name="contract_pay_count"> </string>
+    <string name="contract_pay_month"> </string>
+    <string name="contract_conditions_all"> </string>
+    <string name="contract_conditions_hint"> </string>
+    <string name="contract_conditions_check"> </string>
+    <string name="contract_offer_title"> </string>
+    <string name="contract_insurance_title"> </string>
+    <string name="contract_individual_conditions_title"> </string>
     <string name="contract_admin_info"></string>
     <string name="agreement_SMS"></string>
     <string name="agreement_SMS_title"></string>
@@ -312,7 +310,7 @@
     <!-- chat -->
     <string name="chat_title" translatable="false" />
     <string name="hint_chat_message" translatable="false" />
-    <string name="chat_greetings" translatable="false" />
+    <string name="chat_greetings" />
     <string name="chat_connection_error_title" translatable="false" />
     <string name="chat_connection_error_message" translatable="false" />
     <string name="chat_status_typying" translatable="false" />

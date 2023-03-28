@@ -23,7 +23,6 @@ import merchant.mokka.utils.decoro.watchers.MaskFormatWatcher
 import merchant.mokka.utils.enable
 import merchant.mokka.utils.isBgLocale
 import merchant.mokka.utils.isPlLocale
-import merchant.mokka.utils.isRuLocale
 import merchant.mokka.utils.isValid
 import merchant.mokka.utils.setTextWithLinkSupport
 import merchant.mokka.utils.toAlpha
@@ -81,7 +80,7 @@ class PurchaseFragment : BaseFragment(), PurchaseView {
                 openHelp(toolbarStyle, "article_inform", getString(R.string.purchase_help_title))
         }
 
-        purchaseSelfRegistration.visible(isRuLocale())
+        purchaseSelfRegistration.visible(false)
         purchaseSelfRegistration.setOnClickListener {
             presenter.showSelfRegistration(purchasePhone.text.toString().clearPhone())
         }

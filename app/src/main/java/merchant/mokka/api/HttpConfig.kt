@@ -5,7 +5,6 @@ import merchant.mokka.BuildConfig
 import merchant.mokka.utils.isBgLocale
 import merchant.mokka.utils.isPlLocale
 import merchant.mokka.utils.isRoLocale
-import merchant.mokka.utils.isRuLocale
 
 object HttpConfig {
 
@@ -53,7 +52,6 @@ object HttpConfig {
             RevoInterceptor.serviceName()?.let { uriBuilder.appendEncodedPath(it) }
 
         when {
-            isRuLocale() -> "api/loans/v1"
             isPlLocale() -> "api/loans/v1"
             isRoLocale() -> "api/loans/v1"
             isBgLocale() -> "api/loans/v1"

@@ -11,7 +11,6 @@ import merchant.mokka.common.BasePresenter
 import merchant.mokka.model.LoanData
 import merchant.mokka.ui.root.Screens
 import merchant.mokka.utils.Constants
-import merchant.mokka.utils.isRuLocale
 import merchant.mokka.utils.now
 import java.util.concurrent.TimeUnit
 
@@ -105,7 +104,6 @@ class ConfirmClientPresenter(injector: KodeinInjector) : BasePresenter<ConfirmCl
                     viewState.hideProgress()
                     router.newRootScreen(Screens.DECLINED, it.decisionMessage)
                 }
-                kycPassed == null && isRuLocale() -> getTariffInformation(loan)
                 kycPassed != true -> {
                     viewState.hideProgress()
                     router.navigateTo(Screens.CLIENT_PROFILE, loan)

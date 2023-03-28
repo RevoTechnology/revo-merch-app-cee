@@ -195,9 +195,7 @@ class CalculatorFragment : BaseFragment(), CalculatorView {
         calcSmsView.text = getString(R.string.calc_enable_sms_inform, clientSmsInfoData?.price?.toTextWithCent().orEmpty())
         calcSmsSwh.isChecked = clientSmsInfoData?.subscribed.orFalse()
 
-        val insuranceVisible = isRuLocale() && loan.sum > 0 && loan.insuranceAvailable
-        calcInsuranceLayout.visible(insuranceVisible)
-
+        calcInsuranceLayout.visible(false)
         validate()
     }
 

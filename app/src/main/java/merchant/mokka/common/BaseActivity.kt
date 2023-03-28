@@ -19,7 +19,6 @@ import com.github.salomonbrys.kodein.android.KodeinAppCompatActivity
 import kotlinx.android.synthetic.main.dialog_progress.view.*
 import merchant.mokka.ui.main.help.HelpActivity
 import merchant.mokka.utils.isBgLocale
-import merchant.mokka.utils.isRuLocale
 import merchant.mokka.utils.updateBaseContextLocale
 import merchant.mokka.R
 import merchant.mokka.BuildConfig
@@ -109,7 +108,6 @@ open class BaseActivity : KodeinAppCompatActivity() {
     fun openHelp(toolbarStyle: ToolbarStyle, helpRes: String, title: String) {
         val assetsList = resources.assets.list("raw")
         val locale = when {
-            isRuLocale() -> "ru"
             isBgLocale() -> "bg"
             else -> ""
         }

@@ -25,17 +25,6 @@
         android:layout_marginTop="36dp">
 
         <androidx.appcompat.widget.AppCompatRadioButton
-            android:id="@+id/selectButtonRu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="32dp"
-            android:paddingEnd="32dp"
-            android:textColor="@color/black_de"
-            android:textSize="16sp"
-            android:text="@string/select_locate_ru"
-            app:buttonTint="@color/radio_button_tint"/>
-
-        <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/selectButtonPl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

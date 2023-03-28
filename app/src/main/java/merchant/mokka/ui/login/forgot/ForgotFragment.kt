@@ -48,59 +48,39 @@ class ForgotFragment : BaseFragment(), ForgotView {
     override fun initView(view: View, savedInstanceState: Bundle?) {
         phonePrefix = getString(R.string.phone_prefix)
 
-        if (isRuLocale()) {
-            phoneFormatWatcher = createPhoneMaskFormatWatcher(forgotLogin, getString(R.string.phone_mask))
-        } else {
-            loginValidator = EditTextValidator(
-                        validator = { text -> text.isValidAsPhoneOrLogin() },
-                        onChangedState = { isValid ->
-                            forgotSendCodeBtn.alpha = isValid.toAlpha()
-                        },
-                        errorText = getString(R.string.error_login),
-                        errorRequired = getString(R.string.error_field_required)
-                )
-        }
+        loginValidator = EditTextValidator(
+            validator = { text -> text.isValidAsPhoneOrLogin() },
+            onChangedState = { isValid ->
+                forgotSendCodeBtn.alpha = isValid.toAlpha()
+            },
+            errorText = getString(R.string.error_login),
+            errorRequired = getString(R.string.error_field_required)
+        )
+
         val login = arguments?.getString(ExtrasKey.LOGIN.name).orEmpty()
         forgotLogin.setText(login)
 
         forgotSendCodeBtn.setOnClickListener {
-            if (isRuLocale() && phoneFormatWatcher.mask.isValid()) {
-                    presenter.requestCode(forgotLogin.text.toString())
-            } else if ((isPlLocale() || isBgLocale())&& loginValidator.isValid()) {
-                    presenter.requestCode(forgotLogin.text.toString())
+            if ((isPlLocale() || isBgLocale())&& loginValidator.isValid()) {
+                presenter.requestCode(forgotLogin.text.toString())
             }
         }
     }
 
     private fun validate() {
-        val valid = if (isRuLocale()) {
-            phoneFormatWatcher.mask.isValid()
-        } else {
-            forgotLogin.text.toString().isValidAsPhoneOrLogin()
-        }
+        val valid = forgotLogin.text.toString().isValidAsPhoneOrLogin()
         forgotSendCodeBtn.alpha = valid.toAlpha()
     }
 
     override fun onResume() {
         super.onResume()
-        if (isRuLocale()) {
-            phoneFormatWatcher.setCallback(FormatTextWatcher {
-                forgotSendCodeBtn.alpha = phoneFormatWatcher.mask.isValid().toAlpha()
-            })
-            forgotLogin.inputType = InputType.TYPE_CLASS_PHONE
-        } else {
-            forgotLogin.attachValidator(loginValidator, forgotLoginLayout)
-            forgotLogin.inputType = InputType.TYPE_CLASS_TEXT
-        }
+        forgotLogin.attachValidator(loginValidator, forgotLoginLayout)
+        forgotLogin.inputType = InputType.TYPE_CLASS_TEXT
         validate()
     }
 
     override fun onPause() {
         super.onPause()
-        if (isRuLocale()) {
-            phoneFormatWatcher.setCallback(null)
-        } else {
-            forgotLogin.detachValidator(loginValidator)
-        }
+        forgotLogin.detachValidator(loginValidator)
     }
 }

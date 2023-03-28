@@ -21,14 +21,12 @@ object Constants {
     const val BARCODE_BACKGROUND = 0xf5f5f5
 
     val CURRENCY = when {
-        isRuLocale() -> "руб."
         isRoLocale() -> "RON"
         isBgLocale() -> "лв."
         else -> "zł"
     }
     const val MASKED_DOC_POSTFIX = "_masked"
 
-    const val LOCALE_RU = "ru"
     const val LOCALE_PL = "merchant"
     const val LOCALE_RO = "ro"
     const val LOCALE_BG = "bg"

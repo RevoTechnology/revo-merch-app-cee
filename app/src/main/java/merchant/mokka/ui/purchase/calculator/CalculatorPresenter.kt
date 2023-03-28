@@ -68,7 +68,6 @@ class CalculatorPresenter(injector: KodeinInjector) : BasePresenter<CalculatorVi
 			isPlLocale() -> Screens.CONTRACT
 			isRoLocale() && loan.client?.rclAccepted != true && loan.tariff?.isRclProductKing == true && !loan.client?.missingDocuments.isNullOrEmpty() -> Screens.DOCUMENTS
 			isBgLocale() -> Screens.CONTRACT
-			isRuLocale() -> Screens.CONTRACT_RU
 			else -> Screens.CONTRACT
 		}
 
