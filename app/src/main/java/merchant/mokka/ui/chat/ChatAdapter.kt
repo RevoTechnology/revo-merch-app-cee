@@ -65,6 +65,7 @@ class ChatAdapter(val username: String?,
             ViewType.User -> holder.user(item(position) as ChatMessageDto)
             ViewType.Status -> holder.status(item(position) as ChatMessageStatus)
             ViewType.Loading -> onLoadNext()
+            else -> {}
         }
     }
 

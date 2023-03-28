@@ -19,7 +19,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 
-        setProperty("archivesBaseName", "revo_pl_" + versionName + "(" + versionCode + ")")
+        setProperty("archivesBaseName", "cee_" + versionName + "(" + versionCode + ")")
     }
 
     signingConfigs {
