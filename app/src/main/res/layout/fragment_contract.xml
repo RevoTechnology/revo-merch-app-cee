@@ -19,7 +19,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@string/font_medium"
-            android:text="@string/contract_ru_conditions"
+            android:text="@string/contract_conditions"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
@@ -35,7 +35,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/contract_ru_sum"
+                android:text="@string/contract_sum"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -70,7 +70,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/contract_ru_over"
+                android:text="@string/contract_over"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -105,7 +105,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/contract_ru_pay_count"
+                android:text="@string/contract_pay_count"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -140,7 +140,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/contract_ru_pay_month"
+                android:text="@string/contract_pay_month"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 

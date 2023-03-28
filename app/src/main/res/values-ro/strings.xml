@@ -178,16 +178,16 @@
     <string name="contract_secci_title">Informații precontractuale pentru creditul de consum (SECCI)</string>
 
     <string name="contract_ru_title"> </string>
-    <string name="contract_ru_conditions">Condițiile contractului</string>
-    <string name="contract_ru_sum">Total de plată</string>
-    <string name="contract_ru_over">Suplimentar de plată</string>
-    <string name="contract_ru_pay_count">Numărul de plăți</string>
-    <string name="contract_ru_pay_month">Plata lunară</string>
-    <string name="contract_ru_conditions_all"> </string>
-    <string name="contract_ru_conditions_hint"> </string>
-    <string name="contract_ru_conditions_check"> </string>
-    <string name="contract_ru_offer_title"> </string>
-    <string name="contract_ru_individual_conditions_title"> </string>
+    <string name="contract_conditions">Condițiile contractului</string>
+    <string name="contract_sum">Total de plată</string>
+    <string name="contract_over">Suplimentar de plată</string>
+    <string name="contract_pay_count">Numărul de plăți</string>
+    <string name="contract_pay_month">Plata lunară</string>
+    <string name="contract_conditions_all"> </string>
+    <string name="contract_conditions_hint"> </string>
+    <string name="contract_conditions_check"> </string>
+    <string name="contract_offer_title"> </string>
+    <string name="contract_individual_conditions_title"> </string>
     <string name="contract_admin_info"></string>
 
     <string name="barcode_title">Cod de bare</string>

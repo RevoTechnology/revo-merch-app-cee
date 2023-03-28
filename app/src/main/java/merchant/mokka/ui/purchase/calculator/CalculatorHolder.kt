@@ -63,8 +63,8 @@ class CalculatorHolder(
                 }
             }
 
-            loanSumLayout.visible(!(data.sumWithDiscount == data.totalOfPayments || isRuLocale()))
-            totalOverpaymentContainer.visible(!isRuLocale())
+            loanSumLayout.visible(data.sumWithDiscount != data.totalOfPayments)
+            totalOverpaymentContainer.visible(true)
             totalOverpaymentDivider.visible(totalOverpaymentContainer.isVisible())
 
             when (data.expanded) {

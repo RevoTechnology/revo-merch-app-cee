@@ -14,7 +14,6 @@ import merchant.mokka.model.LoanData
 import merchant.mokka.model.MemoryCashedData
 import merchant.mokka.pref.Prefs
 import merchant.mokka.ui.root.Screens
-import merchant.mokka.utils.isRuLocale
 
 @InjectViewState
 class PurchasePresenter(injector: KodeinInjector) : BasePresenter<PurchaseView>(injector) {
@@ -68,9 +67,9 @@ class PurchasePresenter(injector: KodeinInjector) : BasePresenter<PurchaseView>(
     private fun getPurchaseValidateCode(loan: LoanData, phone: String) {
         viewState.showProgress()
         service.updateLoanRequest(
-                loan.token,
-                phone,
-                if (isRuLocale()) getMinAmount() else null,
+                loanToken = loan.token,
+                phone = phone,
+                amount = null,
                 agreeInsurance = null
         )
                 .subscribeBy(
@@ -107,10 +106,7 @@ class PurchasePresenter(injector: KodeinInjector) : BasePresenter<PurchaseView>(
                         onError = {
                             viewState.hideProgress()
                             loan.isNewClient = true
-                            if (isRuLocale())
-                                router.navigateTo(Screens.CLIENT_PROFILE, loan)
-                            else
-                                router.navigateTo(Screens.AGREEMENT, loan)
+                            router.navigateTo(Screens.AGREEMENT, loan)
                         }
                 )
     }
@@ -125,10 +121,7 @@ class PurchasePresenter(injector: KodeinInjector) : BasePresenter<PurchaseView>(
                         onError = {
                             viewState.hideProgress()
                             if (it is ApiErr && it.clientError()) {
-                                if (isRuLocale())
-                                    router.navigateTo(Screens.CLIENT_PROFILE, loan)
-                                else
-                                    router.navigateTo(Screens.AGREEMENT, loan)
+                                router.navigateTo(Screens.AGREEMENT, loan)
                             } else
                                 viewState.onError(it)
                         }

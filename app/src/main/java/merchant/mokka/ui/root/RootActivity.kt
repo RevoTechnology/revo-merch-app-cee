@@ -103,13 +103,11 @@ class RootActivity : BaseActivity(), RootView {
 
         val locale = getCurrentLocale(this)?.language
 
-        if (locale != Constants.LOCALE_RU
-                && locale != Constants.LOCALE_RO
+        if (locale != Constants.LOCALE_RO
                 && locale != Constants.LOCALE_PL
                 && locale != Constants.LOCALE_BG
                 && Prefs.locale.isEmpty()) {
             val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_select_locale, null, false)
-            val selectButtonRu = dialogView.findViewById<RadioButton>(R.id.selectButtonRu)
             val selectButtonPl = dialogView.findViewById<RadioButton>(R.id.selectButtonPl)
             val selectButtonRo = dialogView.findViewById<RadioButton>(R.id.selectButtonRo)
             val selectButtonBg = dialogView.findViewById<RadioButton>(R.id.selectButtonBg)
@@ -119,7 +117,6 @@ class RootActivity : BaseActivity(), RootView {
                     .setPositiveButton(R.string.button_ok) { _, _ ->
                         when {
                             selectButtonPl.isChecked -> Prefs.locale = Constants.LOCALE_PL
-                            selectButtonRu.isChecked -> Prefs.locale = Constants.LOCALE_RU
                             selectButtonRo.isChecked -> Prefs.locale = Constants.LOCALE_RO
                             selectButtonBg.isChecked -> Prefs.locale = Constants.LOCALE_BG
                         }
@@ -195,9 +192,7 @@ class RootActivity : BaseActivity(), RootView {
     //region ================= InitActivity =================
 
     private fun selectLocale() {
-        val dialogView =
-                LayoutInflater.from(this).inflate(R.layout.dialog_select_locale, null, false)
-        val selectButtonRu = dialogView.findViewById<RadioButton>(R.id.selectButtonRu)
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_select_locale, null, false)
         val selectButtonPl = dialogView.findViewById<RadioButton>(R.id.selectButtonPl)
 
         alert(
@@ -207,10 +202,8 @@ class RootActivity : BaseActivity(), RootView {
                 positive = {
                     Prefs.locale = when {
                         selectButtonPl.isChecked -> Constants.LOCALE_PL
-                        selectButtonRu.isChecked -> Constants.LOCALE_RU
                         else -> ""
                     }
-
                     updateBaseContextLocale(this)
                     recreate()
                 }

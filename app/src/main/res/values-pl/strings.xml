@@ -180,17 +180,17 @@ Prywatności</a> Mokka.]]></string>
     <string name="contract_admin_info"></string>
 
     <string name="contract_ru_title"> </string>
-    <string name="contract_ru_conditions">Kluczowe warunki umowy</string>
-`    <string name="contract_ru_sum">Całkowita kwota do zapłaty</string>
-    <string name="contract_ru_over">Koszt usługi miesięcznie</string>
-    <string name="contract_ru_pay_count">Liczba płatności</string>
-    <string name="contract_ru_pay_month">Miesięczna płatność</string>
-    <string name="contract_ru_conditions_all"> </string>
-    <string name="contract_ru_conditions_hint"> </string>
-    <string name="contract_ru_conditions_check"> </string>
-    <string name="contract_ru_offer_title"> </string>
-    <string name="contract_ru_insurance_title"> </string>
-    <string name="contract_ru_individual_conditions_title"> </string>
+    <string name="contract_conditions">Kluczowe warunki umowy</string>
+`    <string name="contract_sum">Całkowita kwota do zapłaty</string>
+    <string name="contract_over">Koszt usługi miesięcznie</string>
+    <string name="contract_pay_count">Liczba płatności</string>
+    <string name="contract_pay_month">Miesięczna płatność</string>
+    <string name="contract_conditions_all"> </string>
+    <string name="contract_conditions_hint"> </string>
+    <string name="contract_conditions_check"> </string>
+    <string name="contract_offer_title"> </string>
+    <string name="contract_insurance_title"> </string>
+    <string name="contract_individual_conditions_title"> </string>
 
     <string name="protection_program_title"> </string>
 

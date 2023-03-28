@@ -20,7 +20,6 @@ import merchant.mokka.utils.decoro.watchers.MaskFormatWatcher
 import merchant.mokka.utils.isBgLocale
 import merchant.mokka.utils.isPlLocale
 import merchant.mokka.utils.isRoLocale
-import merchant.mokka.utils.isRuLocale
 import merchant.mokka.utils.isValid
 import merchant.mokka.utils.isValidAsPhoneOrLogin
 import merchant.mokka.utils.isValidPinCode
@@ -57,9 +56,8 @@ class SignInFragment : BaseFragment(), SignInView, IDemoClickedView {
         phonePrefix = getString(R.string.phone_prefix)
 
 
-        if (isRuLocale() || isBgLocale()) {
-            phoneFormatWatcher =
-                createPhoneMaskFormatWatcher(signInLogin, getString(R.string.phone_mask))
+        if (isBgLocale()) {
+            phoneFormatWatcher = createPhoneMaskFormatWatcher(signInLogin, getString(R.string.phone_mask))
         } else {
             loginValidator = EditTextValidator(
                 validator = { text -> text.isValidAsPhoneOrLogin() },
@@ -74,10 +72,6 @@ class SignInFragment : BaseFragment(), SignInView, IDemoClickedView {
             errorText = getString(R.string.error_pin_code),
             errorRequired = getString(R.string.error_field_required)
         )
-
-        if (savedInstanceState == null && isRuLocale()) {
-            signInLogin.setText(R.string.phone_empty)
-        }
 
         signInForgotBtn.setOnClickListener {
             presenter.showForgotScreen(signInLogin.text.toString())
@@ -94,10 +88,7 @@ class SignInFragment : BaseFragment(), SignInView, IDemoClickedView {
     }
 
     private fun isModelValid(): Boolean {
-        return (
-                ((isPlLocale() || isRoLocale()) && loginValidator.isValid())
-                        || ((isRuLocale() || isBgLocale()) && phoneFormatWatcher.mask.isValid())
-                ) && pinValidator.isValid()
+        return (((isPlLocale() || isRoLocale()) && loginValidator.isValid()) || (isBgLocale() && phoneFormatWatcher.mask.isValid())) && pinValidator.isValid()
     }
 
     private fun validateModel() {
@@ -107,7 +98,7 @@ class SignInFragment : BaseFragment(), SignInView, IDemoClickedView {
     override fun onResume() {
         super.onResume()
 
-        if (isRuLocale() || isBgLocale()) {
+        if (isBgLocale()) {
             phoneFormatWatcher.setCallback(FormatTextWatcher {
                 if (it.isEmpty() && isBgLocale()) signInLogin.setText(getString(R.string.phone_prefix))
                 validateModel()
@@ -129,7 +120,7 @@ class SignInFragment : BaseFragment(), SignInView, IDemoClickedView {
     override fun onPause() {
         super.onPause()
 
-        if (isRuLocale() || isBgLocale()) {
+        if (isBgLocale()) {
             phoneFormatWatcher.setCallback(null)
         } else {
             signInLogin.detachValidator(loginValidator)

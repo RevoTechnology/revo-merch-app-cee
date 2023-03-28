@@ -178,17 +178,17 @@
     <string name="contract_secci_title">Преддоговорна информация за потребителски кредит</string>
 
     <string name="contract_ru_title"> </string>
-    <string name="contract_ru_conditions">Договорни условия</string>
-    <string name="contract_ru_sum">Общо за плащане</string>
-    <string name="contract_ru_over">Стойност на услуга</string>
-    <string name="contract_ru_pay_count">Брой вноски</string>
-    <string name="contract_ru_pay_month">Месечна вноска</string>
-    <string name="contract_ru_conditions_all"> </string>
-    <string name="contract_ru_conditions_hint"> </string>
-    <string name="contract_ru_conditions_check"> </string>
-    <string name="contract_ru_offer_title"> </string>
-    <string name="contract_ru_insurance_title"> </string>
-    <string name="contract_ru_individual_conditions_title"> </string>
+    <string name="contract_conditions">Договорни условия</string>
+    <string name="contract_sum">Общо за плащане</string>
+    <string name="contract_over">Стойност на услуга</string>
+    <string name="contract_pay_count">Брой вноски</string>
+    <string name="contract_pay_month">Месечна вноска</string>
+    <string name="contract_conditions_all"> </string>
+    <string name="contract_conditions_hint"> </string>
+    <string name="contract_conditions_check"> </string>
+    <string name="contract_offer_title"> </string>
+    <string name="contract_insurance_title"> </string>
+    <string name="contract_individual_conditions_title"> </string>
     <string name="contract_admin_info">Администратор на лични данни е Рево Технолоджис Сп. з о.о. Ще изпратим документите на посочения имейл адрес</string>
 
     <string name="protection_program_title"> </string>

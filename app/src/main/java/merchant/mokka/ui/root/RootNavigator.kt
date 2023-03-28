@@ -10,7 +10,6 @@ import merchant.mokka.ui.client.policy.PolicyFragment
 import merchant.mokka.ui.client.profile.ClientProfileFragment
 import merchant.mokka.ui.client.profile_bg.ClientProfileBgFragment
 import merchant.mokka.ui.client.profile_ro.ClientProfileRoFragment
-import merchant.mokka.ui.client.profile_ru.ClientProfileRuFragment
 import merchant.mokka.ui.login.forgot.ForgotFragment
 import merchant.mokka.ui.login.sign_in.SignInFragment
 import merchant.mokka.ui.login.sign_up.SignUpFragment
@@ -24,7 +23,6 @@ import merchant.mokka.ui.purchase.barcode.BarcodeFragment
 import merchant.mokka.ui.purchase.calculator.CalculatorFragment
 import merchant.mokka.ui.purchase.confirm.ConfirmFragment
 import merchant.mokka.ui.purchase.contract.ContractFragment
-import merchant.mokka.ui.purchase.contract_ru.ContractRuFragment
 import merchant.mokka.ui.purchase.protection.ProtectionProgramFragment
 import merchant.mokka.ui.purchase.purchase.PurchaseFragment
 import merchant.mokka.ui.purchase.self_register.SelfRegisterFragment
@@ -35,7 +33,6 @@ import merchant.mokka.ui.returns.search.SearchFragment
 import merchant.mokka.ui.updater.new_version.NewVersionFragment
 import merchant.mokka.utils.isBgLocale
 import merchant.mokka.utils.isRoLocale
-import merchant.mokka.utils.isRuLocale
 import merchant.mokka.model.*
 import ru.terrakok.cicerone.android.SupportAppNavigator
 
@@ -85,7 +82,6 @@ class RootNavigator(
             Screens.CLIENT_PROFILE -> {
                 SessionRoute.workRoute = false
                 when {
-                    isRuLocale() ->  ClientProfileRuFragment.getInstance(data as LoanData)
                     isRoLocale() -> ClientProfileRoFragment.getInstance(data as LoanData)
                     isBgLocale() -> ClientProfileBgFragment.getInstance(data as LoanData)
                     else -> ClientProfileFragment.getInstance(data as LoanData)
@@ -128,10 +124,6 @@ class RootNavigator(
             Screens.CONTRACT -> {
                 SessionRoute.workRoute = true
                 ContractFragment.getInstance(data as LoanData)
-            }
-            Screens.CONTRACT_RU -> {
-                SessionRoute.workRoute = true
-                ContractRuFragment.getInstance(data as LoanData)
             }
             Screens.BARCODE -> {
                 SessionRoute.workRoute = true

@@ -31,7 +31,7 @@ class PolicyFragment : BaseFragment(), PolicyView {
     }
 
     override val layoutResId = R.layout.fragment_policy
-    override var titleResId = R.string.contract_ru_individual_conditions_title
+    override var titleResId = R.string.contract_individual_conditions_title
     override val homeIconType = HomeIconType.BACK_ARROW
     override val toolbarStyle = ToolbarStyle.ACCENT
 

@@ -17,7 +17,6 @@ import merchant.mokka.track
 import merchant.mokka.ui.root.Screens
 import merchant.mokka.utils.clearPhone
 import merchant.mokka.utils.isRoLocale
-import merchant.mokka.utils.isRuLocale
 
 @InjectViewState
 class SelfRegisterPresenter(injector: KodeinInjector) : BasePresenter<SelfRegisterView>(injector) {
@@ -56,9 +55,9 @@ class SelfRegisterPresenter(injector: KodeinInjector) : BasePresenter<SelfRegist
 
     private fun updateLoan() {
         service.updateLoanRequest(
-                loan.token,
-                loan.clientPhone,
-                if (isRuLocale()) getMinAmount() else null,
+                loanToken = loan.token,
+                phone = loan.clientPhone,
+                amount = null,
                 agreeInsurance = null
         )
                 .subscribeBy(

@@ -96,9 +96,7 @@ class DashboardPresenter(injector: KodeinInjector) : BasePresenter<DashboardView
     fun sendSelfRegistration() = router.newRootScreen(Screens.SELF_REGISTER, "")
 
     fun showChat(activity: Activity) = activity.apply {
-        if (isRuLocale()) router.newScreenChain(Screens.CHAT, "")
-        else
-            Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.dashboard_chat_link))).run { startActivity(this) }
+        Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.dashboard_chat_link))).run { startActivity(this) }
     }
 
 }
