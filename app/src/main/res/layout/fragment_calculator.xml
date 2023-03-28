@@ -270,7 +270,7 @@
 
     </androidx.core.widget.NestedScrollView>
 
-    <pl.revo.merchant.widget.StepButtonWidget
+    <merchant.mokka.widget.StepButtonWidget
         android:id="@+id/calcNextBtn"
         android:layout_width="match_parent"
         android:layout_height="52dp"

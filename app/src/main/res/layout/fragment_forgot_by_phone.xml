@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <pl.revo.merchant.widget.KeyboardWidget
+    <merchant.mokka.widget.KeyboardWidget
         android:id="@+id/forgotKeyboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

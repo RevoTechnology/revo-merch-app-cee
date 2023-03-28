@@ -64,13 +64,13 @@
 -keep class io.sentry.event.Event { *; }
 
 #okhttp - disable minify for requests / responses
--keep class pl.revo.merchant.api.request.* { *; }
--keep class pl.revo.merchant.api.response.** { *; }
--keep class pl.revo.merchant.model.** { *; }
+-keep class merchant.mokka.api.request.* { *; }
+-keep class merchant.mokka.api.response.** { *; }
+-keep class merchant.mokka.model.** { *; }
 
 # Retrofit does reflection on generic parameters. InnerClasses is required to use Signature and
 # EnclosingMethod is required to use InnerClasses.
--keepclasseswithmembers class pl.revo.merchant.api.apis.* { *; }
+-keepclasseswithmembers class merchant.mokka.api.apis.* { *; }
 -keepattributes Signature, InnerClasses, EnclosingMethod
 -keepattributes RuntimeVisibleAnnotations, RuntimeVisibleParameterAnnotations
 -keepclassmembers,allowshrinking,allowobfuscation interface * {

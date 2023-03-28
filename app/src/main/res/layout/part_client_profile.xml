@@ -363,7 +363,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/white">
 
-        <pl.revo.merchant.widget.StepButtonWidget
+        <merchant.mokka.widget.StepButtonWidget
             android:id="@+id/profileNextBtn"
             android:layout_width="match_parent"
             android:layout_height="52dp"

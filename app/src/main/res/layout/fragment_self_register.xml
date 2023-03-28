@@ -77,7 +77,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <pl.revo.merchant.widget.StepButtonWidget
+    <merchant.mokka.widget.StepButtonWidget
         android:id="@+id/purchaseNextBtn"
         android:layout_width="0dp"
         android:layout_height="52dp"

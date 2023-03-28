@@ -312,7 +312,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <pl.revo.merchant.widget.StepButtonWidget
+    <merchant.mokka.widget.StepButtonWidget
         android:id="@+id/detailNextBtn"
         android:layout_width="match_parent"
         android:layout_height="52dp"

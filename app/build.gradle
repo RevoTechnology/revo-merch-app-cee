@@ -9,9 +9,9 @@ apply from: '../tasks.gradle'
 
 android {
     compileSdkVersion 31
-    defaultConfig {
-        applicationId "pl.revo.merchant"
 
+    defaultConfig {
+        applicationId "merchant.mokka"
         minSdkVersion 19
         targetSdkVersion 31
         versionCode 171
@@ -101,7 +101,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    namespace 'pl.revo.merchant'
+    namespace 'merchant.mokka'
 }
 
 dependencies {

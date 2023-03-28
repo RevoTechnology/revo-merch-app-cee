@@ -73,7 +73,7 @@
 
                     </RelativeLayout>
 
-                    <pl.revo.merchant.widget.AspectRatioImageView
+                    <merchant.mokka.widget.AspectRatioImageView
                         android:id="@+id/documentsNamePhoto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
 
                     </RelativeLayout>
 
-                    <pl.revo.merchant.widget.AspectRatioImageView
+                    <merchant.mokka.widget.AspectRatioImageView
                         android:id="@+id/documentsThirdPhoto"
                         android:layout_width="match_parent"
                         android:layout_height="75dp"
@@ -209,7 +209,7 @@
 
                     </RelativeLayout>
 
-                    <pl.revo.merchant.widget.AspectRatioImageView
+                    <merchant.mokka.widget.AspectRatioImageView
                         android:id="@+id/documentsSecondPhoto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -242,7 +242,7 @@
         android:background="@color/white"
         android:layout_alignParentBottom="true">
 
-        <pl.revo.merchant.widget.StepButtonWidget
+        <merchant.mokka.widget.StepButtonWidget
             android:id="@+id/documentsNextBtn"
             android:layout_width="match_parent"
             android:layout_height="52dp"

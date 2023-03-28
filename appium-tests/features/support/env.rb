@@ -18,8 +18,8 @@ def caps
       platformName: 'Android',
       deviceName: 'Lenovo',
       app: File.join(File.dirname(__FILE__), 'revo_release_stage_2.0.5.apk'),
-      appPackage: 'pl.revo.merchant',
-      appActivity: 'pl.revo.merchant.ui.root.RootActivity',
+      appPackage: 'merchant.mokka',
+      appActivity: 'merchant.mokka.ui.root.RootActivity',
       autoGrantPermissions: true
     }
   }
