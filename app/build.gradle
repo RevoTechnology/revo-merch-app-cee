@@ -8,12 +8,12 @@ apply plugin: 'com.google.firebase.crashlytics'
 apply from: '../tasks.gradle'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "merchant.mokka"
         minSdkVersion 19
-        targetSdkVersion 31
+        targetSdkVersion 33
         versionCode 171
         versionName "2.0.24"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
