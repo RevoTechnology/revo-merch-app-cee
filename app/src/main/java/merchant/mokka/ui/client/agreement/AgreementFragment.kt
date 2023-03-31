@@ -84,6 +84,7 @@ class AgreementFragment : BaseFragment(), AgreementView {
             agreementAllCheckBox.isChecked = !agreementAllCheckBox.isChecked
             setAllChecked(agreementAllCheckBox.isChecked)
         }
+
         agreementAllCheckBox.setOnClickListener {
             setAllChecked(agreementAllCheckBox.isChecked)
         }
@@ -96,8 +97,9 @@ class AgreementFragment : BaseFragment(), AgreementView {
             }
             validateChecks()
         }
+
         agreementCreditBureausImageView.setOnClickListener {
-            val kind = if (isBgLocale()) "personal_data" else "credit_bureaus"
+            val kind = if (isBgLocale()) "regulations" else "personal_data_marketing_all"
             presenter.onItemClick(R.string.agreement_credit_bureaus_title, loan, kind)
         }
 
@@ -105,20 +107,17 @@ class AgreementFragment : BaseFragment(), AgreementView {
             if (isBgLocale()) {
                 presenter.agrees?.regulations = agreementMarketingEmailCheckBox.isChecked.toText()
             } else {
-                presenter.agrees?.marketingEmail =
-                    agreementMarketingEmailCheckBox.isChecked.toText()
+                presenter.agrees?.marketingEmail = agreementMarketingEmailCheckBox.isChecked.toText()
             }
-
             validateChecks()
         }
         agreementMarketingEmailImageView.setOnClickListener {
-            val kind = if (isBgLocale()) "regulations" else "personal_data_marketing_all"
+            val kind = if (isBgLocale()) "personal_data" else "credit_bureaus"
             presenter.onItemClick(R.string.agreement_marketing_email_title, loan, kind)
         }
 
         agreementPersonalDataCheckBox.setOnClickListener {
-            presenter.agrees?.personalDataMarketingAll =
-                agreementPersonalDataCheckBox.isChecked.toText()
+            presenter.agrees?.personalDataMarketingAll = agreementPersonalDataCheckBox.isChecked.toText()
             validateChecks()
         }
 
@@ -129,8 +128,6 @@ class AgreementFragment : BaseFragment(), AgreementView {
                 "personal_data_marketing_all"
             )
         }
-
-        validateChecks()
 
         agreementNextBtn.setOnClickListener {
             if (isModelValid()) {
@@ -155,6 +152,8 @@ class AgreementFragment : BaseFragment(), AgreementView {
                 presenter.onNextClick(loan)
             }
         }
+
+        validateChecks()
     }
 
     private fun setAllChecked(checked: Boolean) {
@@ -191,6 +190,11 @@ class AgreementFragment : BaseFragment(), AgreementView {
 
     private fun validateChecks() {
         agreementNextBtn.alpha = isModelValid().toAlpha()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        validateChecks()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {

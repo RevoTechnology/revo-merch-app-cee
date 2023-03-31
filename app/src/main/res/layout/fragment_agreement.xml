@@ -32,15 +32,13 @@
             <LinearLayout style="@style/AgreementItem">
 
                 <CheckBox
-                    android:id="@+id/agreementCreditBureausCheckBox"
+                    android:id="@+id/agreementMarketingEmailCheckBox"
                     style="@style/AgreementCheck"
-                    android:text="@string/agreement_credit_bureaus"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
+                    android:text="@string/agreement_marketing_email"
                     android:theme="@style/CheckBoxTheme" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/agreementCreditBureausImageView"
+                    android:id="@+id/agreementMarketingEmailImageView"
                     style="@style/AgreementArrow" />
 
             </LinearLayout>
@@ -52,13 +50,15 @@
             <LinearLayout style="@style/AgreementItem">
 
                 <CheckBox
-                    android:id="@+id/agreementMarketingEmailCheckBox"
+                    android:id="@+id/agreementCreditBureausCheckBox"
                     style="@style/AgreementCheck"
-                    android:text="@string/agreement_marketing_email"
+                    android:text="@string/agreement_credit_bureaus"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:theme="@style/CheckBoxTheme" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/agreementMarketingEmailImageView"
+                    android:id="@+id/agreementCreditBureausImageView"
                     style="@style/AgreementArrow" />
 
             </LinearLayout>
