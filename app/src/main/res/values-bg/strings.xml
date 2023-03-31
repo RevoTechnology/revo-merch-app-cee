@@ -146,7 +146,7 @@
     <string name="purchase_client">Клиент</string>
     <string name="purchase_phone">Телефон</string>
     <string name="purchase_next">ИЗПРАТИ</string>
-    <string name="purchase_info" tools:ignore="TypographyDashes" formatted="false" ><![CDATA[Админинстратор на лични данни е Рево Технолоджис Сп. з о.о.]]></string>
+    <string name="purchase_info" tools:ignore="TypographyDashes" formatted="false" ><![CDATA[Администратор на лични данни е Рево Технолоджис Сп. з о.о.]]></string>
     <string name="purchase_help_title">Информационна клауза</string>
     <string name="purchase_self_registration">ИЗПРАЩАНЕ НА РЕГИСТРАЦИОННА ФОРМА \n ДО КЛИЕНТА ПО ТЕЛЕФОН?</string>
 
