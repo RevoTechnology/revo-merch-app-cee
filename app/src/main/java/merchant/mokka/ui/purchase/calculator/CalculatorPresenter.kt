@@ -1,5 +1,6 @@
 package merchant.mokka.ui.purchase.calculator
 
+import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.github.salomonbrys.kodein.KodeinInjector
 import com.github.salomonbrys.kodein.instance
@@ -66,13 +67,15 @@ class CalculatorPresenter(injector: KodeinInjector) : BasePresenter<CalculatorVi
 	private fun showConfirmScreen(loan: LoanData) {
 		val nextScreen = when {
 			isPlLocale() -> Screens.CONTRACT
-			isRoLocale() && loan.client?.rclAccepted != true && loan.tariff?.isRclProductKing == true && !loan.client?.missingDocuments.isNullOrEmpty() -> Screens.DOCUMENTS
-			isBgLocale() -> Screens.CONTRACT
+			isRoLocale() && loan.client?.rclAccepted != true && loan.tariff?.isRclProductKing == true && !isAvailabilityDocuments(loan) -> Screens.DOCUMENTS
+			isBgLocale() && !isAvailabilityDocuments(loan) -> Screens.DOCUMENTS
 			else -> Screens.CONTRACT
 		}
 
 		router.navigateTo(nextScreen, loan)
 	}
+
+	private fun isAvailabilityDocuments(loan: LoanData): Boolean = loan.client?.missingDocuments.isNullOrEmpty()
 
 	fun refreshSum(loan: LoanData, sum: Double, agreeInsurance: Boolean?) {
 		viewState.showProgress()

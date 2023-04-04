@@ -66,7 +66,14 @@ class CameraXFragment : AbsKodeinFragment(), CameraView {
     }
 
     private fun takePictureClicked() {
-        if (activity.granted(Manifest.permission.CAMERA) && activity.granted(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+        val isNeedStoragePermission = Build.VERSION.SDK_INT <= Build.VERSION_CODES.R
+        val isGranted = if (isNeedStoragePermission) {
+            activity.granted(Manifest.permission.CAMERA) &&
+            activity.granted(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        }else {
+            activity.granted(Manifest.permission.CAMERA)
+        }
+        if (isGranted) {
             pictureButton.visible(visible = false, isInvisible = true)
             cameraxHelper.takePicture()
         } else {

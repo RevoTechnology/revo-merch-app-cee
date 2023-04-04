@@ -4,15 +4,18 @@ import android.Manifest
 import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.view.isVisible
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.fragment_documents.*
 import merchant.mokka.R
 import merchant.mokka.common.BaseFragment
@@ -23,32 +26,15 @@ import merchant.mokka.model.IdPhoto
 import merchant.mokka.model.LoanData
 import merchant.mokka.ui.client.camera.CameraActivity
 import merchant.mokka.ui.client.profile_ru.ClientPersonalDataDialog
-import merchant.mokka.utils.granted
-import merchant.mokka.utils.isVisible
-import merchant.mokka.utils.toAlpha
-import merchant.mokka.utils.visible
+import merchant.mokka.utils.*
 import java.io.File
+import java.security.Permission
+
+private const val REQUEST_CHECK_PHOTO_NAME = 2003
+private const val REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT = 2004
+private const val REQUEST_CHECK_PHOTO_LIVING_ADDRESS = 2005
 
 class DocumentsFragment : BaseFragment(), DocumentsView {
-
-    companion object {
-        fun getInstance(loan: LoanData): DocumentsFragment {
-            val fragment = DocumentsFragment()
-            fragment.setArguments(ExtrasKey.LOAN, loan)
-            return fragment
-        }
-
-        private const val REQUEST_CAMERA_PERMISSION = 2001
-
-        private const val REQUEST_CHECK_PHOTO_NAME = 2003
-        private const val REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT = 2004
-        private const val REQUEST_CHECK_PHOTO_LIVING_ADDRES = 2005
-    }
-
-    override val layoutResId = R.layout.fragment_documents
-    override val titleResId = R.string.documents_title
-    override val homeIconType = HomeIconType.BACK_ARROW
-    override val toolbarStyle = ToolbarStyle.ACCENT
 
     @InjectPresenter
     lateinit var presenter: DocumentsPresenter
@@ -56,155 +42,104 @@ class DocumentsFragment : BaseFragment(), DocumentsView {
     @ProvidePresenter
     fun providePresenter() = DocumentsPresenter(injector)
 
-    private var request = 0
+    override val layoutResId = R.layout.fragment_documents
+    override val titleResId = R.string.documents_title
+    override val homeIconType = HomeIconType.BACK_ARROW
+    override val toolbarStyle = ToolbarStyle.ACCENT
 
     private lateinit var loan: LoanData
+
+    private var requestCode = 0
+        set(value) {
+            field = value
+            if (value != 0) {
+                selectPhoto(value)
+            }
+        }
+
+    private val isNewClient get() = loan.isNewClient
+
+    private val isRequestCodeValid get() =
+                requestCode == REQUEST_CHECK_PHOTO_NAME ||
+                requestCode == REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT ||
+                requestCode == REQUEST_CHECK_PHOTO_LIVING_ADDRESS
+
+    private val isCameraGrander: Boolean get() {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            activity.granted(Manifest.permission.CAMERA)
+        }else {
+            activity.granted(Manifest.permission.CAMERA) &&
+            activity.granted(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        }
+    }
+
+    private val IdPhoto.isDocumentMissing get() =
+        loan.client?.missingDocuments?.contains(photoName) == false
+
+    private val DocumentButtonView.isHaveTitle get() = this.title.isNotEmpty()
 
     override fun initView(view: View, savedInstanceState: Bundle?) {
         setHasOptionsMenu(true)
         loan = arguments?.getSerializable(ExtrasKey.LOAN.name) as LoanData
-
-        with(documentsNameView.text.isNullOrEmpty() || (isDocumentMissing(IdPhoto.PHOTO_NAME) && !loan.isNewClient)) {
-            documentsNameCard.visible(!this)
-            if (!this) showNameImage()
-        }
-
-        with(documentsClientWithPassportView.text.isNullOrEmpty() || (isDocumentMissing(IdPhoto.PHOTO_CLIENT_WITH_PASSPORT) && !loan.isNewClient)) {
-            documentsClientWithPassportCard.visible(!this)
-            if (!this) showClientWithPassportImage()
-        }
-
-        with(documentsLivingAddressView.text.isNullOrEmpty() || (isDocumentMissing(IdPhoto.PHOTO_LIVING_ADDRESS) && !loan.isNewClient)) {
-            documentsLivingAddressCard.visible(!this)
-            if (!this) showLivingAddressImage()
-        }
-
-        documentsNameCard.setOnClickListener {
-            request = REQUEST_CHECK_PHOTO_NAME
-            selectPhoto()
-        }
-        documentsNameNewButton.setOnClickListener {
-            request = REQUEST_CHECK_PHOTO_NAME
-            selectPhoto()
-        }
-
-        documentsClientWithPassportCard.setOnClickListener {
-            request = REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT
-            selectPhoto()
-        }
-        documentsClientWithPassportButton.setOnClickListener {
-            request = REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT
-            selectPhoto()
-        }
-
-        documentsLivingAddressCard.setOnClickListener {
-            request = REQUEST_CHECK_PHOTO_LIVING_ADDRES
-            selectPhoto()
-        }
-        documentsLivingAddressButton.setOnClickListener {
-            request = REQUEST_CHECK_PHOTO_LIVING_ADDRES
-            selectPhoto()
-        }
-
-        documentsNextBtn.setOnClickListener { onNextButtonClick() }
+        settingVisibilityButtonWithCountry()
+        initializeDocumentButtonsClickListeners()
+        initializeNextButtonClickListener()
         validate()
     }
 
-    private fun onNextButtonClick() {
-        if (loan.client?.confirmData == true)
-            ClientPersonalDataDialog(context = requireContext(), loan = loan).show(onPositiveClick = { presenter.onNextClick(loan) })
-        else
-            presenter.onNextClick(loan)
+    private fun settingVisibilityButtonWithCountry() {
+        documentsNameButton.isVisible = isRoLocale() || isBgLocale()
+        documentsLivingAddressButton.isVisible = isRoLocale()
+        documentsClientWithPassportButton.isVisible = isRoLocale()
     }
 
-    private fun selectPhoto() {
-        if (activity.granted(Manifest.permission.CAMERA) && activity.granted(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            CameraActivity.start(activity, request)
-        } else {
-            requestPermissions(arrayOf(Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE), REQUEST_CAMERA_PERMISSION)
+    private fun initializeButtonVisibility() {
+        val isNameMissing = IdPhoto.PHOTO_NAME.isDocumentMissing
+        val isAddressMissing = IdPhoto.PHOTO_LIVING_ADDRESS.isDocumentMissing
+        val isPassportMissing = IdPhoto.PHOTO_CLIENT_WITH_PASSPORT.isDocumentMissing
+        with(documentsNameButton) {
+            val visibility = !isHaveTitle || (isNameMissing && !isNewClient)
+            isVisible = visibility
+            setImage(null)
+        }
+        with(documentsClientWithPassportButton) {
+            val visibility = !isHaveTitle || (isPassportMissing && !isNewClient)
+            isVisible = visibility
+            setImage(null)
+        }
+        with(documentsLivingAddressButton) {
+            val visibility = !isHaveTitle || (isAddressMissing && !isNewClient)
+            isVisible = visibility
+            setImage(null)
         }
     }
 
-    private fun isDocumentMissing(idPhoto: IdPhoto) =
-            loan.client?.missingDocuments?.contains(idPhoto.photoName) == false
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == REQUEST_CHECK_PHOTO_NAME || requestCode == REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT ||
-                requestCode == REQUEST_CHECK_PHOTO_LIVING_ADDRES
-        ) {
-            if (resultCode == Activity.RESULT_OK) {
-                val image = data?.extras?.get(ExtrasKey.PHOTO_FILE.name) as File?
-                when (request) {
-                    REQUEST_CHECK_PHOTO_NAME -> {
-                        if (image != null) loan.clientIds.nameImage = image
-                        showNameImage()
-                    }
-                    REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT -> {
-                        if (image != null) loan.clientIds.clientWithPassportImage = image
-                        showClientWithPassportImage()
-                    }
-                    REQUEST_CHECK_PHOTO_LIVING_ADDRES -> {
-                        if (image != null) loan.clientIds.livingAddressImage = image
-                        showLivingAddressImage()
-                    }
-                }
-                request = 0
+    private fun initializeDocumentButtonsClickListeners() {
+        val listener = View.OnClickListener {
+            requestCode = when (it.id) {
+                R.id.documentsNameButton -> REQUEST_CHECK_PHOTO_NAME
+                R.id.documentsClientWithPassportButton -> REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT
+                R.id.documentsLivingAddressButton -> REQUEST_CHECK_PHOTO_LIVING_ADDRESS
+                else -> 0
             }
         }
+        documentsNameButton.setOnClickListener(listener)
+        documentsLivingAddressButton.setOnClickListener(listener)
+        documentsClientWithPassportButton.setOnClickListener(listener)
     }
 
-    private fun showNameImage() {
-        if (loan.clientIds.nameImage == null) {
-            documentsNameImage.visibility = View.VISIBLE
-            documentsNamePhoto.visibility = View.GONE
-            documentsNameNewButton.visibility = View.GONE
-        } else {
-            documentsNameImage.visibility = View.GONE
-            documentsNamePhoto.visibility = View.VISIBLE
-            documentsNameNewButton.visibility = View.VISIBLE
-
-            Glide.with(requireContext())
-                    .load(loan.clientIds.nameImage)
-                    .apply(RequestOptions().fitCenter())
-                    .into(documentsNamePhoto)
+    private fun initializeNextButtonClickListener() {
+        documentsNextBtn.setOnClickListener {
+            if (loan.client?.confirmData == true) {
+                ClientPersonalDataDialog(
+                    context = requireContext(),
+                    loan = loan
+                ).show(
+                    onPositiveClick = { presenter.onNextClick(loan) }
+                )
+            }
+            else presenter.onNextClick(loan)
         }
-        validate()
-    }
-
-    private fun showClientWithPassportImage() {
-        if (loan.clientIds.clientWithPassportImage == null) {
-            documentsClientWithPassportImage.visibility = View.VISIBLE
-            documentsSecondPhoto.visibility = View.GONE
-            documentsClientWithPassportButton.visibility = View.GONE
-        } else {
-            documentsClientWithPassportImage.visibility = View.GONE
-            documentsSecondPhoto.visibility = View.VISIBLE
-            documentsClientWithPassportButton.visibility = View.VISIBLE
-
-            Glide.with(requireContext())
-                    .load(loan.clientIds.clientWithPassportImage)
-                    .apply(RequestOptions().fitCenter())
-                    .into(documentsSecondPhoto)
-        }
-        validate()
-    }
-
-    private fun showLivingAddressImage() {
-        if (loan.clientIds.livingAddressImage == null) {
-            documentsLivingAddressImage.visibility = View.VISIBLE
-            documentsThirdPhoto.visibility = View.GONE
-            documentsLivingAddressButton.visibility = View.GONE
-        } else {
-            documentsLivingAddressImage.visibility = View.GONE
-            documentsThirdPhoto.visibility = View.VISIBLE
-            documentsLivingAddressButton.visibility = View.VISIBLE
-
-            Glide.with(requireContext())
-                    .load(loan.clientIds.livingAddressImage)
-                    .apply(RequestOptions().fitCenter())
-                    .into(documentsThirdPhoto)
-        }
-        validate()
     }
 
     private fun isValid(view: View, file: File?, idPhoto: IdPhoto): Boolean {
@@ -214,35 +149,82 @@ class DocumentsFragment : BaseFragment(), DocumentsView {
     }
 
     private fun validate() {
-        val nameImageValid = isValid(view = documentsNameCard,
-                file = loan.clientIds.nameImage,
-                idPhoto = IdPhoto.PHOTO_NAME)
-
-        val clientWithPassportImageValid = isValid(view = documentsClientWithPassportCard,
-                file = loan.clientIds.clientWithPassportImage,
-                idPhoto = IdPhoto.PHOTO_CLIENT_WITH_PASSPORT)
-
-        val livingAddressValid = isValid(view = documentsLivingAddressCard,
-                file = loan.clientIds.livingAddressImage,
-                idPhoto = IdPhoto.PHOTO_LIVING_ADDRESS)
-
-
+        val nameImageValid = isValid(
+            view = documentsNameButton,
+            file = loan.clientIds.nameImage,
+            idPhoto = IdPhoto.PHOTO_NAME
+        )
+        val clientWithPassportImageValid = isValid(
+            view = documentsClientWithPassportButton,
+            file = loan.clientIds.clientWithPassportImage,
+            idPhoto = IdPhoto.PHOTO_CLIENT_WITH_PASSPORT
+        )
+        val livingAddressValid = isValid(
+            view = documentsLivingAddressButton,
+            file = loan.clientIds.livingAddressImage,
+            idPhoto = IdPhoto.PHOTO_LIVING_ADDRESS
+        )
         val isValid = nameImageValid && clientWithPassportImageValid && livingAddressValid
         documentsNextBtn.isEnabled = isValid
         documentsNextBtn.alpha = isValid.toAlpha()
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        when (requestCode) {
-            REQUEST_CAMERA_PERMISSION -> {
-                val granted = grantResults.contains(PackageManager.PERMISSION_GRANTED)
-                if (granted) {
-                    selectPhoto()
-                } else {
-                    alert(getString(R.string.error_title), getString(R.string.scan_camera_permission))
-                }
+    private fun selectPhoto(requestCode: Int) {
+        if (isCameraGrander) {
+            CameraActivity.start(activity, requestCode)
+        } else {
+           cameraPermissionChecker.launch(
+               arrayOf(
+                   Manifest.permission.CAMERA,
+                   Manifest.permission.WRITE_EXTERNAL_STORAGE
+               )
+           )
+        }
+    }
+
+    private val cameraPermissionChecker = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { permissions ->
+        var cameraGranted = false
+        var storageGranted = false
+        permissions.entries.forEach {
+            when (it.key) {
+                Manifest.permission.CAMERA -> cameraGranted = it.value
+                Manifest.permission.WRITE_EXTERNAL_STORAGE -> storageGranted = it.value
             }
-            else -> super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        }
+        val isNeedStoragePermission = Build.VERSION.SDK_INT <= Build.VERSION_CODES.R
+        val isGranted = if (isNeedStoragePermission) cameraGranted && storageGranted else cameraGranted
+        if (isGranted) {
+            selectPhoto(requestCode)
+        }else {
+            alert(getString(R.string.error_title), getString(R.string.scan_camera_permission))
+        }
+    }
+
+    private fun checkActivityResult(code: Int, image: File?) {
+        when (code) {
+            REQUEST_CHECK_PHOTO_NAME -> {
+                if (image != null) loan.clientIds.nameImage = image
+                documentsNameButton.setImage(image)
+            }
+            REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT -> {
+                if (image != null) loan.clientIds.clientWithPassportImage = image
+                documentsClientWithPassportButton.setImage(image)
+            }
+            REQUEST_CHECK_PHOTO_LIVING_ADDRESS -> {
+                if (image != null) loan.clientIds.livingAddressImage = image
+                documentsLivingAddressButton.setImage(image)
+            }
+        }
+        validate()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (isRequestCodeValid && resultCode == Activity.RESULT_OK) {
+            val image = data?.extras?.get(ExtrasKey.PHOTO_FILE.name) as File?
+            checkActivityResult(requestCode, image)
+            this@DocumentsFragment.requestCode = 0
         }
     }
 
@@ -258,6 +240,14 @@ class DocumentsFragment : BaseFragment(), DocumentsView {
                 true
             }
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    companion object {
+        fun getInstance(loan: LoanData): DocumentsFragment {
+            val fragment = DocumentsFragment()
+            fragment.setArguments(ExtrasKey.LOAN, loan)
+            return fragment
         }
     }
 }

@@ -128,8 +128,8 @@
     <string name="scan_camera_permission">Моля, позволи използването на камерата</string>
     <string name="scan_storage_permission">Моля, позволи използването на паметта</string>
 
-    <string name="documents_title">Документи</string>
-    <string name="documents_first">Предна страна на лична карта</string>
+    <string name="documents_title">Снимка за лична карта на клиента</string>
+    <string name="documents_first">Лицева страна на ID на клиента</string>
     <string name="documents_second">Задна страна на лична карта</string>
     <string name="documents_third"> </string>
     <string name="documents_new_photo">СНИМКА</string>
@@ -138,7 +138,7 @@
     <string name="documents_back">Обратно към формата</string>
     <string name="documents_client_name">Клиент</string>
     <string name="documents_client_pesel">ЕГН</string>
-    <string name="documents_title_warning"> </string>
+    <string name="documents_title_warning">Моля, вземете лицевата страна на идентификационния номер на клиента. Уверете се, че документът за самоличност принадлежи на купувача, няма признаци на фалшификация. Ако снимката е неправилна или нечетлива, клиентът ще бъде блокиран.</string>
 
     <!-- purchase -->
     <string name="purchase_title">Нов клиент</string>
