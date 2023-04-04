@@ -28,7 +28,6 @@ import kotlinx.android.synthetic.main.drawer_header_root.view.*
 import merchant.mokka.common.*
 import merchant.mokka.BuildConfig
 import merchant.mokka.R
-import merchant.mokka.common.*
 import merchant.mokka.model.AgentData
 import merchant.mokka.model.UnlockData
 import merchant.mokka.pref.Prefs
@@ -36,7 +35,6 @@ import merchant.mokka.ui.login.unlock.UnlockActivity
 import merchant.mokka.ui.main.dashboard.DashboardFragment
 import merchant.mokka.ui.purchase.purchase.PurchaseFragment
 import merchant.mokka.ui.returns.search.SearchFragment
-import merchant.mokka.utils.*
 import merchant.mokka.utils.*
 import ru.terrakok.cicerone.NavigatorHolder
 
