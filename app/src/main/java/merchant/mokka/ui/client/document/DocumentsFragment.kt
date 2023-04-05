@@ -32,7 +32,6 @@ import java.security.Permission
 
 private const val REQUEST_CHECK_PHOTO_NAME = 2003
 private const val REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT = 2004
-private const val REQUEST_CHECK_PHOTO_LIVING_ADDRESS = 2005
 
 class DocumentsFragment : BaseFragment(), DocumentsView {
 
@@ -57,12 +56,9 @@ class DocumentsFragment : BaseFragment(), DocumentsView {
             }
         }
 
-    private val isNewClient get() = loan.isNewClient
-
     private val isRequestCodeValid get() =
                 requestCode == REQUEST_CHECK_PHOTO_NAME ||
-                requestCode == REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT ||
-                requestCode == REQUEST_CHECK_PHOTO_LIVING_ADDRESS
+                requestCode == REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT
 
     private val isCameraGrander: Boolean get() {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
@@ -74,44 +70,23 @@ class DocumentsFragment : BaseFragment(), DocumentsView {
     }
 
     private val IdPhoto.isDocumentMissing get() =
-        loan.client?.missingDocuments?.contains(photoName) == false
-
-    private val DocumentButtonView.isHaveTitle get() = this.title.isNotEmpty()
+        loan.client?.missingDocuments?.contains(photoName) == true
 
     override fun initView(view: View, savedInstanceState: Bundle?) {
         setHasOptionsMenu(true)
         loan = arguments?.getSerializable(ExtrasKey.LOAN.name) as LoanData
-        settingVisibilityButtonWithCountry()
+        initializeButtonVisibility()
         initializeDocumentButtonsClickListeners()
         initializeNextButtonClickListener()
         validate()
     }
 
-    private fun settingVisibilityButtonWithCountry() {
-        documentsNameButton.isVisible = isRoLocale() || isBgLocale()
-        documentsLivingAddressButton.isVisible = isRoLocale()
-        documentsClientWithPassportButton.isVisible = isRoLocale()
-    }
-
     private fun initializeButtonVisibility() {
         val isNameMissing = IdPhoto.PHOTO_NAME.isDocumentMissing
-        val isAddressMissing = IdPhoto.PHOTO_LIVING_ADDRESS.isDocumentMissing
         val isPassportMissing = IdPhoto.PHOTO_CLIENT_WITH_PASSPORT.isDocumentMissing
-        with(documentsNameButton) {
-            val visibility = !isHaveTitle || (isNameMissing && !isNewClient)
-            isVisible = visibility
-            setImage(null)
-        }
-        with(documentsClientWithPassportButton) {
-            val visibility = !isHaveTitle || (isPassportMissing && !isNewClient)
-            isVisible = visibility
-            setImage(null)
-        }
-        with(documentsLivingAddressButton) {
-            val visibility = !isHaveTitle || (isAddressMissing && !isNewClient)
-            isVisible = visibility
-            setImage(null)
-        }
+
+        documentsNameButton.isVisible = isNameMissing
+        documentsClientWithPassportButton.isVisible = isPassportMissing && isPlLocale()
     }
 
     private fun initializeDocumentButtonsClickListeners() {
@@ -119,12 +94,10 @@ class DocumentsFragment : BaseFragment(), DocumentsView {
             requestCode = when (it.id) {
                 R.id.documentsNameButton -> REQUEST_CHECK_PHOTO_NAME
                 R.id.documentsClientWithPassportButton -> REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT
-                R.id.documentsLivingAddressButton -> REQUEST_CHECK_PHOTO_LIVING_ADDRESS
                 else -> 0
             }
         }
         documentsNameButton.setOnClickListener(listener)
-        documentsLivingAddressButton.setOnClickListener(listener)
         documentsClientWithPassportButton.setOnClickListener(listener)
     }
 
@@ -159,12 +132,7 @@ class DocumentsFragment : BaseFragment(), DocumentsView {
             file = loan.clientIds.clientWithPassportImage,
             idPhoto = IdPhoto.PHOTO_CLIENT_WITH_PASSPORT
         )
-        val livingAddressValid = isValid(
-            view = documentsLivingAddressButton,
-            file = loan.clientIds.livingAddressImage,
-            idPhoto = IdPhoto.PHOTO_LIVING_ADDRESS
-        )
-        val isValid = nameImageValid && clientWithPassportImageValid && livingAddressValid
+        val isValid = nameImageValid && clientWithPassportImageValid
         documentsNextBtn.isEnabled = isValid
         documentsNextBtn.alpha = isValid.toAlpha()
     }
@@ -211,10 +179,6 @@ class DocumentsFragment : BaseFragment(), DocumentsView {
             REQUEST_CHECK_PHOTO_CLIENT_WITH_PASSPORT -> {
                 if (image != null) loan.clientIds.clientWithPassportImage = image
                 documentsClientWithPassportButton.setImage(image)
-            }
-            REQUEST_CHECK_PHOTO_LIVING_ADDRESS -> {
-                if (image != null) loan.clientIds.livingAddressImage = image
-                documentsLivingAddressButton.setImage(image)
             }
         }
         validate()
