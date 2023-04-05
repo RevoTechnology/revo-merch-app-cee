@@ -32,13 +32,6 @@
                 app:buttonText="@string/documents_second"
                 android:layout_marginBottom="8dp"/>
 
-            <merchant.mokka.ui.client.document.DocumentButtonView
-                android:id="@+id/documentsLivingAddressButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:buttonText="@string/documents_third"
-                android:layout_marginBottom="8dp"/>
-
             <TextView
                 android:id="@+id/descriptionText"
                 android:layout_width="match_parent"

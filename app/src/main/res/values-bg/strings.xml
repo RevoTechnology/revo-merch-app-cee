@@ -130,7 +130,7 @@
 
     <string name="documents_title">Снимка за лична карта на клиента</string>
     <string name="documents_first">Лицева страна на ID на клиента</string>
-    <string name="documents_second">Задна страна на лична карта</string>
+    <string name="documents_second"> </string>
     <string name="documents_third"> </string>
     <string name="documents_new_photo">СНИМКА</string>
     <string name="documents_pick_photo_title">Моля, избери местоположение</string>
