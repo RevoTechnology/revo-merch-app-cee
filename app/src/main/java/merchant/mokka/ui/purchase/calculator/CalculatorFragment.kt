@@ -238,6 +238,7 @@ class CalculatorFragment : BaseFragment(), CalculatorView {
             }
 
     private fun validateSum(sum: Double): Boolean {
+        if (sum == 0.0) return false
         val validValue = isValidSum(sum)
 
         calcSumError.text = when (validValue) {
