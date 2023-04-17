@@ -36,6 +36,9 @@
 -keepclassmembers class kotlin.Metadata {
     public <methods>;
 }
+-keepclassmembernames @com.squareup.moshi.JsonClass class * extends java.lang.Enum {
+    <fields>;
+}
 
 #Sublime Picker
 -keepnames class com.appeaser.sublimepickerlibrary.datepicker.** {
