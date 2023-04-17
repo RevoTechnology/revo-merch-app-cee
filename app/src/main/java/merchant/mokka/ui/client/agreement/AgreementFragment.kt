@@ -190,6 +190,13 @@ class AgreementFragment : BaseFragment(), AgreementView {
 
     private fun validateChecks() {
         agreementNextBtn.alpha = isModelValid().toAlpha()
+        validateAgreementAllCheckBox()
+    }
+
+    private fun validateAgreementAllCheckBox() {
+        agreementAllCheckBox.isChecked =  if (isBgLocale()) {
+            agreementCreditBureausCheckBox.isChecked && agreementMarketingEmailCheckBox.isChecked && agreementPersonalDataCheckBox.isChecked
+        } else agreementCreditBureausCheckBox.isChecked
     }
 
     override fun onResume() {
