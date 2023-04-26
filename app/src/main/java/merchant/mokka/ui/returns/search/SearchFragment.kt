@@ -21,18 +21,10 @@ import merchant.mokka.common.BaseRecyclerViewAdapter
 import merchant.mokka.common.HomeIconType
 import merchant.mokka.common.ToolbarStyle
 import merchant.mokka.model.SearchData
-import merchant.mokka.utils.FormatTextWatcher
-import merchant.mokka.utils.SimpleTextWatcher
-import merchant.mokka.utils.addMask
-import merchant.mokka.utils.clearPhone
+import merchant.mokka.utils.*
 import merchant.mokka.utils.cnp.isValidCnp
-import merchant.mokka.utils.createPhoneMaskFormatWatcher
 import merchant.mokka.utils.decoro.slots.PredefinedSlots
 import merchant.mokka.utils.decoro.watchers.MaskFormatWatcher
-import merchant.mokka.utils.isBgLocale
-import merchant.mokka.utils.isRoLocale
-import merchant.mokka.utils.isValid
-import merchant.mokka.utils.isValidAsPolishPESEL
 import merchant.mokka.widget.EditTextValidator
 import merchant.mokka.widget.attachValidator
 import merchant.mokka.widget.detachValidator
@@ -124,10 +116,9 @@ class SearchFragment : BaseFragment(), SearchView {
 
             searchButton.setOnClickListener {
                 adapter.items.clear()
-
-                val login = if (isBgLocale()) searchLogin.text.toString()
-                    .replace(getString(R.string.phone_empty), "") else searchLogin.text.toString()
-
+                val login = if (isBgLocale() || isRoLocale() || isPlLocale()) {
+                    searchLogin.text.toString().replace(getString(R.string.phone_empty), "")
+                } else searchLogin.text.toString()
                 presenter.searchPurchases(
                     login,
                     searchPassport.text.toString(),

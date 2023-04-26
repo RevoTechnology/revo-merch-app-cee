@@ -1,6 +1,7 @@
 package merchant.mokka.ui.client.profile_ro
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -96,7 +97,6 @@ class ClientProfileRoFragment : BaseFragment(), ClientProfileRoView {
     private fun saveData(confirm: Boolean) {
         val cnp = profileCnp?.text.toString().cnp()
         val isOver18 = cnp?.checkAge(18) == true
-
 
         if ((cnp == null || !isOver18) && !presenter.isDemo()) {
             onError(R.string.error_pesel)
@@ -262,19 +262,10 @@ class ClientProfileRoFragment : BaseFragment(), ClientProfileRoView {
             profileLastName.setText(it.lastName)
             profileCnp.setText(it.idDocuments?.romanianCnp?.number)
             profileEmail.setText(it.email)
-
             profileWarningSwh.isChecked = it.blackMark == "1"
-        }
-
-        if (clientData != null) {
-            showConfirmDialog(
-                    onPositiveClick = {
-                        if (isModelValid()) {
-                            saveData(false)
-                        }
-                    },
-                    onNegativeClick = { }
-            )
+            if (isModelValid()) {
+                saveData(false)
+            }
         }
     }
 
