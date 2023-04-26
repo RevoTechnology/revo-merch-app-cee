@@ -196,7 +196,7 @@ class AgreementFragment : BaseFragment(), AgreementView {
     private fun validateAgreementAllCheckBox() {
         agreementAllCheckBox.isChecked =  if (isBgLocale()) {
             agreementCreditBureausCheckBox.isChecked && agreementMarketingEmailCheckBox.isChecked && agreementPersonalDataCheckBox.isChecked
-        } else agreementCreditBureausCheckBox.isChecked
+        } else agreementCreditBureausCheckBox.isChecked && agreementMarketingEmailCheckBox.isChecked
     }
 
     override fun onResume() {
