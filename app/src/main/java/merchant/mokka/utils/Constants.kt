@@ -27,7 +27,7 @@ object Constants {
     }
     const val MASKED_DOC_POSTFIX = "_masked"
 
-    const val LOCALE_PL = "merchant"
+    const val LOCALE_PL = "pl"
     const val LOCALE_RO = "ro"
     const val LOCALE_BG = "bg"
 }
