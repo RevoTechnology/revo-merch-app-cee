@@ -5,7 +5,6 @@ import android.text.InputFilter
 import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.TextView
-import androidx.core.view.isVisible
 import com.google.android.material.textfield.TextInputLayout
 import merchant.mokka.utils.*
 
@@ -27,8 +26,8 @@ class EditSumValidator(
 
     override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
         var text = s.toString()
-                .replace(",", StringUtils.decimalSeparator.toString())
-                .replace(".", StringUtils.decimalSeparator.toString())
+            .replace(",", StringUtils.decimalSeparator.toString())
+            .replace(".", StringUtils.decimalSeparator.toString())
 
         if (text.isEmpty()) {
             inputLayout?.hint = ""
@@ -47,15 +46,12 @@ class EditSumValidator(
             sumView?.let { it.text = sum.toTextWithCurrency() }
             editor?.let {
                 it.removeTextChangedListener(this)
-                // due to https://revoplus.atlassian.net/browse/BB-1054
-                // it.setText(sum.toText())
                 it.setSelection(length)
                 it.addTextChangedListener(this)
             }
             validate(sum)
             if (errorText != null) inputLayout?.error = if (isValid()) "" else errorText
         }
-        sumView?.isVisible = text.isNotBlank()
     }
 
     private fun isValid(sum: Double): Boolean {

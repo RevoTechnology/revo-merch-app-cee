@@ -1,6 +1,5 @@
 package merchant.mokka.ui.purchase.calculator
 
-import android.util.Log
 import com.arellomobile.mvp.InjectViewState
 import com.github.salomonbrys.kodein.KodeinInjector
 import com.github.salomonbrys.kodein.instance
@@ -11,7 +10,6 @@ import merchant.mokka.common.BasePresenter
 import merchant.mokka.model.AutoAgentData
 import merchant.mokka.model.LoanData
 import merchant.mokka.ui.root.Screens
-import merchant.mokka.utils.*
 import merchant.mokka.utils.*
 
 @InjectViewState
