@@ -1,7 +1,6 @@
 package merchant.mokka.ui.client.profile_ro
 
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -19,8 +18,6 @@ import merchant.mokka.common.HomeIconType
 import merchant.mokka.common.ToolbarStyle
 import merchant.mokka.model.*
 import merchant.mokka.ui.root.RootActivity
-import merchant.mokka.utils.*
-import merchant.mokka.model.*
 import merchant.mokka.utils.*
 import merchant.mokka.utils.cnp.cnp
 import merchant.mokka.utils.cnp.isValidCnp
@@ -263,8 +260,15 @@ class ClientProfileRoFragment : BaseFragment(), ClientProfileRoView {
             profileCnp.setText(it.idDocuments?.romanianCnp?.number)
             profileEmail.setText(it.email)
             profileWarningSwh.isChecked = it.blackMark == "1"
-            if (isModelValid()) {
-                saveData(false)
+            if (clientData != null) {
+                showConfirmDialog(
+                    onPositiveClick = {
+                        if (isModelValid()) {
+                            saveData(false)
+                        }
+                    },
+                    onNegativeClick = { }
+                )
             }
         }
     }
