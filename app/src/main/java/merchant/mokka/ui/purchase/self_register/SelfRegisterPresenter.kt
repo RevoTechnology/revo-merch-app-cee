@@ -29,21 +29,19 @@ class SelfRegisterPresenter(injector: KodeinInjector) : BasePresenter<SelfRegist
 
     fun isDemo() = service.demo
 
-    fun createLoan() {
+    fun createLoan(phone: String) {
         if (this::loan.isInitialized) {
             sendSelfRegistration(loan)
         } else {
             viewState.showProgress()
-            service.createLoanRequest()
+            service.createLoanRequest(phone)
                     .subscribeBy(
                             onSuccess = {
                                 loan = LoanData(
                                     token = it.token.orEmpty(),
-                                    clientPhone = phone?.clearPhone().orEmpty()
+                                    clientPhone = phone
                                 )
-                                Sentry.removeExtra("loan_request_id")
-                                Sentry.setExtra("loan_request_id", it.toString())
-                                updateLoan()
+                                sendSelfRegistration(loan)
                             },
                             onError = {
                                 viewState.hideProgress()
@@ -51,24 +49,6 @@ class SelfRegisterPresenter(injector: KodeinInjector) : BasePresenter<SelfRegist
                             }
                     )
         }
-    }
-
-    private fun updateLoan() {
-        service.updateLoanRequest(
-                loanToken = loan.token,
-                phone = loan.clientPhone,
-                amount = null,
-                agreeInsurance = null
-        )
-                .subscribeBy(
-                        onSuccess = {
-                            sendSelfRegistration(loan)
-                        },
-                        onError = {
-                            viewState.hideProgress()
-                            viewState.onError(it)
-                        }
-                )
     }
 
     private fun getMinAmount(): String {

@@ -22,7 +22,6 @@ interface ApiLoan {
             @Body loanRequest: LoanReq
     ): Single<Response<ResponseBody>>
 
-
     @GET("api/loans/v1/loan_requests/{token}")
     fun getTariffInformation(
             @Path("token") loanToken: String

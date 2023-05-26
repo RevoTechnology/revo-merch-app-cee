@@ -2,6 +2,7 @@ package merchant.mokka.api
 
 import android.content.Context
 import android.net.Uri
+import android.util.Log
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -254,11 +255,17 @@ class HttpService(
 
     //region ================= loans =================
 
-    override fun createLoanRequest(): Single<LoanReqData> {
+    override fun createLoanRequest(phone: String): Single<LoanReqData> {
         return if (demo) {
             mockData.getRequestToken()
         } else {
-            val request = LoanReq(LoanReqData(storeId = Prefs.currentStoreId.orZero(), insuranceAgree = true))
+            val request = LoanReq(
+                LoanReqData(
+                    storeId = Prefs.currentStoreId.orZero(),
+                    insuranceAgree = true,
+                    phone = phone
+                )
+            )
             val single = serviceLoan.loanCreateRequest(
                     loanRequest = request
             )

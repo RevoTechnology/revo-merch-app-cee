@@ -86,18 +86,7 @@ class RootPresenter(injector: KodeinInjector) : BasePresenter<RootView>(injector
     }
 
     fun onMakePurchaseClick() {
-        viewState.showProgress()
-        service.createLoanRequest()
-                .subscribeBy(
-                        onSuccess = {
-                            viewState.hideProgress()
-                            router.newRootScreen(Screens.PURCHASE, LoanData(token = it.token.orEmpty()))
-                        },
-                        onError = {
-                            viewState.hideProgress()
-                            viewState.onError(it)
-                        }
-                )
+        router.newRootScreen(Screens.PURCHASE)
     }
 
     fun onSignOutClick() {

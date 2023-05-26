@@ -62,13 +62,10 @@ class SelfRegisterFragment : BaseFragment(), SelfRegisterView {
 
         purchaseNextBtn.setOnClickListener {
             if (presenter.valid) {
-                presenter.createLoan()
+                val phone = presenter.phone?.clearPhone()?.replace(getString(R.string.phone_prefix), "") ?: ""
+                presenter.createLoan(phone)
             }
         }
-
-        /*purchaseInfo.setOnClickListener {
-            openHelp(toolbarStyle, "article_inform", getString(R.string.purchase_help_title))
-        }*/
 
         if (presenter.isDemo())
             purchaseDemo.visibility = View.VISIBLE

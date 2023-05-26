@@ -14,6 +14,7 @@ import merchant.mokka.model.LoanData
 import merchant.mokka.model.MemoryCashedData
 import merchant.mokka.pref.Prefs
 import merchant.mokka.ui.root.Screens
+import merchant.mokka.utils.clearPhone
 
 @InjectViewState
 class PurchasePresenter(injector: KodeinInjector) : BasePresenter<PurchaseView>(injector) {
@@ -21,74 +22,51 @@ class PurchasePresenter(injector: KodeinInjector) : BasePresenter<PurchaseView>(
     private val memoryCashedData by injector.instance<MemoryCashedData>()
     private val autoAgentData by injector.instance<AutoAgentData>()
 
-    var phone: String? = null
+    var phone: String = ""
     var valid: Boolean = false
     lateinit var loan: LoanData
 
     fun isDemo() = service.demo
 
     fun create() {
-        if (autoAgentData.isValid) phone = autoAgentData.phone
+        if (autoAgentData.isValid) phone = autoAgentData.phone ?: ""
     }
 
     fun createLoan(phone: String) {
         if (this::loan.isInitialized) {
             loan.client = null
-            getPurchaseValidateCode(loan, phone)
+            loan.clientPhone = phone
+            getClientInfo(loan)
         } else {
             viewState.showProgress()
-            service.createLoanRequest()
+            service.createLoanRequest(phone)
                     .subscribeBy(
                             onSuccess = {
                                 viewState.hideProgress()
                                 Sentry.removeExtra("loan_request_id")
                                 Sentry.setExtra("loan_request_id", it.token.toString())
-
-                                val sum =
-                                    if (autoAgentData.isValid) autoAgentData.amount?.toDouble() else null
-
+                                val sum = if (autoAgentData.isValid) autoAgentData.amount?.toDouble() else null
                                 loan = LoanData(
                                     token = it.token.orEmpty(),
                                     clientPhone = phone,
                                     sum = sum ?: 0.0,
                                     insuranceAvailable = it.insuranceAvailable ?: false
                                 )
-
-                                getPurchaseValidateCode(loan, phone)
+                                getClientInfo(loan)
                             },
                             onError = {
                                 viewState.hideProgress()
-                                viewState.onError(it)
+                                if (it is ApiErr) {
+                                    when {
+                                        it.largeAmount() -> viewState.onError(R.string.error_purchase_exceeds)
+                                        it.phoneError() -> viewState.onError(R.string.error_phone)
+                                        else -> viewState.onError(it)
+                                    }
+                                } else
+                                    viewState.onError(it)
                             }
                     )
         }
-    }
-
-    private fun getPurchaseValidateCode(loan: LoanData, phone: String) {
-        viewState.showProgress()
-        service.updateLoanRequest(
-                loanToken = loan.token,
-                phone = phone,
-                amount = null,
-                agreeInsurance = null
-        )
-                .subscribeBy(
-                        onSuccess = {
-                            loan.clientPhone = phone
-                            getClientInfo(loan)
-                        },
-                        onError = {
-                            viewState.hideProgress()
-                            if (it is ApiErr) {
-                                when {
-                                    it.largeAmount() -> viewState.onError(R.string.error_purchase_exceeds)
-                                    it.phoneError() -> viewState.onError(R.string.error_phone)
-                                    else -> viewState.onError(it)
-                                }
-                            } else
-                                viewState.onError(it)
-                        }
-                )
     }
 
     private fun getMinAmount(): String {
