@@ -255,7 +255,7 @@ class HttpService(
 
     //region ================= loans =================
 
-    override fun createLoanRequest(phone: String): Single<LoanReqData> {
+    override fun createLoanRequest(phone: String?): Single<LoanReqData> {
         return if (demo) {
             mockData.getRequestToken()
         } else {
@@ -263,7 +263,8 @@ class HttpService(
                 LoanReqData(
                     storeId = Prefs.currentStoreId.orZero(),
                     insuranceAgree = true,
-                    phone = phone
+                    phone = phone,
+                    amount = "1000"
                 )
             )
             val single = serviceLoan.loanCreateRequest(

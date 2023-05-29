@@ -62,8 +62,7 @@ class SelfRegisterFragment : BaseFragment(), SelfRegisterView {
 
         purchaseNextBtn.setOnClickListener {
             if (presenter.valid) {
-                val phone = presenter.phone?.clearPhone()?.replace(getString(R.string.phone_prefix), "") ?: ""
-                presenter.createLoan(phone)
+                presenter.createLoan()
             }
         }
 
