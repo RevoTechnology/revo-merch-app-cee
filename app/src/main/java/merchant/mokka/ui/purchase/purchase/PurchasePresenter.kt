@@ -33,40 +33,34 @@ class PurchasePresenter(injector: KodeinInjector) : BasePresenter<PurchaseView>(
     }
 
     fun createLoan(phone: String) {
-        if (this::loan.isInitialized) {
-            loan.client = null
-            loan.clientPhone = phone
-            getClientInfo(loan)
-        } else {
-            viewState.showProgress()
-            service.createLoanRequest(phone)
-                    .subscribeBy(
-                            onSuccess = {
-                                viewState.hideProgress()
-                                Sentry.removeExtra("loan_request_id")
-                                Sentry.setExtra("loan_request_id", it.token.toString())
-                                val sum = if (autoAgentData.isValid) autoAgentData.amount?.toDouble() else null
-                                loan = LoanData(
-                                    token = it.token.orEmpty(),
-                                    clientPhone = phone,
-                                    sum = sum ?: 0.0,
-                                    insuranceAvailable = it.insuranceAvailable ?: false
-                                )
-                                getClientInfo(loan)
-                            },
-                            onError = {
-                                viewState.hideProgress()
-                                if (it is ApiErr) {
-                                    when {
-                                        it.largeAmount() -> viewState.onError(R.string.error_purchase_exceeds)
-                                        it.phoneError() -> viewState.onError(R.string.error_phone)
-                                        else -> viewState.onError(it)
-                                    }
-                                } else
-                                    viewState.onError(it)
-                            }
+        viewState.showProgress()
+        service.createLoanRequest(phone)
+            .subscribeBy(
+                onSuccess = {
+                    viewState.hideProgress()
+                    Sentry.removeExtra("loan_request_id")
+                    Sentry.setExtra("loan_request_id", it.token.toString())
+                    val sum = if (autoAgentData.isValid) autoAgentData.amount?.toDouble() else null
+                    loan = LoanData(
+                        token = it.token.orEmpty(),
+                        clientPhone = phone,
+                        sum = sum ?: 0.0,
+                        insuranceAvailable = it.insuranceAvailable ?: false
                     )
-        }
+                    getClientInfo(loan)
+                },
+                onError = {
+                    viewState.hideProgress()
+                    if (it is ApiErr) {
+                        when {
+                            it.largeAmount() -> viewState.onError(R.string.error_purchase_exceeds)
+                            it.phoneError() -> viewState.onError(R.string.error_phone)
+                            else -> viewState.onError(it)
+                        }
+                    } else
+                        viewState.onError(it)
+                }
+            )
     }
 
     private fun getMinAmount(): String {
@@ -76,34 +70,34 @@ class PurchasePresenter(injector: KodeinInjector) : BasePresenter<PurchaseView>(
 
     private fun getClientInfo(loan: LoanData) {
         service.getClientInfo(loan.token)
-                .subscribeBy(
-                        onSuccess = {
-                            loan.client = it
-                            sendClientConfirmCode(loan)
-                        },
-                        onError = {
-                            viewState.hideProgress()
-                            loan.isNewClient = true
-                            router.navigateTo(Screens.AGREEMENT, loan)
-                        }
-                )
+            .subscribeBy(
+                onSuccess = {
+                    loan.client = it
+                    sendClientConfirmCode(loan)
+                },
+                onError = {
+                    viewState.hideProgress()
+                    loan.isNewClient = true
+                    router.navigateTo(Screens.AGREEMENT, loan)
+                }
+            )
     }
 
     private fun sendClientConfirmCode(loan: LoanData) {
         service.sendConfirmClientCode(loan.token)
-                .subscribeBy(
-                        onSuccess = {
-                            viewState.hideProgress()
-                            router.navigateTo(Screens.CONFIRM_CLIENT, loan)
-                        },
-                        onError = {
-                            viewState.hideProgress()
-                            if (it is ApiErr && it.clientError()) {
-                                router.navigateTo(Screens.AGREEMENT, loan)
-                            } else
-                                viewState.onError(it)
-                        }
-                )
+            .subscribeBy(
+                onSuccess = {
+                    viewState.hideProgress()
+                    router.navigateTo(Screens.CONFIRM_CLIENT, loan)
+                },
+                onError = {
+                    viewState.hideProgress()
+                    if (it is ApiErr && it.clientError()) {
+                        router.navigateTo(Screens.AGREEMENT, loan)
+                    } else
+                        viewState.onError(it)
+                }
+            )
     }
 
     fun showDashboardScreen() {
@@ -115,8 +109,7 @@ class PurchasePresenter(injector: KodeinInjector) : BasePresenter<PurchaseView>(
     }
 
     fun clickOnLink(link: String) {
-        val url = StringBuilder()
-                .append(RevoInterceptor.baseUrl())
+        val url = StringBuilder().append(RevoInterceptor.baseUrl())
         if (::loan.isInitialized) url.append(String.format(link, loan.token))
         else url.append("api/loans/v1/documents/privacy_policy")
 
