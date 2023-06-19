@@ -14,7 +14,7 @@ android {
         applicationId "merchant.mokka"
         minSdkVersion 19
         targetSdkVersion 33
-        versionCode 175
+        versionCode 186
         versionName "2.0.26"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
@@ -46,6 +46,12 @@ android {
             debuggable false
 
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    bundle {
+        language {
+            enableSplit = false
         }
     }
 

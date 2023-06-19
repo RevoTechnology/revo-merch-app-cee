@@ -19,7 +19,6 @@ import com.github.salomonbrys.kodein.android.KodeinAppCompatActivity
 import kotlinx.android.synthetic.main.dialog_progress.view.*
 import merchant.mokka.ui.main.help.HelpActivity
 import merchant.mokka.utils.isBgLocale
-import merchant.mokka.utils.updateBaseContextLocale
 import merchant.mokka.R
 import merchant.mokka.BuildConfig
 
@@ -156,9 +155,5 @@ open class BaseActivity : KodeinAppCompatActivity() {
         return supportFragmentManager.fragments.firstOrNull {
             it is IDemoClickedView
         } as? IDemoClickedView
-    }
-
-    override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(updateBaseContextLocale(newBase))
     }
 }
