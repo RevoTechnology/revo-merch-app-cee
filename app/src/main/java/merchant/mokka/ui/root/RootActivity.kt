@@ -100,11 +100,13 @@ class RootActivity : BaseActivity(), RootView {
         }
 
         val locale = getCurrentLocale(this)?.language
+        val isNeedShowLocaleDialog =
+            locale != Constants.LOCALE_RO &&
+            locale != Constants.LOCALE_PL &&
+            locale != Constants.LOCALE_BG &&
+            Prefs.locale.isEmpty()
 
-        if (locale != Constants.LOCALE_RO
-                && locale != Constants.LOCALE_PL
-                && locale != Constants.LOCALE_BG
-                && Prefs.locale.isEmpty()) {
+        if (isNeedShowLocaleDialog) {
             val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_select_locale, null, false)
             val selectButtonPl = dialogView.findViewById<RadioButton>(R.id.selectButtonPl)
             val selectButtonRo = dialogView.findViewById<RadioButton>(R.id.selectButtonRo)

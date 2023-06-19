@@ -82,12 +82,10 @@ class ConfirmClientPresenter(injector: KodeinInjector) : BasePresenter<ConfirmCl
                         },
                         onError = {
                             viewState.hideProgress()
-
                             when {
                                 it is ApiErr && it.codeError() -> viewState.onError(R.string.error_sms_code)
                                 else -> viewState.onError(it)
                             }
-
                             viewState.setCodeValid(false)
                         }
                 )

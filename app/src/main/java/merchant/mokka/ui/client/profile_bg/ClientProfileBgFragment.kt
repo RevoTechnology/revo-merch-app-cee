@@ -351,8 +351,9 @@ class ClientProfileBgFragment : BaseFragment(), ClientProfileBgView {
         clientData?.let {
             profileFirstName.setText(it.firstName)
             profileLastName.setText(it.lastName)
-            profilePesel.setText(it.idDocuments?.polishPesel?.number)
-            profileId.setText(it.idDocuments?.polishId?.number)
+            patronymicName.setText(it.middleName)
+            profilePesel.setText(it.idDocuments?.egn?.number)
+            profileId.setText(it.idDocuments?.idCard?.number)
             profileStreet.setText(it.street)
             profileHouse.setText(it.house)
             profileFlat.setText(it.apartment)
