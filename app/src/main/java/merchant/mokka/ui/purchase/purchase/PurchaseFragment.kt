@@ -85,19 +85,6 @@ class PurchaseFragment : BaseFragment(), PurchaseView {
             presenter.showSelfRegistration(purchasePhone.text.toString().clearPhone())
         }
 
-        if (BuildConfig.DEBUG) {
-            when {
-                isPlLocale() -> "+48333999112"
-                else -> null
-            }?.let {
-                purchasePhone.setText(it)
-                presenter.phone = it
-                validate(true)
-            }
-
-            purchaseNextBtn.enable(true)
-        }
-
         puchaseInfoView.movementMethod = LinkMovementMethod.getInstance()
 
         puchaseInfoView.setTextWithLinkSupport(getString(R.string.purchase_info)){

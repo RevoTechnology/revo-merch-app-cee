@@ -98,14 +98,6 @@ class ClientProfileFragment : BaseFragment(), ClientProfileView {
                 profileFlatLayout,
                 profileWarningSwh).forEach { it?.visible(false) }
 
-        if(BuildConfig.DEBUG ){
-            profileFirstName.setText("MATEUSZ")
-            profileLastName.setText("SZEMRAJ")
-            profileId.setText("GWX599396")
-            profilePesel.setText("87062746316")
-            profileEmail.setText("forgiven.null+${UUID.randomUUID()}@gmail.com")
-        }
-
         profilePesel.filters = arrayOf<InputFilter>(LengthFilter(11))
     }
 

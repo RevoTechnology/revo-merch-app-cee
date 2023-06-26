@@ -80,15 +80,6 @@ class ClientProfileRoFragment : BaseFragment(), ClientProfileRoView {
         )
 
         dialog?.dismiss()
-
-        if (BuildConfig.DEBUG) {
-            profileFirstName.setText("Client")
-            profileLastName.setText("Cliente")
-            profileCnp.setText("5000801055525")
-            profileBulletin.setText("SX123456")
-            profileEmail.setText("forgiven.null+${UUID.randomUUID().toString().take(5)}@gmail.com")
-            validateModel()
-        }
     }
 
     private fun saveData(confirm: Boolean) {
