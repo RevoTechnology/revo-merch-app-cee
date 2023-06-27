@@ -15,7 +15,6 @@ import merchant.mokka.di.dependencies
 import merchant.mokka.notification.NotificationsChannels
 import merchant.mokka.pref.Prefs
 import merchant.mokka.utils.CrashReportingTree
-import merchant.mokka.utils.updateBaseContextLocale
 import timber.log.Timber
 
 class App : Application(), KodeinAware {
@@ -28,16 +27,14 @@ class App : Application(), KodeinAware {
         super.onCreate()
         instance = this
         Prefs.init(this)
-        updateBaseContextLocale(this)
 
         FirebaseApp.initializeApp(this)
         FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
         else Timber.plant(CrashReportingTree())
 
-        try {
+        runCatching {
             ProviderInstaller.installIfNeeded(this)
-        } catch (e: Throwable) {
         }
 
         NotificationsChannels(this).create()

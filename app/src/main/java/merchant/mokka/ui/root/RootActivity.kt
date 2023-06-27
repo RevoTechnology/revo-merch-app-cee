@@ -37,6 +37,7 @@ import merchant.mokka.ui.purchase.purchase.PurchaseFragment
 import merchant.mokka.ui.returns.search.SearchFragment
 import merchant.mokka.utils.*
 import ru.terrakok.cicerone.NavigatorHolder
+import java.util.Locale
 
 class RootActivity : BaseActivity(), RootView {
 
@@ -99,40 +100,50 @@ class RootActivity : BaseActivity(), RootView {
             }
         }
 
-        val locale = getCurrentLocale(this)?.language
-        val isNeedShowLocaleDialog =
-            locale != Constants.LOCALE_RO &&
-            locale != Constants.LOCALE_PL &&
-            locale != Constants.LOCALE_BG &&
-            Prefs.locale.isEmpty()
-
-        if (isNeedShowLocaleDialog) {
-            val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_select_locale, null, false)
-            val selectButtonPl = dialogView.findViewById<RadioButton>(R.id.selectButtonPl)
-            val selectButtonRo = dialogView.findViewById<RadioButton>(R.id.selectButtonRo)
-            val selectButtonBg = dialogView.findViewById<RadioButton>(R.id.selectButtonBg)
-            AlertDialog.Builder(this)
-                    .setView(dialogView)
-                    .setCancelable(true)
-                    .setPositiveButton(R.string.button_ok) { _, _ ->
-                        when {
-                            selectButtonPl.isChecked -> Prefs.locale = Constants.LOCALE_PL
-                            selectButtonRo.isChecked -> Prefs.locale = Constants.LOCALE_RO
-                            selectButtonBg.isChecked -> Prefs.locale = Constants.LOCALE_BG
-                        }
-
-                        updateBaseContextLocale(this)
-                        recreate()
-                    }
-                    .show()
-        } else if (Prefs.locale.isEmpty() && locale != null) {
-            Prefs.locale = locale
-            updateBaseContextLocale(this)
-            recreate()
-        } else {
-            presenter.checkApkVersion(getDeviceInfo(LOG_STEP))
-            presenter.handleLamoda(intent.getStringExtra("json_data"))
+        if (checkLocale()) {
+            showLocaleDialog()
+        }else {
+            updateLocale()
         }
+    }
+
+    private fun checkLocale(): Boolean {
+        val prefsLocale = Prefs.locale
+        val prefsLocaleEmpty = prefsLocale.isEmpty()
+        val locale = if (prefsLocaleEmpty) getCurrentLocale(this)?.language else prefsLocale
+        return  locale != Constants.LOCALE_RO &&
+                locale != Constants.LOCALE_PL &&
+                locale != Constants.LOCALE_BG
+    }
+
+    private fun showLocaleDialog() {
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_select_locale, null, false)
+        val selectButtonPl = dialogView.findViewById<RadioButton>(R.id.selectButtonPl)
+        val selectButtonRo = dialogView.findViewById<RadioButton>(R.id.selectButtonRo)
+        val selectButtonBg = dialogView.findViewById<RadioButton>(R.id.selectButtonBg)
+        AlertDialog.Builder(this)
+            .setView(dialogView)
+            .setCancelable(true)
+            .setPositiveButton(R.string.button_ok) { _, _ ->
+                when {
+                    selectButtonPl.isChecked -> Prefs.locale = Constants.LOCALE_PL
+                    selectButtonRo.isChecked -> Prefs.locale = Constants.LOCALE_RO
+                    selectButtonBg.isChecked -> Prefs.locale = Constants.LOCALE_BG
+                }
+                updateLocale()
+            }
+            .show()
+    }
+
+    private fun updateLocale() {
+        val locale = Locale(Prefs.locale)
+        val res = resources
+        val dm = res.displayMetrics
+        val conf = res.configuration
+        conf.locale = locale
+        res.updateConfiguration(conf, dm)
+        presenter.checkApkVersion(getDeviceInfo(LOG_STEP))
+        presenter.handleLamoda(intent.getStringExtra("json_data"))
     }
 
     override fun onResume() {
@@ -190,25 +201,6 @@ class RootActivity : BaseActivity(), RootView {
     //endregion
 
     //region ================= InitActivity =================
-
-    private fun selectLocale() {
-        val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_select_locale, null, false)
-        val selectButtonPl = dialogView.findViewById<RadioButton>(R.id.selectButtonPl)
-
-        alert(
-                view = dialogView,
-                cancelable = true,
-                positiveButtonResId = R.string.button_ok,
-                positive = {
-                    Prefs.locale = when {
-                        selectButtonPl.isChecked -> Constants.LOCALE_PL
-                        else -> ""
-                    }
-                    updateBaseContextLocale(this)
-                    recreate()
-                }
-        )
-    }
 
     private fun initToolbar() {
         setSupportActionBar(rootToolbar)
