@@ -144,8 +144,8 @@ class PurchaseFragment : BaseFragment(), PurchaseView {
 
     private fun submit() {
         if (presenter.valid) {
-            val phone = presenter.phone.clearPhone().replace(getString(R.string.phone_prefix), "")
-            presenter.createLoan(phone)
+            val clearPhone = presenter.phone.clearPhone()
+            presenter.createLoan(clearPhone)
         }
     }
 }
