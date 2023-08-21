@@ -14,8 +14,8 @@ android {
         applicationId "merchant.mokka"
         minSdkVersion 19
         targetSdkVersion 33
-        versionCode 186
-        versionName "2.0.26"
+        versionCode 188
+        versionName "2.0.27"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 
