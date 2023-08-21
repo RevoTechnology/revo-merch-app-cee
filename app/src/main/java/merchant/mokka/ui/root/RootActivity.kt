@@ -111,6 +111,9 @@ class RootActivity : BaseActivity(), RootView {
         val prefsLocale = Prefs.locale
         val prefsLocaleEmpty = prefsLocale.isEmpty()
         val locale = if (prefsLocaleEmpty) getCurrentLocale(this)?.language else prefsLocale
+        if (locale != prefsLocale) {
+            Prefs.locale = locale.orEmpty()
+        }
         return  locale != Constants.LOCALE_RO &&
                 locale != Constants.LOCALE_PL &&
                 locale != Constants.LOCALE_BG
