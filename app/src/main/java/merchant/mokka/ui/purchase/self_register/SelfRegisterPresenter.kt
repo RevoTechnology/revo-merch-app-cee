@@ -34,7 +34,7 @@ class SelfRegisterPresenter(injector: KodeinInjector) : BasePresenter<SelfRegist
             sendSelfRegistration(loan)
         } else {
             viewState.showProgress()
-            service.createLoanRequest(null)
+            service.createLoanRequest(null, "1")
                 .subscribeBy(
                     onSuccess = {
                         loan = LoanData(

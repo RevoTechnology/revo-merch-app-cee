@@ -46,7 +46,7 @@ interface ApiService {
 
     //region ================= loans =================
 
-    fun createLoanRequest(phone: String?) : Single<LoanReqData>
+    fun createLoanRequest(phone: String?, amount: String = "1000") : Single<LoanReqData>
     fun updateLoanRequest(loanToken: String, phone: String, amount: String?, agreeInsurance: Boolean?) : Single<out Boolean>
     fun getClientInfo(loanToken: String) : Single<out ClientData>
 
