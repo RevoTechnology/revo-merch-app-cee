@@ -11,7 +11,6 @@ import android.os.Bundle
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
-import android.widget.RadioButton
 import androidx.annotation.StringRes
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
@@ -25,9 +24,9 @@ import com.bumptech.glide.request.RequestOptions
 import com.github.salomonbrys.kodein.instance
 import kotlinx.android.synthetic.main.activity_root.*
 import kotlinx.android.synthetic.main.drawer_header_root.view.*
-import merchant.mokka.common.*
 import merchant.mokka.BuildConfig
 import merchant.mokka.R
+import merchant.mokka.common.*
 import merchant.mokka.model.AgentData
 import merchant.mokka.model.UnlockData
 import merchant.mokka.pref.Prefs
@@ -37,7 +36,7 @@ import merchant.mokka.ui.purchase.purchase.PurchaseFragment
 import merchant.mokka.ui.returns.search.SearchFragment
 import merchant.mokka.utils.*
 import ru.terrakok.cicerone.NavigatorHolder
-import java.util.Locale
+
 
 class RootActivity : BaseActivity(), RootView {
 
@@ -99,54 +98,10 @@ class RootActivity : BaseActivity(), RootView {
                         R.id.item_return_purchase)?.isChecked = true
             }
         }
-
-        if (checkLocale()) {
-            showLocaleDialog()
-        }else {
-            updateLocale()
+        checkLocaleUpdates(this) {
+            presenter.checkApkVersion(getDeviceInfo(LOG_STEP))
+            presenter.handleLamoda(intent.getStringExtra("json_data"))
         }
-    }
-
-    private fun checkLocale(): Boolean {
-        val prefsLocale = Prefs.locale
-        val prefsLocaleEmpty = prefsLocale.isEmpty()
-        val locale = if (prefsLocaleEmpty) getCurrentLocale(this)?.language else prefsLocale
-        if (locale != prefsLocale) {
-            Prefs.locale = locale.orEmpty()
-        }
-        return  locale != Constants.LOCALE_RO &&
-                locale != Constants.LOCALE_PL &&
-                locale != Constants.LOCALE_BG
-    }
-
-    private fun showLocaleDialog() {
-        val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_select_locale, null, false)
-        val selectButtonPl = dialogView.findViewById<RadioButton>(R.id.selectButtonPl)
-        val selectButtonRo = dialogView.findViewById<RadioButton>(R.id.selectButtonRo)
-        val selectButtonBg = dialogView.findViewById<RadioButton>(R.id.selectButtonBg)
-        AlertDialog.Builder(this)
-            .setView(dialogView)
-            .setCancelable(true)
-            .setPositiveButton(R.string.button_ok) { _, _ ->
-                when {
-                    selectButtonPl.isChecked -> Prefs.locale = Constants.LOCALE_PL
-                    selectButtonRo.isChecked -> Prefs.locale = Constants.LOCALE_RO
-                    selectButtonBg.isChecked -> Prefs.locale = Constants.LOCALE_BG
-                }
-                updateLocale()
-            }
-            .show()
-    }
-
-    private fun updateLocale() {
-        val locale = Locale(Prefs.locale)
-        val res = resources
-        val dm = res.displayMetrics
-        val conf = res.configuration
-        conf.locale = locale
-        res.updateConfiguration(conf, dm)
-        presenter.checkApkVersion(getDeviceInfo(LOG_STEP))
-        presenter.handleLamoda(intent.getStringExtra("json_data"))
     }
 
     override fun onResume() {
@@ -201,14 +156,17 @@ class RootActivity : BaseActivity(), RootView {
         }
     }
 
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(newBase.setLocale())
+    }
+
     //endregion
 
     //region ================= InitActivity =================
 
     private fun initToolbar() {
         setSupportActionBar(rootToolbar)
-        toggle = object : ActionBarDrawerToggle(this, rootDrawerLayout, rootToolbar,
-                R.string.drawer_open, R.string.drawer_close) {}
+        toggle = object : ActionBarDrawerToggle(this, rootDrawerLayout, rootToolbar, R.string.drawer_open, R.string.drawer_close) {}
         rootDrawerLayout.addDrawerListener(toggle)
         toggle.syncState()
     }
@@ -225,10 +183,8 @@ class RootActivity : BaseActivity(), RootView {
                 setToolbarTextViewsMarquee()
                 title = if (titleRes == 0) "" else getString(titleRes)
                 subtitle = subtitleRes?.let { getString(it) }
-                setTitleTextColor(
-                        ContextCompat.getColor(this@RootActivity, toolbarStyle.titleColorRes))
-                setBackgroundColor(
-                        ContextCompat.getColor(this@RootActivity, toolbarStyle.bkgColorRes))
+                setTitleTextColor(ContextCompat.getColor(this@RootActivity, toolbarStyle.titleColorRes))
+                setBackgroundColor(ContextCompat.getColor(this@RootActivity, toolbarStyle.bkgColorRes))
             }
         }
 

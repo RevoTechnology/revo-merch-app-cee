@@ -120,9 +120,9 @@ private fun updateResourcesLocaleLegacy(context: Context?, locale: Locale?): Con
     return context
 }
 
-fun isPlLocale() = Prefs.locale == Constants.LOCALE_PL
-fun isRoLocale() = Prefs.locale == Constants.LOCALE_RO
-fun isBgLocale() = Prefs.locale == Constants.LOCALE_BG
+fun isPlLocale() = Prefs.locale == LOCALE_PL
+fun isRoLocale() = Prefs.locale == LOCALE_RO
+fun isBgLocale() = Prefs.locale == LOCALE_BG
 
 fun Context?.getDeviceInfo(logStep: String): DeviceInfoData? {
     this ?: return null
