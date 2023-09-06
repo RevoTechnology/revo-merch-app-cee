@@ -62,6 +62,9 @@ data class ClientData(
     @Json(name = "confirm_data")
     val confirmData: Boolean? = null,
 
+    @Json(name = "kyc_passed")
+    val isKycPassed: Boolean? = null,
+
     var technicalMessage: String? = null,
 
     @Json(name = "is_repeated") val _isRepeated: Boolean? = null,

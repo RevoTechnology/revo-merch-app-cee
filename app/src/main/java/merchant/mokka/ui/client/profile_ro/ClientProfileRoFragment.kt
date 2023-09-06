@@ -80,6 +80,11 @@ class ClientProfileRoFragment : BaseFragment(), ClientProfileRoView {
         )
 
         dialog?.dismiss()
+        if (loan.client?.isRepeated == true && loan.client?.isKycPassed == false) {
+            saveData(true)
+        }
+
+        validateModel()
     }
 
     private fun saveData(confirm: Boolean) {
