@@ -26,5 +26,8 @@ data class LoanReqData(
         var insuranceAvailable: Boolean? = null,
 
         @Json(name = "agree_insurance")
-        var insuranceAgree: Boolean? = null
+        var insuranceAgree: Boolean? = null,
+
+        @Json(name = "kind")
+        var kind: String = "merch_app"
 )
