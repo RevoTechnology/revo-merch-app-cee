@@ -8,9 +8,9 @@ import merchant.mokka.utils.isRoLocale
 
 object HttpConfig {
 
-    const val MAX_CONNECTION_TIMEOUT: Long = 60000
-    const val MAX_READ_TIMEOUT: Long = 60000
-    const val MAX_WRITE_TIMEOUT: Long = 60000
+    const val MAX_CONNECTION_TIMEOUT: Long = 120000
+    const val MAX_READ_TIMEOUT: Long = 120000
+    const val MAX_WRITE_TIMEOUT: Long = 120000
 
     const val ADDRESS_URL = "http://kodpocztowy.intami.pl/api/"
     const val APK_DESTINATION = "revo.apk"
