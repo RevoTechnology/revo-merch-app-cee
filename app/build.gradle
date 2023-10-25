@@ -63,30 +63,18 @@ android {
         stage {
             dimension "env"
             buildConfigField("Boolean", "IS_PROD", "false")
-            buildConfigField("String", "BASE_URL", '"https://backend.best.revoup.ru/"')
-            buildConfigField("String", "BASE_PL_URL", '"https://stage-backend.revoplus.pl/"')
-            buildConfigField("String", "BASE_RO_URL", '"https://stage-backend.mokka.ro/"')
-            buildConfigField("String", "BASE_BG_URL", '"https://stage-backend.mokka.bg/"')
             buildConfigField("String", "ENV", '"staging"')
         }
 
         prod {
             dimension "env"
             buildConfigField("Boolean", "IS_PROD", "true")
-            buildConfigField("String", "BASE_URL", '"https://discovery.revo.ru/"')
-            buildConfigField("String", "BASE_PL_URL", '"https://b.revoplus.pl/"')
-            buildConfigField("String", "BASE_RO_URL", '"https://b.mokka.ro/"')
-            buildConfigField("String", "BASE_BG_URL", '"https://b.mokka.bg/"')
             buildConfigField("String", "ENV", '"production"')
         }
 
         otest {
             dimension "env"
             buildConfigField("Boolean", "IS_PROD", "false")
-            buildConfigField("String", "BASE_URL", '"https://backend.best.revoup.ru/"')
-            buildConfigField("String", "BASE_PL_URL", '"https://test-backend.revoplus.pl/"')
-            buildConfigField("String", "BASE_RO_URL", '"https://test-backend.mokka.ro/"')
-            buildConfigField("String", "BASE_BG_URL", '"https://test-backend.mokka.bg/"')
             buildConfigField("String", "ENV", '"staging"')
         }
 
