@@ -69,7 +69,6 @@ class CalculatorPresenter(injector: KodeinInjector) : BasePresenter<CalculatorVi
 			isBgLocale() && !isAvailabilityDocuments(loan) -> Screens.DOCUMENTS
 			else -> Screens.CONTRACT
 		}
-
 		router.navigateTo(nextScreen, loan)
 	}
 

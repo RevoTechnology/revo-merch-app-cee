@@ -115,8 +115,8 @@ class ClientProfileBgFragment : BaseFragment(), ClientProfileBgView {
     }
 
     private fun saveData(confirm: Boolean) {
-        loan.client = getClientData()
         if (confirm) {
+            loan.client = getClientData()
             showConfirmDialog(
                 onPositiveClick = { presenter.onNextClick(loan) },
                 onNegativeClick = {}
