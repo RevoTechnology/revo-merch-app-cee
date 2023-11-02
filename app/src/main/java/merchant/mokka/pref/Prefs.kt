@@ -3,6 +3,7 @@ package merchant.mokka.pref
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
+import merchant.mokka.utils.Constants
 import java.util.*
 
 object Prefs{
@@ -22,6 +23,7 @@ object Prefs{
     private const val TARIFF_MIN_KEY = "tariffMin"
     private const val TARIFF_MAX_KEY = "tariffMax"
     private const val LOCALE_KEY = "locale"
+    private const val STAND_KEY = "stand"
     private const val PUSH_TOKEN_KEY = "pushToken"
     private const val UUID_KEY = "uuid"
     private const val LIVETEX_TOKEN = "LIVETEX_TOKEN"
@@ -64,5 +66,15 @@ object Prefs{
     var livetexToken: String?
         get()  = sp.getString(LIVETEX_TOKEN, null)
         set(value) { sp.edit().putString(LIVETEX_TOKEN, value).apply() }
+
+    var stand: Constants.STANDS?
+        get() {
+            val link = sp.getString(STAND_KEY, "") ?: return null
+            return Constants.STANDS.getByLink(link)
+        }
+        set(value) {
+            val link = value?.getLinkByLanguage()
+            sp.edit().putString(STAND_KEY, link).apply()
+        }
 
 }

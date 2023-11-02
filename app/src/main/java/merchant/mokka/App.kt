@@ -14,6 +14,7 @@ import com.google.firebase.crashlytics.FirebaseCrashlytics
 import merchant.mokka.di.dependencies
 import merchant.mokka.notification.NotificationsChannels
 import merchant.mokka.pref.Prefs
+import merchant.mokka.utils.Constants
 import merchant.mokka.utils.CrashReportingTree
 import timber.log.Timber
 
@@ -27,6 +28,7 @@ class App : Application(), KodeinAware {
         super.onCreate()
         instance = this
         Prefs.init(this)
+        initializeBaseUrl()
 
         FirebaseApp.initializeApp(this)
         FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
@@ -51,6 +53,15 @@ class App : Application(), KodeinAware {
             }
         )
         if (Prefs.pushToken.isNotEmpty()) Exponea.trackPushToken(Prefs.pushToken)
+    }
+
+    private fun initializeBaseUrl() {
+        if (BuildConfig.DEBUG) {
+            val stand = Prefs.stand
+            Prefs.stand = stand
+        } else {
+            Prefs.stand = Constants.STANDS.PROD
+        }
     }
 
     override fun attachBaseContext(base: Context) {

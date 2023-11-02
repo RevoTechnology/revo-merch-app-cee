@@ -5,6 +5,7 @@ import okhttp3.Interceptor
 import okhttp3.Response
 import merchant.mokka.BuildConfig
 import merchant.mokka.pref.Prefs
+import merchant.mokka.utils.Constants
 import merchant.mokka.utils.isBgLocale
 import merchant.mokka.utils.isPlLocale
 import merchant.mokka.utils.isRoLocale
@@ -44,13 +45,8 @@ class RevoInterceptor(val useRevoAuth: Boolean, val usePathConstructor: Boolean)
 
 
     companion object {
-        fun baseUrl() = when {
-            isPlLocale() -> BuildConfig.BASE_PL_URL
-            isRoLocale() -> BuildConfig.BASE_RO_URL
-            isBgLocale() -> BuildConfig.BASE_BG_URL
 
-            else -> BuildConfig.BASE_URL
-        }
+        fun baseUrl(stands: Constants.STANDS) = stands.getLinkByLanguage()
 
         fun apiEnvironment() = when {
             isPlLocale() -> null
