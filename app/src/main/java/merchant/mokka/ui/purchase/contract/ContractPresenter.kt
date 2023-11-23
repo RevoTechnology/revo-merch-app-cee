@@ -137,7 +137,8 @@ class ContractPresenter(injector: KodeinInjector) : BasePresenter<ContractView>(
     fun showInfoClientRepeatNoRcl(loan: LoanData) {
         if (isRoLocale() && !isInfoClientRepeatNoRclShown && loan.client?.isRepeated == true && loan.client?.rclAccepted != true) {
             isInfoClientRepeatNoRclShown = true
-            viewState.showInfoClientRepeatNoRcl()
+//            Скрыто в задаче #39
+//            viewState.showInfoClientRepeatNoRcl()
         }
     }
 }

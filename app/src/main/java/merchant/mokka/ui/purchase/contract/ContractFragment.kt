@@ -159,7 +159,8 @@ class ContractFragment : BaseFragment(), ContractView {
 
         validateChecks()
 
-        presenter.showInfoClientRepeatNoRcl(loan)
+//        Скрыто в задаче #39
+//        presenter.showInfoClientRepeatNoRcl(loan)
     }
 
     private fun fillRomania() {
