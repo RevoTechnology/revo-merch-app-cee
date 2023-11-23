@@ -26,4 +26,82 @@ object Constants {
         else -> "zł"
     }
     const val MASKED_DOC_POSTFIX = "_masked"
+
+    enum class STANDS(val link: Links) {
+        TEST(
+            Links(
+                pl = "https://test-backend.revoplus.pl/",
+                ro = "https://test-backend.mokka.ro/",
+                bg = "https://test-backend.mokka.bg/"
+            )
+        ),
+        PROD(
+            Links(
+                pl = "https://b.revoplus.pl/",
+                ro = "https://b.mokka.ro/",
+                bg = "https://b.mokka.bg/"
+            )
+        ),
+        STAGE(
+            Links(
+                pl = "https://stage-backend.revoplus.pl/",
+                ro = "https://stage-backend.mokka.ro/",
+                bg = "https://stage-backend.mokka.bg/"
+            )
+        ),
+        DEMO(
+            Links(
+                pl = "https://demo-backend.mokka.pl/",
+                ro = "https://demo-backend.mokka.ro/",
+                bg = "https://demo-backend.mokka.bg/"
+            )
+        ),
+        DEV1(
+            Links(
+                pl = "https://b.dev1.mokka.pl/",
+                ro = "https://b.dev1.mokka.ro/",
+                bg = "https://b.dev1.mokka.bg/"
+            )
+        ),
+        DEV2(
+            Links(
+                pl = "https://b.dev2.mokka.pl/",
+                ro = "https://b.dev2.mokka.ro/",
+                bg = "https://b.dev2.mokka.bg/"
+            )
+        );
+
+        fun getLinkByLanguage(): String {
+            return when {
+                isRoLocale() -> link.ro
+                isPlLocale() -> link.pl
+                isBgLocale() -> link.bg
+                else -> ""
+            }
+        }
+
+        companion object {
+            fun getByEnv(env: String): STANDS {
+                return when (env) {
+                    "stage" -> STAGE
+                    "prod" -> PROD
+                    "otest" -> DEMO
+                    else -> STAGE
+                }
+            }
+
+            fun getByLink(link: String): STANDS {
+                return values().firstOrNull { it.link.containsLink(link) } ?: STAGE
+            }
+        }
+    }
+
+    data class Links(
+        val pl: String,
+        val ro: String,
+        val bg: String
+    ) {
+        fun containsLink(link: String) = pl == link || ro == link || bg == link
+    }
+
 }

@@ -5,6 +5,7 @@ import com.github.salomonbrys.kodein.KodeinInjector
 import com.github.salomonbrys.kodein.instance
 import io.reactivex.rxkotlin.subscribeBy
 import io.sentry.Sentry
+import merchant.mokka.BuildConfig
 import merchant.mokka.R
 import merchant.mokka.api.RevoInterceptor
 import merchant.mokka.api.error.ApiErr
@@ -14,6 +15,7 @@ import merchant.mokka.model.LoanData
 import merchant.mokka.model.MemoryCashedData
 import merchant.mokka.pref.Prefs
 import merchant.mokka.ui.root.Screens
+import merchant.mokka.utils.Constants
 import merchant.mokka.utils.clearPhone
 
 @InjectViewState
@@ -109,7 +111,7 @@ class PurchasePresenter(injector: KodeinInjector) : BasePresenter<PurchaseView>(
     }
 
     fun clickOnLink(link: String) {
-        val url = StringBuilder().append(RevoInterceptor.baseUrl())
+        val url = StringBuilder().append(RevoInterceptor.baseUrl(Prefs.stand ?: Constants.STANDS.getByEnv(BuildConfig.ENV)))
         if (::loan.isInitialized) url.append(String.format(link, loan.token))
         else url.append("api/loans/v1/documents/privacy_policy")
 

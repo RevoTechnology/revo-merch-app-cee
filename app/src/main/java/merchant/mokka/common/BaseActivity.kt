@@ -100,8 +100,8 @@ open class BaseActivity : KodeinAppCompatActivity() {
         val messageView = dialog.findViewById(android.R.id.message) as TextView?
         messageView?.movementMethod = LinkMovementMethod.getInstance()
         messageView?.text = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-            Html.fromHtml(message, Html.FROM_HTML_MODE_LEGACY)
-        else Html.fromHtml(message)
+            Html.fromHtml(message ?: "", Html.FROM_HTML_MODE_LEGACY)
+        else Html.fromHtml(message ?: "")
     }
 
     fun openHelp(toolbarStyle: ToolbarStyle, helpRes: String, title: String) {

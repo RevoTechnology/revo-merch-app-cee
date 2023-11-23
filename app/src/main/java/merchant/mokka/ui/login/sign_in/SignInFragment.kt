@@ -3,6 +3,7 @@ package merchant.mokka.ui.login.sign_in
 import android.os.Bundle
 import android.text.InputType
 import android.view.View
+import androidx.core.view.isVisible
 import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import kotlinx.android.synthetic.main.fragment_sign_in.*
@@ -13,6 +14,7 @@ import merchant.mokka.common.HomeIconType
 import merchant.mokka.common.IDemoClickedView
 import merchant.mokka.common.ToolbarStyle
 import merchant.mokka.model.AgentData
+import merchant.mokka.pref.Prefs
 import merchant.mokka.ui.root.RootActivity
 import merchant.mokka.utils.FormatTextWatcher
 import merchant.mokka.utils.createPhoneMaskFormatWatcher
@@ -84,7 +86,17 @@ class SignInFragment : BaseFragment(), SignInView, IDemoClickedView {
 
         signInVer.text = getString(R.string.app_version, BuildConfig.VERSION_NAME)
 
+        initializeStandChangeButton()
+
         presenter.create()
+    }
+
+    private fun initializeStandChangeButton() {
+        changStands.text = Prefs.stand?.name
+        changStands.isVisible = BuildConfig.DEBUG
+        changStands.setOnClickListener {
+            (requireActivity() as RootActivity).showStandSwitchAlert()
+        }
     }
 
     private fun isModelValid(): Boolean {

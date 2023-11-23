@@ -2,15 +2,17 @@ package merchant.mokka.api
 
 import android.net.Uri
 import merchant.mokka.BuildConfig
+import merchant.mokka.pref.Prefs
+import merchant.mokka.utils.Constants
 import merchant.mokka.utils.isBgLocale
 import merchant.mokka.utils.isPlLocale
 import merchant.mokka.utils.isRoLocale
 
 object HttpConfig {
 
-    const val MAX_CONNECTION_TIMEOUT: Long = 60000
-    const val MAX_READ_TIMEOUT: Long = 60000
-    const val MAX_WRITE_TIMEOUT: Long = 60000
+    const val MAX_CONNECTION_TIMEOUT: Long = 120000
+    const val MAX_READ_TIMEOUT: Long = 120000
+    const val MAX_WRITE_TIMEOUT: Long = 120000
 
     const val ADDRESS_URL = "http://kodpocztowy.intami.pl/api/"
     const val APK_DESTINATION = "revo.apk"
@@ -39,14 +41,13 @@ object HttpConfig {
     val UPDATE_APK_URL = "$UPDATE_ENDPOINT/revo.apk"
 
     private fun customUriBuilder(): Uri.Builder {
-        val uriBuilder = Uri.parse(RevoInterceptor.baseUrl()).buildUpon()
+        val uriBuilder = Uri.parse(RevoInterceptor.baseUrl(Prefs.stand ?: Constants.STANDS.getByEnv(BuildConfig.ENV))).buildUpon()
         RevoInterceptor.apiEnvironment()?.let { uriBuilder.appendEncodedPath(it) }
         RevoInterceptor.countryCode()?.let { uriBuilder.appendEncodedPath(it) }
         return uriBuilder
     }
 
-    private fun modifyCustomUriBuilder(uriBuilder: Uri.Builder,
-                                       serviceName: Boolean = false) {
+    private fun modifyCustomUriBuilder(uriBuilder: Uri.Builder, serviceName: Boolean = false) {
 
         if (serviceName)
             RevoInterceptor.serviceName()?.let { uriBuilder.appendEncodedPath(it) }

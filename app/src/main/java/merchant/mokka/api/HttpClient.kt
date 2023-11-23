@@ -5,11 +5,14 @@ import io.reactivex.Scheduler
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import merchant.mokka.BuildConfig
 import okhttp3.ConnectionSpec
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import merchant.mokka.api.adapter.MoshiUtils
 import merchant.mokka.api.apis.ApiUpdate
+import merchant.mokka.pref.Prefs
+import merchant.mokka.utils.Constants
 import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -47,7 +50,7 @@ class HttpClient(
         val httpClient = createHttpClientInstance(serviceClass = serviceClass, logLevel = logLevel)
 
         return Retrofit.Builder()
-                .baseUrl(RevoInterceptor.baseUrl())
+                .baseUrl(RevoInterceptor.baseUrl(Prefs.stand ?: Constants.STANDS.getByEnv(BuildConfig.ENV)))
                 .addConverterFactory(createConverterFactory())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(httpClient)

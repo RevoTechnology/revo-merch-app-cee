@@ -8,9 +8,13 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.RadioButton
+import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
@@ -36,6 +40,7 @@ import merchant.mokka.ui.purchase.purchase.PurchaseFragment
 import merchant.mokka.ui.returns.search.SearchFragment
 import merchant.mokka.utils.*
 import ru.terrakok.cicerone.NavigatorHolder
+import kotlin.system.exitProcess
 
 
 class RootActivity : BaseActivity(), RootView {
@@ -112,6 +117,57 @@ class RootActivity : BaseActivity(), RootView {
 
     private fun getCurrentFragment(): Fragment? {
         return supportFragmentManager.findFragmentById(R.id.rootContainer)
+    }
+
+    fun showStandSwitchAlert() {
+
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_select_stand, null, false)
+
+        val selectButtonDemo = dialogView.findViewById<RadioButton>(R.id.selectDemo)
+        val selectButtonStage = dialogView.findViewById<RadioButton>(R.id.selectStage)
+        val selectButtonTest = dialogView.findViewById<RadioButton>(R.id.selectTest)
+        val selectButtonProd = dialogView.findViewById<RadioButton>(R.id.selectProd)
+        val selectButtonDev1 = dialogView.findViewById<RadioButton>(R.id.selectDev1)
+        val selectButtonDev2 = dialogView.findViewById<RadioButton>(R.id.selectDev2)
+
+        val prefStand = Prefs.stand
+
+        selectButtonDemo.isChecked = prefStand == Constants.STANDS.DEMO
+        selectButtonStage.isChecked = prefStand == Constants.STANDS.STAGE
+        selectButtonProd.isChecked = prefStand == Constants.STANDS.PROD
+        selectButtonTest.isChecked = prefStand == Constants.STANDS.TEST
+        selectButtonDev1.isChecked = prefStand == Constants.STANDS.DEV1
+        selectButtonDev2.isChecked = prefStand == Constants.STANDS.DEV2
+
+        alert(
+            view = dialogView,
+            cancelable = true,
+            positiveButtonResId = R.string.button_ok,
+            positive = {
+                val stand = when {
+                    selectButtonDemo.isChecked -> Constants.STANDS.DEMO
+                    selectButtonProd.isChecked -> Constants.STANDS.PROD
+                    selectButtonStage.isChecked -> Constants.STANDS.STAGE
+                    selectButtonTest.isChecked -> Constants.STANDS.TEST
+                    selectButtonDev1.isChecked -> Constants.STANDS.DEV1
+                    selectButtonDev2.isChecked -> Constants.STANDS.DEV2
+                    else -> Constants.STANDS.STAGE
+                }
+                Prefs.stand = stand
+                Toast.makeText(this, "Wait for the application to restart", Toast.LENGTH_SHORT).show()
+                Handler(Looper.getMainLooper()).postDelayed({
+                    restartApplication(this)
+                }, 1500)
+            }
+        )
+    }
+
+    private fun restartApplication(activity: Activity) {
+        val pm = activity.packageManager
+        val intent = pm.getLaunchIntentForPackage(activity.packageName)
+        activity.finishAffinity()
+        activity.startActivity(intent)
+        exitProcess(0)
     }
 
     //region ================= SessionUtils =================

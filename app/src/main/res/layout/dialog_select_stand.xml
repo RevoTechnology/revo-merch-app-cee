@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="24dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingBottom="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Select stand"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/selectStage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:textColor="@color/black_de"
+            android:textSize="16sp"
+            android:text="Stage"
+            app:buttonTint="@color/radio_button_tint"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/selectProd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black_de"
+            android:textSize="16sp"
+            android:text="Prod"
+            app:buttonTint="@color/radio_button_tint"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/selectDemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black_de"
+            android:textSize="16sp"
+            android:text="Demo"
+            app:buttonTint="@color/radio_button_tint"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/selectTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black_de"
+            android:textSize="16sp"
+            android:text="Test"
+            app:buttonTint="@color/radio_button_tint"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/selectDev1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:textColor="@color/black_de"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:text="Dev1"
+            app:buttonTint="@color/radio_button_tint"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/selectDev2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black_de"
+            android:textSize="16sp"
+            android:text="Dev2"
+            app:buttonTint="@color/radio_button_tint"/>
+
+    </RadioGroup>
+
+</LinearLayout>
